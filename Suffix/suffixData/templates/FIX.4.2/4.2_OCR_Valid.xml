@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<message name="OrderCancelRequest" msgType="F" isRequiredOnly="false" beginString="FIX.4.2">
+    <body>
+        <field name="TraderID" id="6606">mmaddison</field>
+        <field name="OrigClOrdID" id="41">@LASTVALUE:D:11</field>
+        <field name="OrderID" id="37">@LASTVALUE:E:37</field>
+        <field name="ClOrdID" id="11">@MMAD181219_CANC-:increment</field>
+        <field name="Symbol" id="55">US124661AA71</field>
+        <field name="SecurityID" id="48">US124661AA71</field>
+        <field name="IDSource" id="22">4</field>
+        <field name="Side" id="54">1</field>
+        <field name="TransactTime" id="60">@UTCTIMESTAMP</field>
+        <field name="OrderQty" id="38">1000000</field>
+    </body>
+</message>

@@ -1,0 +1,1 @@
+2021-12-30 11:09:14.868 INFO  initiator.InitiatorIoHandler - MINA session created for FIX.4.4:T2Kauaiblk6->MA:T2Kauaiblk6_ABQA3: local=/10.8.142.168:57662, class org.apache.mina.transport.socket.nio.SocketSessionImpl, remote=fixptm-abQA3.vip.marketaxess.com/10.33.193.251:443

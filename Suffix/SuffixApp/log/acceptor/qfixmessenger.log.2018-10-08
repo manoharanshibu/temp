@@ -1,0 +1,269 @@
+2018-10-05 11:10:49.765 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties
+
+2018-10-05 11:10:49.765 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties file (directory: cfg\acceptor\messenger.cfg)
+suffix.version:http://crpnycsfxbase01.corporate.local/version.txt
+messenger.dict.fix44:FIX44.xml
+messenger.dict.fix43:FIX43.xml
+messenger.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+messenger.dict.fix41:FIX41.xml
+messenger.dict.fix40:FIX40.xml
+messenger.license:resources/license.txt
+suffix.jar:http://crpnycsfxbase01.corporate.local/sufFIX.jar
+suffix.dict.fix43.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX43.xml
+messenger.dict.fixt11:FIXT11.xml
+messenger.home.url:https://code.google.com/p/quickfix-messenger/
+suffix.dict.fixt11.url:http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml
+suffix.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+suffix.dict.fix40.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX40.xml
+messenger.parser.threads:20
+messenger.dict.fix50sp2:FIX50SP2.xml
+messenger.dict.fix50:FIX50.xml
+suffix.dict.fix50.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50.xml
+suffix.messageTable.columns:
+messenger.icons:resources/icons/
+messenger.help.url:http://wiki.marketaxess.com/display/appdev/SufFIX
+messenger.file.path:../suffixData
+suffix.dict.fix44.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml
+messenger.environment:
+suffix.dict.fix50sp2.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml
+messenger.fixwiki.url:http://fixwiki.org/fixwiki/
+suffix.dict.fix41.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX41.xml
+
+2018-10-05 11:10:49.780 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/version.txt
+2018-10-05 11:10:49.937 INFO  util.URLUtil - Finished downloading elapsed time 157
+2018-10-05 11:10:49.937 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/quickfixversion.txt
+2018-10-05 11:10:50.015 INFO  util.URLUtil - Finished downloading elapsed time 78
+2018-10-05 11:10:50.046 ERROR cache.DataDictionaryCache - Problems downloading Quickfix Data Dictionary C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+java.net.MalformedURLException: no protocol: null?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4
+	at java.net.URL.<init>(URL.java:586)
+	at java.net.URL.<init>(URL.java:483)
+	at java.net.URL.<init>(URL.java:432)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.loadDataDictionaries(DataDictionaryCache.java:40)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.<init>(DataDictionaryCache.java:28)
+	at com.jramoyo.qfixmessenger.QFixMessenger.<init>(QFixMessenger.java:350)
+	at com.jramoyo.qfixmessenger.QFixMessenger.setSessionAndMessengerSettings(QFixMessenger.java:230)
+	at com.jramoyo.qfixmessenger.QFixMessenger.main(QFixMessenger.java:172)
+2018-10-05 11:10:50.108 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX44.xml
+2018-10-05 11:10:50.624 INFO  util.URLUtil - Finished downloading FIX44.xml elapsed time 516
+2018-10-05 11:10:50.655 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX50SP2.xml
+2018-10-05 11:10:50.812 INFO  util.URLUtil - Finished downloading FIX50SP2.xml elapsed time 157
+2018-10-05 11:10:50.843 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIXT11.xml
+2018-10-05 11:10:50.921 INFO  util.URLUtil - Finished downloading FIXT11.xml elapsed time 78
+2018-10-05 11:10:51.734 INFO  qfixmessenger.QFixMessenger - Starting acceptor with settings 
+[DEFAULT]
+NonStopSession=Y
+ConnectionType=acceptor
+InitiatorManualLogon=Y
+ReconnectInterval=5
+TargetCompID=INIT
+LogScreenHeartbeats=Y
+SocketConnectHost=localhost
+SenderCompID=ACCEPT
+HeartBtInt=90
+FileStorePath=data/messenger/acceptor
+FileLogPath=log/acceptor
+[SESSION]
+SocketAcceptPort=9878
+DataDictionary=C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+BeginString=FIX.4.2
+
+2018-10-05 11:10:51.906 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2018-10-05 11:10:51.906 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2018-10-05 11:10:51.906 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2018-10-05 11:10:51.921 INFO  quickfix.SocketAcceptor - Listening for connections at 0.0.0.0/0.0.0.0:9878
+2018-10-05 11:11:02.667 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties
+
+2018-10-05 11:11:02.667 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties file (directory: cfg\acceptor\messenger.cfg)
+suffix.version:http://crpnycsfxbase01.corporate.local/version.txt
+messenger.dict.fix44:FIX44.xml
+messenger.dict.fix43:FIX43.xml
+messenger.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+messenger.dict.fix41:FIX41.xml
+messenger.dict.fix40:FIX40.xml
+messenger.license:resources/license.txt
+suffix.jar:http://crpnycsfxbase01.corporate.local/sufFIX.jar
+suffix.dict.fix43.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX43.xml
+messenger.dict.fixt11:FIXT11.xml
+messenger.home.url:https://code.google.com/p/quickfix-messenger/
+suffix.dict.fixt11.url:http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml
+suffix.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+suffix.dict.fix40.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX40.xml
+messenger.parser.threads:20
+messenger.dict.fix50sp2:FIX50SP2.xml
+messenger.dict.fix50:FIX50.xml
+suffix.dict.fix50.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50.xml
+suffix.messageTable.columns:
+messenger.icons:resources/icons/
+messenger.help.url:http://wiki.marketaxess.com/display/appdev/SufFIX
+messenger.file.path:../suffixData
+suffix.dict.fix44.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml
+messenger.environment:
+suffix.dict.fix50sp2.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml
+messenger.fixwiki.url:http://fixwiki.org/fixwiki/
+suffix.dict.fix41.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX41.xml
+
+2018-10-05 11:11:02.683 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/version.txt
+2018-10-05 11:11:02.840 INFO  util.URLUtil - Finished downloading elapsed time 157
+2018-10-05 11:11:02.840 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/quickfixversion.txt
+2018-10-05 11:11:02.918 INFO  util.URLUtil - Finished downloading elapsed time 78
+2018-10-05 11:11:02.918 ERROR cache.DataDictionaryCache - Problems downloading Quickfix Data Dictionary C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+java.net.MalformedURLException: no protocol: null?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4
+	at java.net.URL.<init>(URL.java:586)
+	at java.net.URL.<init>(URL.java:483)
+	at java.net.URL.<init>(URL.java:432)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.loadDataDictionaries(DataDictionaryCache.java:40)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.<init>(DataDictionaryCache.java:28)
+	at com.jramoyo.qfixmessenger.QFixMessenger.<init>(QFixMessenger.java:350)
+	at com.jramoyo.qfixmessenger.QFixMessenger.setSessionAndMessengerSettings(QFixMessenger.java:230)
+	at com.jramoyo.qfixmessenger.QFixMessenger.main(QFixMessenger.java:172)
+2018-10-05 11:11:02.980 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX44.xml
+2018-10-05 11:11:03.511 INFO  util.URLUtil - Finished downloading FIX44.xml elapsed time 531
+2018-10-05 11:11:03.558 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX50SP2.xml
+2018-10-05 11:11:03.714 INFO  util.URLUtil - Finished downloading FIX50SP2.xml elapsed time 156
+2018-10-05 11:11:03.746 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIXT11.xml
+2018-10-05 11:11:03.824 INFO  util.URLUtil - Finished downloading FIXT11.xml elapsed time 78
+2018-10-05 11:11:04.668 INFO  qfixmessenger.QFixMessenger - Starting acceptor with settings 
+[DEFAULT]
+NonStopSession=Y
+ConnectionType=acceptor
+InitiatorManualLogon=Y
+ReconnectInterval=5
+TargetCompID=INIT
+LogScreenHeartbeats=Y
+SocketConnectHost=localhost
+SenderCompID=ACCEPT
+HeartBtInt=90
+FileStorePath=data/messenger/acceptor
+FileLogPath=log/acceptor
+[SESSION]
+SocketAcceptPort=9878
+DataDictionary=C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+BeginString=FIX.4.2
+
+2018-10-05 11:11:04.824 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2018-10-05 11:11:04.824 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2018-10-05 11:11:04.824 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2018-10-05 11:11:04.839 ERROR qfixmessenger.QFixMessenger - Logon failed!
+quickfix.RuntimeError: java.net.BindException: Address already in use: bind
+	at quickfix.mina.acceptor.AbstractSocketAcceptor.startAcceptingConnections(AbstractSocketAcceptor.java:149)
+	at quickfix.SocketAcceptor.initialize(SocketAcceptor.java:64)
+	at quickfix.SocketAcceptor.start(SocketAcceptor.java:57)
+	at com.jramoyo.qfixmessenger.QFixMessenger.logon(QFixMessenger.java:457)
+	at com.jramoyo.qfixmessenger.QFixMessenger.main(QFixMessenger.java:182)
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:436)
+	at sun.nio.ch.Net.bind(Net.java:428)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.mina.transport.socket.nio.SocketAcceptor.registerNew(SocketAcceptor.java:363)
+	at org.apache.mina.transport.socket.nio.SocketAcceptor.access$800(SocketAcceptor.java:55)
+	at org.apache.mina.transport.socket.nio.SocketAcceptor$Worker.run(SocketAcceptor.java:222)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+	at java.lang.Thread.run(Thread.java:745)
+2018-10-05 11:11:05.043 ERROR qfixmessenger.QFixMessenger - An unexpected exception occured!
+java.lang.NullPointerException
+	at com.jramoyo.qfixmessenger.ui.QFixMessengerFrame.initSessionsPanel(QFixMessengerFrame.java:2204)
+	at com.jramoyo.qfixmessenger.ui.QFixMessengerFrame.initLeftPanel(QFixMessengerFrame.java:730)
+	at com.jramoyo.qfixmessenger.ui.QFixMessengerFrame.initComponents(QFixMessengerFrame.java:645)
+	at com.jramoyo.qfixmessenger.ui.QFixMessengerFrame.access$200(QFixMessengerFrame.java:86)
+	at com.jramoyo.qfixmessenger.ui.QFixMessengerFrame$1Launcher.run(QFixMessengerFrame.java:119)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:744)
+	at java.awt.EventQueue.access$400(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.awt.EventQueue$3.run(EventQueue.java:691)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:714)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2018-10-05 11:11:18.345 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:50414
+2018-10-05 11:11:56.679 INFO  listeners.SendActionListener - Sending message 8=FIX.4.29=173535=849=MA56=STPTC34=7852=20180815-12:27:51.2289690=139691=WPACBIC9692=B9694=100.8109693=19695=8700009697=Cancelled7761=19691=ABO1MPID9692=C9694=105.0009693=19695=8700009697=Covered7761=29691=GMSG9692=C9694=107.5009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=39691=GUCPUSM19692=B9694=108.3009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=49691=RBAIUS41XXX9692=B9694=114.1009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=59691=LAZA9692=C9694=115.4009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=69691=NITE9692=B9694=116.4009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=79691=AASIUS339692=B9694=117.5009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=89691=ANZBUS339692=B9696=Please Contact your ANZ Salesperson 1.9697=Passed7761=99691=CRLYUS339692=B9697=Passed7761=109691=CTBAAU2SFXD9692=B9696=None in TList9697=Passed7761=119691=RDOSUS319692=B9697=Passed7761=129691=SBSIUS339692=B9697=Timed Out 7761=153109=STP Test Client, Inc.76=WPACBIC17=One-USD_EMM-1662856-0-0-lh4q237=582212611=JBZ180806181014255719=One-USD_EMM-1662856-0-0-laxor20=1150=439=464=2018081754=132=031=100.810151=014=06=100.8109805=438.9489806=421.2165645=439.4749804=439.4745961=Price75=2018081560=20180815-12:23:02.079381=877047.0038=8700006655=87000055=FIXED22=448=USP79171AE79200=202409205=1223=7.45106=PROVINCE OF CORDOBA6620=201703016659=20170301107=CORDO  7.450  9/1/24 (URegS)6608=7.2816637=202409016611=29886.926612=906933.926609=MISC6606=atrianine@marketxess.com15=USD120=USD9947=wpacus04157=16610=014
+2018-10-05 16:22:39.159 INFO  quickfix.QFixMessengerApplication - Server has rejected login with message user requested
+2018-10-05 16:22:39.159 INFO  quickfix.QFixMessengerApplication - fromAdmin: Logout received 8=FIX.4.29=7435=534=197649=INIT52=20181005-15:22:39.15956=ACCEPT58=user requested10=198
+2018-10-05 16:22:39.159 INFO  quickfix.Session - [FIX.4.2:ACCEPT->INIT] Disconnecting: Received logout request
+2018-10-05 16:22:47.772 INFO  quickfix.SocketAcceptor - No longer accepting connections on 0.0.0.0/0.0.0.0:9878
+2018-10-05 16:22:47.772 INFO  quickfix.SocketAcceptor - Logging out all sessions
+2018-10-05 16:22:47.788 INFO  qfixmessenger.QFixMessenger - Shutting down at Fri Oct 05 16:22:47 BST 2018...
+2018-10-08 17:12:18.720 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties
+
+2018-10-08 17:12:18.736 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties file (directory: cfg\acceptor\messenger.cfg)
+suffix.version:http://crpnycsfxbase01.corporate.local/version.txt
+messenger.dict.fix44:FIX44.xml
+messenger.dict.fix43:FIX43.xml
+messenger.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+messenger.dict.fix41:FIX41.xml
+messenger.dict.fix40:FIX40.xml
+messenger.license:resources/license.txt
+suffix.jar:http://crpnycsfxbase01.corporate.local/sufFIX.jar
+suffix.dict.fix43.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX43.xml
+messenger.dict.fixt11:FIXT11.xml
+messenger.home.url:https://code.google.com/p/quickfix-messenger/
+suffix.dict.fixt11.url:http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml
+suffix.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+suffix.dict.fix40.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX40.xml
+messenger.parser.threads:20
+messenger.dict.fix50sp2:FIX50SP2.xml
+messenger.dict.fix50:FIX50.xml
+suffix.dict.fix50.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50.xml
+suffix.messageTable.columns:
+messenger.icons:resources/icons/
+messenger.help.url:http://wiki.marketaxess.com/display/appdev/SufFIX
+messenger.file.path:../suffixData
+suffix.dict.fix44.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml
+messenger.environment:
+suffix.dict.fix50sp2.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml
+messenger.fixwiki.url:http://fixwiki.org/fixwiki/
+suffix.dict.fix41.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX41.xml
+
+2018-10-08 17:12:18.736 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/version.txt
+2018-10-08 17:12:18.908 INFO  util.URLUtil - Finished downloading elapsed time 172
+2018-10-08 17:12:18.908 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/quickfixversion.txt
+2018-10-08 17:12:18.971 INFO  util.URLUtil - Finished downloading elapsed time 63
+2018-10-08 17:12:19.002 ERROR cache.DataDictionaryCache - Problems downloading Quickfix Data Dictionary C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+java.net.MalformedURLException: no protocol: null?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4
+	at java.net.URL.<init>(URL.java:586)
+	at java.net.URL.<init>(URL.java:483)
+	at java.net.URL.<init>(URL.java:432)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.loadDataDictionaries(DataDictionaryCache.java:40)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.<init>(DataDictionaryCache.java:28)
+	at com.jramoyo.qfixmessenger.QFixMessenger.<init>(QFixMessenger.java:350)
+	at com.jramoyo.qfixmessenger.QFixMessenger.setSessionAndMessengerSettings(QFixMessenger.java:230)
+	at com.jramoyo.qfixmessenger.QFixMessenger.main(QFixMessenger.java:172)
+2018-10-08 17:12:19.064 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX44.xml
+2018-10-08 17:12:19.580 INFO  util.URLUtil - Finished downloading FIX44.xml elapsed time 516
+2018-10-08 17:12:19.611 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX50SP2.xml
+2018-10-08 17:12:19.783 INFO  util.URLUtil - Finished downloading FIX50SP2.xml elapsed time 172
+2018-10-08 17:12:19.814 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIXT11.xml
+2018-10-08 17:12:19.877 INFO  util.URLUtil - Finished downloading FIXT11.xml elapsed time 63
+2018-10-08 17:12:20.736 INFO  qfixmessenger.QFixMessenger - Starting acceptor with settings 
+[DEFAULT]
+NonStopSession=Y
+ConnectionType=acceptor
+InitiatorManualLogon=Y
+ReconnectInterval=5
+TargetCompID=INIT
+LogScreenHeartbeats=Y
+SocketConnectHost=localhost
+SenderCompID=ACCEPT
+HeartBtInt=90
+FileStorePath=data/messenger/acceptor
+FileLogPath=log/acceptor
+[SESSION]
+SocketAcceptPort=9878
+DataDictionary=C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+BeginString=FIX.4.2
+
+2018-10-08 17:12:20.892 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2018-10-08 17:12:20.892 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2018-10-08 17:12:20.892 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2018-10-08 17:12:20.908 INFO  quickfix.SocketAcceptor - Listening for connections at 0.0.0.0/0.0.0.0:9878
+2018-10-08 17:12:40.518 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:61191
+2018-10-08 17:23:31.901 INFO  quickfix.QFixMessengerApplication - No text in logout, taking no action 8=FIX.4.29=5635=534=198549=INIT52=20181008-16:23:31.90156=ACCEPT10=098
+2018-10-08 17:23:31.901 INFO  quickfix.QFixMessengerApplication - fromAdmin: Logout received 8=FIX.4.29=5635=534=198549=INIT52=20181008-16:23:31.90156=ACCEPT10=098
+2018-10-08 17:23:31.901 INFO  quickfix.Session - [FIX.4.2:ACCEPT->INIT] Disconnecting: IO Session closed

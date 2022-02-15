@@ -1,0 +1,575 @@
+2022-01-05 00:07:36.679 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:50725
+2022-01-05 00:08:08.490 ERROR acceptor.AcceptorIoHandler - Socket (/127.0.0.1:50725): java.io.IOException: An existing connection was forcibly closed by the remote host
+java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor.read(SocketIoProcessor.java:218)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor.process(SocketIoProcessor.java:198)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor.access$400(SocketIoProcessor.java:45)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor$Worker.run(SocketIoProcessor.java:485)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+	at java.lang.Thread.run(Thread.java:745)
+2022-01-05 00:08:08.885 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:50756
+2022-01-05 00:08:40.484 ERROR acceptor.AcceptorIoHandler - Socket (/127.0.0.1:50756): java.io.IOException: An existing connection was forcibly closed by the remote host
+java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor.read(SocketIoProcessor.java:218)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor.process(SocketIoProcessor.java:198)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor.access$400(SocketIoProcessor.java:45)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor$Worker.run(SocketIoProcessor.java:485)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+	at java.lang.Thread.run(Thread.java:745)
+2022-01-05 00:08:43.923 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:50780
+2022-01-05 00:09:15.915 ERROR acceptor.AcceptorIoHandler - Socket (/127.0.0.1:50780): java.io.IOException: An existing connection was forcibly closed by the remote host
+java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor.read(SocketIoProcessor.java:218)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor.process(SocketIoProcessor.java:198)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor.access$400(SocketIoProcessor.java:45)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor$Worker.run(SocketIoProcessor.java:485)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+	at java.lang.Thread.run(Thread.java:745)
+2022-01-05 00:09:16.309 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:50798
+2022-01-05 00:09:47.911 ERROR acceptor.AcceptorIoHandler - Socket (/127.0.0.1:50798): java.io.IOException: An existing connection was forcibly closed by the remote host
+java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor.read(SocketIoProcessor.java:218)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor.process(SocketIoProcessor.java:198)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor.access$400(SocketIoProcessor.java:45)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor$Worker.run(SocketIoProcessor.java:485)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+	at java.lang.Thread.run(Thread.java:745)
+2022-01-05 00:47:37.982 INFO  quickfix.SocketAcceptor - No longer accepting connections on 0.0.0.0/0.0.0.0:9878
+2022-01-05 00:47:37.982 INFO  quickfix.SocketAcceptor - No longer accepting connections on 0.0.0.0/0.0.0.0:443
+2022-01-05 00:47:37.982 INFO  quickfix.SocketAcceptor - Logging out all sessions
+2022-01-05 00:47:37.990 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties
+
+2022-01-05 00:47:37.990 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties file (directory: cfg\acceptor\messenger.cfg)
+suffix.version:http://crpnycsfxbase01.corporate.local/version.txt
+messenger.dict.fix44:FIX44.xml
+messenger.dict.fix43:FIX43.xml
+messenger.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+messenger.dict.fix41:FIX41.xml
+messenger.dict.fix40:FIX40.xml
+messenger.license:resources/license.txt
+suffix.jar:http://crpnycsfxbase01.corporate.local/sufFIX.jar
+suffix.dict.fix43.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX43.xml
+messenger.dict.fixt11:FIXT11.xml
+messenger.home.url:https://code.google.com/p/quickfix-messenger/
+suffix.dict.fixt11.url:http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml
+suffix.dict.fix40.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX40.xml
+messenger.parser.threads:20
+messenger.dict.fix50sp2:FIX50SP2.xml
+messenger.dict.fix50:FIX50.xml
+suffix.dict.fix50.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50.xml
+suffix.messageTable.columns:
+messenger.icons:resources/icons/
+messenger.help.url:http://wiki.marketaxess.com/display/appdev/SufFIX
+suffix.dict.fix42.url:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+messenger.file.path:../suffixData
+suffix.dict.fix44.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml
+messenger.environment:
+suffix.dict.fix50sp2.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml
+messenger.fixwiki.url:http://fixwiki.org/fixwiki/
+suffix.dict.fix41.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX41.xml
+
+2022-01-05 00:47:37.990 INFO  util.URLUtil - Started downloading http://crpnbgsfxbase01.corporate.local/version.txt
+2022-01-05 00:47:38.152 INFO  util.URLUtil - Finished downloading elapsed time 162
+2022-01-05 00:47:38.152 ERROR config.QFixMessengerConfig - Error talking to server
+java.lang.NullPointerException
+	at com.jramoyo.qfixmessenger.config.QFixMessengerConfig.getAppropriateURLString(QFixMessengerConfig.java:450)
+	at com.jramoyo.qfixmessenger.config.QFixMessengerConfig.checkForUpdates(QFixMessengerConfig.java:331)
+	at com.jramoyo.qfixmessenger.QFixMessenger.<init>(QFixMessenger.java:341)
+	at com.jramoyo.qfixmessenger.QFixMessenger.setSessionAndMessengerSettings(QFixMessenger.java:230)
+	at com.jramoyo.qfixmessenger.QFixMessenger.refresh(QFixMessenger.java:396)
+	at com.jramoyo.qfixmessenger.ui.QFixMessengerFrame.reload(QFixMessengerFrame.java:2398)
+	at com.jramoyo.qfixmessenger.ui.QFixMessengerFrame$1.actionPerformed(QFixMessengerFrame.java:445)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2739)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:746)
+	at java.awt.EventQueue.access$400(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.awt.EventQueue$3.run(EventQueue.java:691)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:719)
+	at java.awt.EventQueue$4.run(EventQueue.java:717)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:716)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2022-01-05 00:47:38.152 ERROR cache.DataDictionaryCache - Problems downloading Quickfix Data Dictionary C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+java.net.MalformedURLException: unknown protocol: c
+	at java.net.URL.<init>(URL.java:593)
+	at java.net.URL.<init>(URL.java:483)
+	at java.net.URL.<init>(URL.java:432)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.loadDataDictionaries(DataDictionaryCache.java:40)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.<init>(DataDictionaryCache.java:28)
+	at com.jramoyo.qfixmessenger.QFixMessenger.<init>(QFixMessenger.java:350)
+	at com.jramoyo.qfixmessenger.QFixMessenger.setSessionAndMessengerSettings(QFixMessenger.java:230)
+	at com.jramoyo.qfixmessenger.QFixMessenger.refresh(QFixMessenger.java:396)
+	at com.jramoyo.qfixmessenger.ui.QFixMessengerFrame.reload(QFixMessengerFrame.java:2398)
+	at com.jramoyo.qfixmessenger.ui.QFixMessengerFrame$1.actionPerformed(QFixMessengerFrame.java:445)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2739)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:746)
+	at java.awt.EventQueue.access$400(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.awt.EventQueue$3.run(EventQueue.java:691)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:719)
+	at java.awt.EventQueue$4.run(EventQueue.java:717)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:716)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2022-01-05 00:47:38.152 INFO  util.URLUtil - Started downloading http://crpnbgsfxbase01.corporate.local/TRAX/FIX44.xml?Username=smanoharan&Hostname=MKTX-AP4315&SufFIXVersion=3.0.0rc5 to FIX44.xml
+2022-01-05 00:47:38.638 INFO  util.URLUtil - Finished downloading FIX44.xml elapsed time 486
+2022-01-05 00:47:38.654 INFO  util.URLUtil - Started downloading http://crpnbgsfxbase01.corporate.local/TRAX/FIX50SP2.xml?Username=smanoharan&Hostname=MKTX-AP4315&SufFIXVersion=3.0.0rc5 to FIX50SP2.xml
+2022-01-05 00:47:39.074 INFO  util.URLUtil - Finished downloading FIX50SP2.xml elapsed time 420
+2022-01-05 00:47:39.096 INFO  util.URLUtil - Started downloading http://crpnbgsfxbase01.corporate.local/TRAX/FIXT11.xml?Username=smanoharan&Hostname=MKTX-AP4315&SufFIXVersion=3.0.0rc5 to FIXT11.xml
+2022-01-05 00:47:39.176 INFO  util.URLUtil - Finished downloading FIXT11.xml elapsed time 80
+2022-01-05 00:47:39.176 INFO  qfixmessenger.QFixMessenger - Starting acceptor with settings 
+[DEFAULT]
+NonStopSession=Y
+ConnectionType=acceptor
+InitiatorManualLogon=Y
+SocketAcceptPort=9878
+ReconnectInterval=5
+TargetCompID=INIT
+LogScreenHeartbeats=Y
+SocketConnectHost=localhost
+SenderCompID=ACCEPT
+HeartBtInt=90
+FileStorePath=data/messenger/acceptor
+FileLogPath=log/acceptor
+[SESSION]
+SocketAcceptPort=443
+TargetCompID=MA_GEMS
+SenderCompID=QA1_DUM_MAEMS
+BeginString=FIX.4.4
+[SESSION]
+SocketAcceptPort=9878
+TargetCompID=INIT
+SenderCompID=ACCEPT
+DataDictionary=C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+BeginString=FIX.4.2
+
+2022-01-05 00:47:39.208 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2022-01-05 00:47:39.208 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2022-01-05 00:47:39.208 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2022-01-05 00:47:39.223 INFO  quickfix.SocketAcceptor - Listening for connections at 0.0.0.0/0.0.0.0:9878
+2022-01-05 00:47:39.223 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2022-01-05 00:47:39.223 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2022-01-05 00:47:39.223 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2022-01-05 00:47:39.223 INFO  quickfix.SocketAcceptor - Listening for connections at 0.0.0.0/0.0.0.0:443
+2022-01-05 00:48:20.116 ERROR util.UnmarshallWorkerLoadFrame - An Exception occurred while importing message.
+java.lang.NullPointerException
+	at com.jramoyo.qfixmessenger.ui.panels.ComponentPanelNewFrame.populateXml(ComponentPanelNewFrame.java:224)
+	at com.jramoyo.qfixmessenger.ui.panels.GroupPanelNewFrame.populateXml(GroupPanelNewFrame.java:307)
+	at com.jramoyo.qfixmessenger.ui.panels.MessagePanelNewFrame.populateXml(MessagePanelNewFrame.java:428)
+	at com.jramoyo.qfixmessenger.ui.MessageEditFrame.loadXmlMessage(MessageEditFrame.java:732)
+	at com.jramoyo.qfixmessenger.util.UnmarshallWorkerLoadFrame.done(UnmarshallWorkerLoadFrame.java:49)
+	at javax.swing.SwingWorker$5.run(SwingWorker.java:737)
+	at javax.swing.SwingWorker$DoSubmitAccumulativeRunnable.run(SwingWorker.java:832)
+	at sun.swing.AccumulativeRunnable.run(AccumulativeRunnable.java:112)
+	at javax.swing.SwingWorker$DoSubmitAccumulativeRunnable.actionPerformed(SwingWorker.java:842)
+	at javax.swing.Timer.fireActionPerformed(Timer.java:313)
+	at javax.swing.Timer$DoPostEvent.run(Timer.java:245)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:744)
+	at java.awt.EventQueue.access$400(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.awt.EventQueue$3.run(EventQueue.java:691)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:714)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2022-01-05 00:50:15.734 INFO  quickfix.SocketAcceptor - No longer accepting connections on 0.0.0.0/0.0.0.0:9878
+2022-01-05 00:50:15.734 INFO  quickfix.SocketAcceptor - No longer accepting connections on 0.0.0.0/0.0.0.0:443
+2022-01-05 00:50:15.734 INFO  quickfix.SocketAcceptor - Logging out all sessions
+2022-01-05 00:50:15.734 INFO  qfixmessenger.QFixMessenger - Shutting down at Wed Jan 05 00:50:15 GMT 2022...
+2022-01-05 00:50:34.899 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties
+
+2022-01-05 00:50:34.899 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties file (directory: cfg\acceptor\messenger.cfg)
+suffix.version:http://crpnycsfxbase01.corporate.local/version.txt
+messenger.dict.fix44:FIX44.xml
+messenger.dict.fix43:FIX43.xml
+messenger.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+messenger.dict.fix41:FIX41.xml
+messenger.dict.fix40:FIX40.xml
+messenger.license:resources/license.txt
+suffix.jar:http://crpnycsfxbase01.corporate.local/sufFIX.jar
+suffix.dict.fix43.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX43.xml
+messenger.dict.fixt11:FIXT11.xml
+messenger.home.url:https://code.google.com/p/quickfix-messenger/
+suffix.dict.fixt11.url:http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml
+suffix.dict.fix40.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX40.xml
+messenger.parser.threads:20
+messenger.dict.fix50sp2:FIX50SP2.xml
+messenger.dict.fix50:FIX50.xml
+suffix.dict.fix50.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50.xml
+suffix.messageTable.columns:
+messenger.icons:resources/icons/
+messenger.help.url:http://wiki.marketaxess.com/display/appdev/SufFIX
+suffix.dict.fix42.url:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+messenger.file.path:../suffixData
+suffix.dict.fix44.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml
+messenger.environment:
+suffix.dict.fix50sp2.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml
+messenger.fixwiki.url:http://fixwiki.org/fixwiki/
+suffix.dict.fix41.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX41.xml
+
+2022-01-05 00:50:34.914 INFO  util.URLUtil - Started downloading http://crpnbgsfxbase01.corporate.local/version.txt
+2022-01-05 00:50:35.084 INFO  util.URLUtil - Finished downloading elapsed time 170
+2022-01-05 00:50:35.084 ERROR config.QFixMessengerConfig - Error talking to server
+java.lang.NullPointerException
+	at com.jramoyo.qfixmessenger.config.QFixMessengerConfig.getAppropriateURLString(QFixMessengerConfig.java:450)
+	at com.jramoyo.qfixmessenger.config.QFixMessengerConfig.checkForUpdates(QFixMessengerConfig.java:331)
+	at com.jramoyo.qfixmessenger.QFixMessenger.<init>(QFixMessenger.java:341)
+	at com.jramoyo.qfixmessenger.QFixMessenger.setSessionAndMessengerSettings(QFixMessenger.java:230)
+	at com.jramoyo.qfixmessenger.QFixMessenger.main(QFixMessenger.java:172)
+2022-01-05 00:50:35.084 ERROR cache.DataDictionaryCache - Problems downloading Quickfix Data Dictionary C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+java.net.MalformedURLException: unknown protocol: c
+	at java.net.URL.<init>(URL.java:593)
+	at java.net.URL.<init>(URL.java:483)
+	at java.net.URL.<init>(URL.java:432)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.loadDataDictionaries(DataDictionaryCache.java:40)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.<init>(DataDictionaryCache.java:28)
+	at com.jramoyo.qfixmessenger.QFixMessenger.<init>(QFixMessenger.java:350)
+	at com.jramoyo.qfixmessenger.QFixMessenger.setSessionAndMessengerSettings(QFixMessenger.java:230)
+	at com.jramoyo.qfixmessenger.QFixMessenger.main(QFixMessenger.java:172)
+2022-01-05 00:50:35.146 INFO  util.URLUtil - Started downloading http://crpnbgsfxbase01.corporate.local/TRAX/FIX44.xml?Username=smanoharan&Hostname=MKTX-AP4315&SufFIXVersion=3.0.0rc5 to FIX44.xml
+2022-01-05 00:50:35.637 INFO  util.URLUtil - Finished downloading FIX44.xml elapsed time 491
+2022-01-05 00:50:35.684 INFO  util.URLUtil - Started downloading http://crpnbgsfxbase01.corporate.local/TRAX/FIX50SP2.xml?Username=smanoharan&Hostname=MKTX-AP4315&SufFIXVersion=3.0.0rc5 to FIX50SP2.xml
+2022-01-05 00:50:35.969 INFO  util.URLUtil - Finished downloading FIX50SP2.xml elapsed time 285
+2022-01-05 00:50:36.000 INFO  util.URLUtil - Started downloading http://crpnbgsfxbase01.corporate.local/TRAX/FIXT11.xml?Username=smanoharan&Hostname=MKTX-AP4315&SufFIXVersion=3.0.0rc5 to FIXT11.xml
+2022-01-05 00:50:36.073 INFO  util.URLUtil - Finished downloading FIXT11.xml elapsed time 73
+2022-01-05 00:50:36.875 INFO  qfixmessenger.QFixMessenger - Starting acceptor with settings 
+[DEFAULT]
+NonStopSession=Y
+ConnectionType=acceptor
+InitiatorManualLogon=Y
+SocketAcceptPort=9878
+ReconnectInterval=5
+TargetCompID=INIT
+LogScreenHeartbeats=Y
+SocketConnectHost=localhost
+SenderCompID=ACCEPT
+HeartBtInt=90
+FileStorePath=data/messenger/acceptor
+FileLogPath=log/acceptor
+[SESSION]
+SocketAcceptPort=443
+TargetCompID=MA_GEMS
+SenderCompID=QA1_DUM_MAEMS
+BeginString=FIX.4.4
+[SESSION]
+SocketAcceptPort=9878
+TargetCompID=INIT
+SenderCompID=ACCEPT
+DataDictionary=C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+BeginString=FIX.4.2
+
+2022-01-05 00:50:37.086 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2022-01-05 00:50:37.086 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2022-01-05 00:50:37.086 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2022-01-05 00:50:37.086 INFO  quickfix.SocketAcceptor - Listening for connections at 0.0.0.0/0.0.0.0:9878
+2022-01-05 00:50:37.086 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2022-01-05 00:50:37.086 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2022-01-05 00:50:37.086 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2022-01-05 00:50:37.086 INFO  quickfix.SocketAcceptor - Listening for connections at 0.0.0.0/0.0.0.0:443
+2022-01-05 00:51:42.892 INFO  quickfix.SocketAcceptor - No longer accepting connections on 0.0.0.0/0.0.0.0:9878
+2022-01-05 00:51:42.892 INFO  quickfix.SocketAcceptor - No longer accepting connections on 0.0.0.0/0.0.0.0:443
+2022-01-05 00:51:42.892 INFO  quickfix.SocketAcceptor - Logging out all sessions
+2022-01-05 00:51:42.900 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties
+
+2022-01-05 00:51:42.900 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties file (directory: cfg\acceptor\messenger.cfg)
+suffix.version:http://crpnycsfxbase01.corporate.local/version.txt
+messenger.dict.fix44:FIX44.xml
+messenger.dict.fix43:FIX43.xml
+messenger.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+messenger.dict.fix41:FIX41.xml
+messenger.dict.fix40:FIX40.xml
+messenger.license:resources/license.txt
+suffix.jar:http://crpnycsfxbase01.corporate.local/sufFIX.jar
+suffix.dict.fix43.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX43.xml
+messenger.dict.fixt11:FIXT11.xml
+messenger.home.url:https://code.google.com/p/quickfix-messenger/
+suffix.dict.fixt11.url:http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml
+suffix.dict.fix40.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX40.xml
+messenger.parser.threads:20
+messenger.dict.fix50sp2:FIX50SP2.xml
+messenger.dict.fix50:FIX50.xml
+suffix.dict.fix50.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50.xml
+suffix.messageTable.columns:
+messenger.icons:resources/icons/
+messenger.help.url:http://wiki.marketaxess.com/display/appdev/SufFIX
+suffix.dict.fix42.url:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+messenger.file.path:../suffixData
+suffix.dict.fix44.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml
+messenger.environment:
+suffix.dict.fix50sp2.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml
+messenger.fixwiki.url:http://fixwiki.org/fixwiki/
+suffix.dict.fix41.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX41.xml
+
+2022-01-05 00:51:42.900 INFO  util.URLUtil - Started downloading http://crpnbgsfxbase01.corporate.local/version.txt
+2022-01-05 00:51:43.043 INFO  util.URLUtil - Finished downloading elapsed time 143
+2022-01-05 00:51:43.043 ERROR config.QFixMessengerConfig - Error talking to server
+java.lang.NullPointerException
+	at com.jramoyo.qfixmessenger.config.QFixMessengerConfig.getAppropriateURLString(QFixMessengerConfig.java:450)
+	at com.jramoyo.qfixmessenger.config.QFixMessengerConfig.checkForUpdates(QFixMessengerConfig.java:331)
+	at com.jramoyo.qfixmessenger.QFixMessenger.<init>(QFixMessenger.java:341)
+	at com.jramoyo.qfixmessenger.QFixMessenger.setSessionAndMessengerSettings(QFixMessenger.java:230)
+	at com.jramoyo.qfixmessenger.QFixMessenger.refresh(QFixMessenger.java:396)
+	at com.jramoyo.qfixmessenger.ui.QFixMessengerFrame.reload(QFixMessengerFrame.java:2398)
+	at com.jramoyo.qfixmessenger.ui.QFixMessengerFrame$1.actionPerformed(QFixMessengerFrame.java:445)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2739)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:746)
+	at java.awt.EventQueue.access$400(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.awt.EventQueue$3.run(EventQueue.java:691)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:719)
+	at java.awt.EventQueue$4.run(EventQueue.java:717)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:716)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2022-01-05 00:51:43.043 ERROR cache.DataDictionaryCache - Problems downloading Quickfix Data Dictionary C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+java.net.MalformedURLException: unknown protocol: c
+	at java.net.URL.<init>(URL.java:593)
+	at java.net.URL.<init>(URL.java:483)
+	at java.net.URL.<init>(URL.java:432)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.loadDataDictionaries(DataDictionaryCache.java:40)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.<init>(DataDictionaryCache.java:28)
+	at com.jramoyo.qfixmessenger.QFixMessenger.<init>(QFixMessenger.java:350)
+	at com.jramoyo.qfixmessenger.QFixMessenger.setSessionAndMessengerSettings(QFixMessenger.java:230)
+	at com.jramoyo.qfixmessenger.QFixMessenger.refresh(QFixMessenger.java:396)
+	at com.jramoyo.qfixmessenger.ui.QFixMessengerFrame.reload(QFixMessengerFrame.java:2398)
+	at com.jramoyo.qfixmessenger.ui.QFixMessengerFrame$1.actionPerformed(QFixMessengerFrame.java:445)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2739)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:746)
+	at java.awt.EventQueue.access$400(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.awt.EventQueue$3.run(EventQueue.java:691)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:719)
+	at java.awt.EventQueue$4.run(EventQueue.java:717)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:716)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2022-01-05 00:51:43.065 INFO  util.URLUtil - Started downloading http://crpnbgsfxbase01.corporate.local/TRAX/FIX44.xml?Username=smanoharan&Hostname=MKTX-AP4315&SufFIXVersion=3.0.0rc5 to FIX44.xml
+2022-01-05 00:51:43.528 INFO  util.URLUtil - Finished downloading FIX44.xml elapsed time 463
+2022-01-05 00:51:43.543 INFO  util.URLUtil - Started downloading http://crpnbgsfxbase01.corporate.local/TRAX/FIX50SP2.xml?Username=smanoharan&Hostname=MKTX-AP4315&SufFIXVersion=3.0.0rc5 to FIX50SP2.xml
+2022-01-05 00:51:43.860 INFO  util.URLUtil - Finished downloading FIX50SP2.xml elapsed time 317
+2022-01-05 00:51:43.882 INFO  util.URLUtil - Started downloading http://crpnbgsfxbase01.corporate.local/TRAX/FIXT11.xml?Username=smanoharan&Hostname=MKTX-AP4315&SufFIXVersion=3.0.0rc5 to FIXT11.xml
+2022-01-05 00:51:43.967 INFO  util.URLUtil - Finished downloading FIXT11.xml elapsed time 85
+2022-01-05 00:51:43.967 INFO  qfixmessenger.QFixMessenger - Starting acceptor with settings 
+[DEFAULT]
+NonStopSession=Y
+ConnectionType=acceptor
+InitiatorManualLogon=Y
+SocketAcceptPort=9878
+ReconnectInterval=5
+TargetCompID=INIT
+LogScreenHeartbeats=Y
+SocketConnectHost=localhost
+SenderCompID=ACCEPT
+HeartBtInt=90
+FileStorePath=data/messenger/acceptor
+FileLogPath=log/acceptor
+[SESSION]
+SocketAcceptPort=443
+TargetCompID=MA_GEMS
+SenderCompID=QA1_DUM_MAEMS
+BeginString=FIX.4.4
+[SESSION]
+SocketAcceptPort=9878
+TargetCompID=INIT
+SenderCompID=ACCEPT
+DataDictionary=C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+BeginString=FIX.4.2
+
+2022-01-05 00:51:43.998 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2022-01-05 00:51:43.998 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2022-01-05 00:51:43.998 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2022-01-05 00:51:44.014 INFO  quickfix.SocketAcceptor - Listening for connections at 0.0.0.0/0.0.0.0:9878
+2022-01-05 00:51:44.014 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2022-01-05 00:51:44.014 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2022-01-05 00:51:44.014 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2022-01-05 00:51:44.014 INFO  quickfix.SocketAcceptor - Listening for connections at 0.0.0.0/0.0.0.0:443
+2022-01-05 09:11:44.543 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:59241
+2022-01-05 09:12:16.527 ERROR acceptor.AcceptorIoHandler - Socket (/127.0.0.1:59241): java.io.IOException: An existing connection was forcibly closed by the remote host
+java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor.read(SocketIoProcessor.java:218)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor.process(SocketIoProcessor.java:198)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor.access$400(SocketIoProcessor.java:45)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor$Worker.run(SocketIoProcessor.java:485)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+	at java.lang.Thread.run(Thread.java:745)
+2022-01-05 09:12:16.941 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:59258
+2022-01-05 09:12:48.532 ERROR acceptor.AcceptorIoHandler - Socket (/127.0.0.1:59258): java.io.IOException: An existing connection was forcibly closed by the remote host
+java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor.read(SocketIoProcessor.java:218)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor.process(SocketIoProcessor.java:198)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor.access$400(SocketIoProcessor.java:45)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor$Worker.run(SocketIoProcessor.java:485)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+	at java.lang.Thread.run(Thread.java:745)
+2022-01-05 09:12:51.994 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:59277
+2022-01-05 09:13:23.987 ERROR acceptor.AcceptorIoHandler - Socket (/127.0.0.1:59277): java.io.IOException: An existing connection was forcibly closed by the remote host
+java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor.read(SocketIoProcessor.java:218)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor.process(SocketIoProcessor.java:198)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor.access$400(SocketIoProcessor.java:45)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor$Worker.run(SocketIoProcessor.java:485)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+	at java.lang.Thread.run(Thread.java:745)
+2022-01-05 09:13:24.405 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:59295
+2022-01-05 09:13:55.980 ERROR acceptor.AcceptorIoHandler - Socket (/127.0.0.1:59295): java.io.IOException: An existing connection was forcibly closed by the remote host
+java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor.read(SocketIoProcessor.java:218)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor.process(SocketIoProcessor.java:198)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor.access$400(SocketIoProcessor.java:45)
+	at org.apache.mina.transport.socket.nio.SocketIoProcessor$Worker.run(SocketIoProcessor.java:485)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+	at java.lang.Thread.run(Thread.java:745)
+2022-01-05 09:50:19.048 INFO  quickfix.SocketAcceptor - No longer accepting connections on 0.0.0.0/0.0.0.0:9878
+2022-01-05 09:50:19.048 INFO  quickfix.SocketAcceptor - No longer accepting connections on 0.0.0.0/0.0.0.0:443
+2022-01-05 09:50:19.052 INFO  quickfix.SocketAcceptor - Logging out all sessions
+2022-01-05 09:50:19.052 INFO  qfixmessenger.QFixMessenger - Shutting down at Wed Jan 05 09:50:19 GMT 2022...

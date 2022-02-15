@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<message name="NewOrderSingle" msgType="D" isRequiredOnly="false" beginString="FIX.4.2">
+    <body>
+        <field name="TraderID" id="6606">MMADTrader1</field>
+        <field name="ClOrdID" id="11">@MMAD230119-:increment</field>
+        <groups name="NoAllocs" id="78" count="0"/>
+        <field name="SettlmntTyp" id="63">3</field>
+        <groups name="NoTradingSessions" id="386" count="0"/>
+        <field name="Symbol" id="55">NA</field>
+        <field name="SymbolSfx" id="65">[NONE]</field>
+        <field name="SecurityID" id="48">US912556DU88</field>
+        <field name="IDSource" id="22">4</field>
+        <field name="Side" id="54">1</field>
+        <field name="TransactTime" id="60">@UTCTIMESTAMP</field>
+        <field name="OrderQty" id="38">1000000</field>
+        <field name="OrdType" id="40">2</field>
+        <field name="MKTXPriceType" id="6614">1</field>
+        <groups name="NoDealers" id="9690" count="0"/>
+    </body>
+</message>

@@ -1,0 +1,36 @@
+{
+    "fromMessageType": "8",
+    "toMessageType": "8",
+    "fromSystem": "MA_EMS",
+    "toSystem": "FRONT_ARENA",
+    "fromExecType": "0",
+    "outputBeginString": "FIX.4.2",
+    "outputFormat": [
+      {"MsgType": "'8'"},
+      {"OrderID": "[OrderID]"},
+      {"ClOrdID": "[ClOrdID]"},
+      {"ExecID": "[ExecID]"},
+      {"ExecType": "[ExecType]"},
+      {"ExecTransType": "'0'"},//This is hard coded since it was missing from the xform spec.  Check with Marlon.
+      {"OrdStatus": "[OrdStatus]" },
+      {"FutSettDate": "ifExists(64, [SettlDate])"},
+      {"Symbol": "[Symbol]"},
+      {"SecurityID": "[SecurityID]"},
+      //{"SecurityIDSource": "'4'"},
+      //{"MaturityDate":"[MaturityDate]"},
+      {"IssueDate":"[IssueDate]"},
+      {"CouponRate":"[CouponRate]"},
+      {"Issuer": "[Issuer]"},
+      {"SecurityDesc": "[SecurityDesc]"},
+      {"Side": "[Side]"},
+      {"OrderQty": "[OrderQty]"},
+      {"Currency": "[Currency]"},
+      {"LeavesQty": "[LeavesQty]"},
+      {"CumQty": "[CumQty]"},
+      {"AvgPx": "[AvgPx]"},
+      {"TradeDate": "[TradeDate]"},
+      {"TransactTime": "[TransactTime]"},
+      {"SettlCurrency": "[SettlCurrency]"},
+      {"MKTXInquiryID": "ifExists(20117, [MKTXInquiryID])"}
+    ]
+}     

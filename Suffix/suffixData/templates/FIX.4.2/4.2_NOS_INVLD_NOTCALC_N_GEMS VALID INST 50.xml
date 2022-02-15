@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<message name="NewOrderSingle" msgType="D" isRequiredOnly="false" beginString="FIX.4.2">
+    <body>
+        <field name="TraderID" id="6606">MMADTrader1</field>
+        <field name="ClOrdID" id="11">@4.2_NOS_INVLD_NOTCALC_N_GEMS VALID INST 50-:increment</field>
+        <groups name="NoAllocs" id="78" count="0"/>
+        <field name="SettlmntTyp" id="63">3</field>
+        <field name="HandlInst" id="21">1</field>
+        <groups name="NoTradingSessions" id="386" count="0"/>
+        <field name="Symbol" id="55">NA</field>
+        <field name="SymbolSfx" id="65">ISIN</field>
+        <field name="SecurityID" id="48">US912537TQ07</field>
+        <field name="IDSource" id="22">4</field>
+        <field name="Side" id="54">1</field>
+        <field name="TransactTime" id="60">@UTCTIMESTAMP</field>
+        <field name="OrderQty" id="38">1000000</field>
+        <field name="OrdType" id="40">2</field>
+        <field name="Price" id="44">100.25</field>
+        <field name="MKTXPriceType" id="6614">1</field>
+        <field name="TimeInForce" id="59">0</field>
+        <groups name="NoDealers" id="9690" count="0"/>
+    </body>
+</message>

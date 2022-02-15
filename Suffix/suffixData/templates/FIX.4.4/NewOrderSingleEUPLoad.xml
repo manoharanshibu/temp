@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<message name="NewOrderSingle" msgType="D" isRequiredOnly="false" beginString="FIX.4.4">
+    <body>
+        <field name="ClOrdID" id="11">@MMAD291118-:increment</field>
+        <component name="Parties">
+            <groups name="NoPartyIDs" id="453" count="1">
+                <group>
+                    <field name="PartyID" id="448">@Aggressor_Trader_PartyID</field>
+                    <field name="PartyIDSource" id="447">@Aggressor_Trader_PartyIDSource</field>
+                    <field name="PartyRole" id="452">@Aggressor_Trader_PartyRole</field>
+                    <groups name="NoPartySubIDs" id="802" count="0"/>
+                </group>
+            </groups>
+        </component>
+        <groups name="NoAllocs" id="78" count="0"/>
+        <groups name="NoTradingSessions" id="386" count="0"/>
+        <component name="Instrument">
+            <field name="Symbol" id="55">NA</field>
+            <field name="SecurityID" id="48">XS1334778021</field>
+            <field name="SecurityIDSource" id="22">4</field>
+            <groups name="NoSecurityAltID" id="454" count="0"/>
+            <groups name="NoEvents" id="864" count="0"/>
+        </component>
+        <component name="FinancingDetails"/>
+        <groups name="NoUnderlyings" id="711" count="0"/>
+        <field name="Side" id="54">2</field>
+        <field name="TransactTime" id="60">@UTCTIMESTAMP</field>
+        <component name="Stipulations">
+            <groups name="NoStipulations" id="232" count="0"/>
+        </component>
+        <component name="OrderQtyData">
+            <field name="OrderQty" id="38">1000000</field>
+        </component>
+        <field name="OrdType" id="40">1</field>
+        <field name="PriceType" id="423">1</field>
+        <component name="SpreadOrBenchmarkCurveData"/>
+        <component name="YieldData"/>
+        <component name="CommissionData"/>
+        <component name="PegInstructions"/>
+        <component name="DiscretionInstructions"/>
+        <component name="Dealers">
+            <groups name="NoDealers" id="9690" count="0"/>
+        </component>
+        <component name="BloombergFields"/>
+    </body>
+</message>

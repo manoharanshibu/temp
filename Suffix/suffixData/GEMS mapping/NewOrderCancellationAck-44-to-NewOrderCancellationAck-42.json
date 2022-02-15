@@ -1,0 +1,38 @@
+{
+    "fromMessageType": "8",
+    "toMessageType": "8",
+    "fromSystem": "MA_EMS",
+    "toSystem": "FRONT_ARENA",
+    "fromExecType": "4",
+    "outputBeginString": "FIX.4.2",
+    "outputFormat": [
+      {"MsgType": "'8'"},
+      {"OrderID": "[OrderID]"},
+      {"ClOrdID": "[ClOrdID]"},
+      {"OrigClOrdID": "[OrigClOrdID]"},
+      {"ClientID": "'???'"},//Ask Marlon what to put here
+      {"ExecID": "[ExecID]"},
+      {"ExecRefID": "[ExecRefID]"},
+      {"ExecType": "[ExecType]"},
+      {"OrdStatus": "'4'" },
+      //{"SettlDate": "[SettlDate]"},
+      {"Symbol": "[Symbol]"},
+      {"SecurityID": "[SecurityID]"},
+      //{"SecurityIDSource": "'4'"}, //Doesn't exist in 4.2 dict
+      {"CustomMaturityDate":"[MaturityDate]"},
+      {"IssueDate":"[IssueDate]"},
+      {"CouponRate":"[CouponRate]"},
+      {"Issuer": "[Issuer]"},
+      {"SecurityDesc": "[SecurityDesc]"},
+      {"Side": "[Side]"},
+      {"OrderQty": "[OrderQty]"},
+      {"Currency": "[Currency]"},
+      {"LeavesQty": "[LeavesQty]"},
+      {"CumQty": "[CumQty]"},
+      {"AvgPx": "[AvgPx]"},
+      {"TradeDate": "[TradeDate]"},
+      {"TransactTime": "[TransactTime]"},
+      {"SettlCurrency": "[SettlCurrency]"},
+      {"MKTXInquiryID": "[MKTXInquiryID]"}
+    ]
+}        

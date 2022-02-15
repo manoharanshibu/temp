@@ -1,0 +1,36 @@
+import { Meta, Story, Canvas, Props } from '@storybook/addon-docs/blocks';
+import TimerComponent from './index';
+import { Box } from '@mui/material';
+import { action } from '@storybook/addon-actions';
+import moment from 'moment';
+
+<Meta title="Components/TimerComponent" component={TimerComponent} />
+
+# Timer Component
+
+The `TimerComponent` component renders Timer Input Components
+
+export const Template = (args) => {
+  const onChangeAction = action('onChangeAction');
+  return (
+    <Box height="28px">
+      <TimerComponent {...args} onChange={onChangeAction}>
+      </TimerComponent>
+    </Box>
+  );
+};
+
+export const argTypes = {
+};
+
+## Default
+
+<Canvas>
+  <Story name="default" argTypes={argTypes}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Props
+
+<Props of={TimerComponent} />

@@ -1,0 +1,140 @@
+2019-01-28 09:55:05.129 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties
+
+2019-01-28 09:55:05.134 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties file (directory: cfg\acceptor\messenger.cfg)
+suffix.version:http://crpnycsfxbase01.corporate.local/version.txt
+messenger.dict.fix44:FIX44.xml
+messenger.dict.fix43:FIX43.xml
+messenger.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+messenger.dict.fix41:FIX41.xml
+messenger.dict.fix40:FIX40.xml
+messenger.license:resources/license.txt
+suffix.jar:http://crpnycsfxbase01.corporate.local/sufFIX.jar
+suffix.dict.fix43.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX43.xml
+messenger.dict.fixt11:FIXT11.xml
+messenger.home.url:https://code.google.com/p/quickfix-messenger/
+suffix.dict.fixt11.url:http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml
+suffix.dict.fix40.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX40.xml
+messenger.parser.threads:20
+messenger.dict.fix50sp2:FIX50SP2.xml
+messenger.dict.fix50:FIX50.xml
+suffix.dict.fix50.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50.xml
+suffix.messageTable.columns:
+messenger.icons:resources/icons/
+messenger.help.url:http://wiki.marketaxess.com/display/appdev/SufFIX
+suffix.dict.fix42.url:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+messenger.file.path:../suffixData
+suffix.dict.fix44.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml
+messenger.environment:
+suffix.dict.fix50sp2.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml
+messenger.fixwiki.url:http://fixwiki.org/fixwiki/
+suffix.dict.fix41.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX41.xml
+
+2019-01-28 09:55:05.136 INFO  util.URLUtil - Started downloading http://crpnbgsfxbase01.corporate.local/version.txt
+2019-01-28 09:55:05.315 INFO  util.URLUtil - Finished downloading elapsed time 179
+2019-01-28 09:55:05.316 ERROR config.QFixMessengerConfig - Error talking to server
+java.lang.NullPointerException
+	at com.jramoyo.qfixmessenger.config.QFixMessengerConfig.getAppropriateURLString(QFixMessengerConfig.java:450)
+	at com.jramoyo.qfixmessenger.config.QFixMessengerConfig.checkForUpdates(QFixMessengerConfig.java:331)
+	at com.jramoyo.qfixmessenger.QFixMessenger.<init>(QFixMessenger.java:341)
+	at com.jramoyo.qfixmessenger.QFixMessenger.setSessionAndMessengerSettings(QFixMessenger.java:230)
+	at com.jramoyo.qfixmessenger.QFixMessenger.main(QFixMessenger.java:172)
+2019-01-28 09:55:05.346 ERROR cache.DataDictionaryCache - Problems downloading Quickfix Data Dictionary C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+java.net.MalformedURLException: unknown protocol: c
+	at java.net.URL.<init>(URL.java:593)
+	at java.net.URL.<init>(URL.java:483)
+	at java.net.URL.<init>(URL.java:432)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.loadDataDictionaries(DataDictionaryCache.java:40)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.<init>(DataDictionaryCache.java:28)
+	at com.jramoyo.qfixmessenger.QFixMessenger.<init>(QFixMessenger.java:350)
+	at com.jramoyo.qfixmessenger.QFixMessenger.setSessionAndMessengerSettings(QFixMessenger.java:230)
+	at com.jramoyo.qfixmessenger.QFixMessenger.main(QFixMessenger.java:172)
+2019-01-28 09:55:05.414 INFO  util.URLUtil - Started downloading http://crpnbgsfxbase01.corporate.local/TRAX/FIX44.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc5 to FIX44.xml
+2019-01-28 09:55:05.958 INFO  util.URLUtil - Finished downloading FIX44.xml elapsed time 543
+2019-01-28 09:55:05.996 INFO  util.URLUtil - Started downloading http://crpnbgsfxbase01.corporate.local/TRAX/FIX50SP2.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc5 to FIX50SP2.xml
+2019-01-28 09:55:06.416 INFO  util.URLUtil - Finished downloading FIX50SP2.xml elapsed time 420
+2019-01-28 09:55:06.450 INFO  util.URLUtil - Started downloading http://crpnbgsfxbase01.corporate.local/TRAX/FIXT11.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc5 to FIXT11.xml
+2019-01-28 09:55:06.524 INFO  util.URLUtil - Finished downloading FIXT11.xml elapsed time 73
+2019-01-28 09:55:07.367 INFO  qfixmessenger.QFixMessenger - Starting acceptor with settings 
+[DEFAULT]
+NonStopSession=Y
+ConnectionType=acceptor
+InitiatorManualLogon=Y
+SocketAcceptPort=9878
+ReconnectInterval=5
+TargetCompID=INIT
+LogScreenHeartbeats=Y
+SocketConnectHost=localhost
+SenderCompID=ACCEPT
+HeartBtInt=90
+FileStorePath=data/messenger/acceptor
+FileLogPath=log/acceptor
+[SESSION]
+SocketAcceptPort=443
+TargetCompID=MA_GEMS
+SenderCompID=QA1_DUM_MAEMS
+BeginString=FIX.4.4
+[SESSION]
+SocketAcceptPort=9878
+TargetCompID=INIT
+SenderCompID=ACCEPT
+DataDictionary=C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+BeginString=FIX.4.2
+
+2019-01-28 09:55:07.606 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2019-01-28 09:55:07.606 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2019-01-28 09:55:07.606 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2019-01-28 09:55:07.622 INFO  quickfix.SocketAcceptor - Listening for connections at 0.0.0.0/0.0.0.0:9878
+2019-01-28 09:55:07.622 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2019-01-28 09:55:07.622 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2019-01-28 09:55:07.622 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2019-01-28 09:55:07.622 INFO  quickfix.SocketAcceptor - Listening for connections at 0.0.0.0/0.0.0.0:443
+2019-01-28 09:55:18.645 ERROR panels.FreeTextMessagePanel - Cannot create tree view
+quickfix.InvalidMessage: SOH not found at end of field: 10 in 8=FIX.4.49=21535=D52=20190125-12:05:34.87011=MMAD-EXPIREDISIN-421=122=438=100000040=244=100.2548=US413627AX8254=155=NA59=060=20190125-12:05:17.094423=1453=2448=MMADTrader1447=C452=11448=MMADTrader1447=P452=1210=006
+	at quickfix.Message.extractField(Message.java:802)
+	at quickfix.Message.parseGroup(Message.java:612)
+	at quickfix.Message.parseBody(Message.java:580)
+	at quickfix.Message.parse(Message.java:476)
+	at quickfix.Message.fromString(Message.java:459)
+	at com.jramoyo.qfixmessenger.ui.panels.FreeTextMessagePanel.showParsed(FreeTextMessagePanel.java:294)
+	at com.jramoyo.qfixmessenger.ui.MessageEditFrame$6.itemStateChanged(MessageEditFrame.java:375)
+	at javax.swing.AbstractButton.fireItemStateChanged(AbstractButton.java:2050)
+	at javax.swing.AbstractButton$Handler.itemStateChanged(AbstractButton.java:2353)
+	at javax.swing.DefaultButtonModel.fireItemStateChanged(DefaultButtonModel.java:455)
+	at javax.swing.JToggleButton$ToggleButtonModel.setSelected(JToggleButton.java:272)
+	at javax.swing.JToggleButton$ToggleButtonModel.setPressed(JToggleButton.java:289)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2739)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:746)
+	at java.awt.EventQueue.access$400(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.awt.EventQueue$3.run(EventQueue.java:691)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:719)
+	at java.awt.EventQueue$4.run(EventQueue.java:717)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:716)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2019-01-28 09:55:22.788 INFO  quickfix.SocketAcceptor - No longer accepting connections on 0.0.0.0/0.0.0.0:9878
+2019-01-28 09:55:22.788 INFO  quickfix.SocketAcceptor - No longer accepting connections on 0.0.0.0/0.0.0.0:443
+2019-01-28 09:55:22.789 INFO  quickfix.SocketAcceptor - Logging out all sessions
+2019-01-28 09:55:22.792 INFO  qfixmessenger.QFixMessenger - Shutting down at Mon Jan 28 09:55:22 GMT 2019...

@@ -1,0 +1,1162 @@
+2018-10-02 09:52:34.716 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties
+
+2018-10-02 09:52:34.716 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties file (directory: cfg\acceptor\messenger.cfg)
+suffix.version:http://crpnycsfxbase01.corporate.local/version.txt
+messenger.dict.fix44:FIX44.xml
+messenger.dict.fix43:FIX43.xml
+messenger.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+messenger.dict.fix41:FIX41.xml
+messenger.dict.fix40:FIX40.xml
+messenger.license:resources/license.txt
+suffix.jar:http://crpnycsfxbase01.corporate.local/sufFIX.jar
+suffix.dict.fix43.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX43.xml
+messenger.dict.fixt11:FIXT11.xml
+messenger.home.url:https://code.google.com/p/quickfix-messenger/
+suffix.dict.fixt11.url:http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml
+suffix.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+suffix.dict.fix40.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX40.xml
+messenger.parser.threads:20
+messenger.dict.fix50sp2:FIX50SP2.xml
+messenger.dict.fix50:FIX50.xml
+suffix.dict.fix50.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50.xml
+suffix.messageTable.columns:
+messenger.icons:resources/icons/
+messenger.help.url:http://wiki.marketaxess.com/display/appdev/SufFIX
+messenger.file.path:../suffixData
+suffix.dict.fix44.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml
+messenger.environment:
+suffix.dict.fix50sp2.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml
+messenger.fixwiki.url:http://fixwiki.org/fixwiki/
+suffix.dict.fix41.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX41.xml
+
+2018-10-02 09:52:34.716 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/version.txt
+2018-10-02 09:52:34.872 INFO  util.URLUtil - Finished downloading elapsed time 156
+2018-10-02 09:52:34.872 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/quickfixversion.txt
+2018-10-02 09:52:34.950 INFO  util.URLUtil - Finished downloading elapsed time 78
+2018-10-02 09:52:34.950 ERROR cache.DataDictionaryCache - Problems downloading Quickfix Data Dictionary C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+java.net.MalformedURLException: no protocol: null?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4
+	at java.net.URL.<init>(URL.java:586)
+	at java.net.URL.<init>(URL.java:483)
+	at java.net.URL.<init>(URL.java:432)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.loadDataDictionaries(DataDictionaryCache.java:40)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.<init>(DataDictionaryCache.java:28)
+	at com.jramoyo.qfixmessenger.QFixMessenger.<init>(QFixMessenger.java:350)
+	at com.jramoyo.qfixmessenger.QFixMessenger.setSessionAndMessengerSettings(QFixMessenger.java:230)
+	at com.jramoyo.qfixmessenger.QFixMessenger.main(QFixMessenger.java:172)
+2018-10-02 09:52:35.013 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX44.xml
+2018-10-02 09:52:35.513 INFO  util.URLUtil - Finished downloading FIX44.xml elapsed time 500
+2018-10-02 09:52:35.544 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX50SP2.xml
+2018-10-02 09:52:35.732 INFO  util.URLUtil - Finished downloading FIX50SP2.xml elapsed time 188
+2018-10-02 09:52:35.779 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIXT11.xml
+2018-10-02 09:52:35.841 INFO  util.URLUtil - Finished downloading FIXT11.xml elapsed time 62
+2018-10-02 09:52:36.669 INFO  qfixmessenger.QFixMessenger - Starting acceptor with settings 
+[DEFAULT]
+NonStopSession=Y
+ConnectionType=acceptor
+InitiatorManualLogon=Y
+ReconnectInterval=5
+TargetCompID=INIT
+LogScreenHeartbeats=Y
+SocketConnectHost=localhost
+SenderCompID=ACCEPT
+HeartBtInt=30
+FileStorePath=data/messenger/acceptor
+FileLogPath=log/acceptor
+[SESSION]
+SocketAcceptPort=9878
+DataDictionary=C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+BeginString=FIX.4.2
+
+2018-10-02 09:52:36.841 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2018-10-02 09:52:36.841 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2018-10-02 09:52:36.841 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2018-10-02 09:52:36.841 INFO  quickfix.SocketAcceptor - Listening for connections at 0.0.0.0/0.0.0.0:9878
+2018-10-02 09:52:43.101 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:65348
+2018-10-02 09:54:27.572 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:65357
+2018-10-02 09:54:28.009 INFO  quickfix.Session - [FIX.4.2:ACCEPT->INIT] Disconnecting: IO Session closed
+2018-10-02 09:54:52.707 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:65365
+2018-10-02 09:54:53.004 INFO  quickfix.Session - [FIX.4.2:ACCEPT->INIT] Disconnecting: IO Session closed
+2018-10-02 09:54:53.004 INFO  quickfix.QFixMessengerApplication - No text in logout, taking no action 8=FIX.4.29=5335=534=249=INIT52=20181002-08:54:53.00456=ACCEPT10=183
+2018-10-02 09:54:53.004 INFO  quickfix.QFixMessengerApplication - fromAdmin: Logout received 8=FIX.4.29=5335=534=249=INIT52=20181002-08:54:53.00456=ACCEPT10=183
+2018-10-02 09:55:09.027 INFO  quickfix.SocketAcceptor - No longer accepting connections on 0.0.0.0/0.0.0.0:9878
+2018-10-02 09:55:09.027 INFO  quickfix.SocketAcceptor - Logging out all sessions
+2018-10-02 09:55:09.043 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties
+
+2018-10-02 09:55:09.043 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties file (directory: cfg\acceptor\messenger.cfg)
+suffix.version:http://crpnycsfxbase01.corporate.local/version.txt
+messenger.dict.fix44:FIX44.xml
+messenger.dict.fix43:FIX43.xml
+messenger.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+messenger.dict.fix41:FIX41.xml
+messenger.dict.fix40:FIX40.xml
+messenger.license:resources/license.txt
+suffix.jar:http://crpnycsfxbase01.corporate.local/sufFIX.jar
+suffix.dict.fix43.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX43.xml
+messenger.dict.fixt11:FIXT11.xml
+messenger.home.url:https://code.google.com/p/quickfix-messenger/
+suffix.dict.fixt11.url:http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml
+suffix.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+suffix.dict.fix40.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX40.xml
+messenger.parser.threads:20
+messenger.dict.fix50sp2:FIX50SP2.xml
+messenger.dict.fix50:FIX50.xml
+suffix.dict.fix50.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50.xml
+suffix.messageTable.columns:
+messenger.icons:resources/icons/
+messenger.help.url:http://wiki.marketaxess.com/display/appdev/SufFIX
+messenger.file.path:../suffixData
+suffix.dict.fix44.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml
+messenger.environment:
+suffix.dict.fix50sp2.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml
+messenger.fixwiki.url:http://fixwiki.org/fixwiki/
+suffix.dict.fix41.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX41.xml
+
+2018-10-02 09:55:09.043 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/version.txt
+2018-10-02 09:55:09.184 INFO  util.URLUtil - Finished downloading elapsed time 141
+2018-10-02 09:55:09.184 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/quickfixversion.txt
+2018-10-02 09:55:09.262 INFO  util.URLUtil - Finished downloading elapsed time 78
+2018-10-02 09:55:09.262 ERROR cache.DataDictionaryCache - Problems downloading Quickfix Data Dictionary C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+java.net.MalformedURLException: no protocol: null?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4
+	at java.net.URL.<init>(URL.java:586)
+	at java.net.URL.<init>(URL.java:483)
+	at java.net.URL.<init>(URL.java:432)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.loadDataDictionaries(DataDictionaryCache.java:40)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.<init>(DataDictionaryCache.java:28)
+	at com.jramoyo.qfixmessenger.QFixMessenger.<init>(QFixMessenger.java:350)
+	at com.jramoyo.qfixmessenger.QFixMessenger.setSessionAndMessengerSettings(QFixMessenger.java:230)
+	at com.jramoyo.qfixmessenger.QFixMessenger.refresh(QFixMessenger.java:396)
+	at com.jramoyo.qfixmessenger.ui.QFixMessengerFrame.reload(QFixMessengerFrame.java:2398)
+	at com.jramoyo.qfixmessenger.ui.QFixMessengerFrame$1.actionPerformed(QFixMessengerFrame.java:445)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2739)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:746)
+	at java.awt.EventQueue.access$400(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.awt.EventQueue$3.run(EventQueue.java:691)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:719)
+	at java.awt.EventQueue$4.run(EventQueue.java:717)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:716)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2018-10-02 09:55:09.262 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX44.xml
+2018-10-02 09:55:09.762 INFO  util.URLUtil - Finished downloading FIX44.xml elapsed time 500
+2018-10-02 09:55:09.793 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX50SP2.xml
+2018-10-02 09:55:09.965 INFO  util.URLUtil - Finished downloading FIX50SP2.xml elapsed time 172
+2018-10-02 09:55:09.980 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIXT11.xml
+2018-10-02 09:55:10.058 INFO  util.URLUtil - Finished downloading FIXT11.xml elapsed time 78
+2018-10-02 09:55:10.058 INFO  qfixmessenger.QFixMessenger - Starting acceptor with settings 
+[DEFAULT]
+NonStopSession=Y
+ConnectionType=acceptor
+InitiatorManualLogon=Y
+ReconnectInterval=5
+TargetCompID=INIT
+LogScreenHeartbeats=Y
+SocketConnectHost=localhost
+SenderCompID=ACCEPT
+HeartBtInt=30
+FileStorePath=data/messenger/acceptor
+FileLogPath=log/acceptor
+[SESSION]
+SocketAcceptPort=9878
+DataDictionary=C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+BeginString=FIX.4.2
+
+2018-10-02 09:55:10.090 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2018-10-02 09:55:10.090 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2018-10-02 09:55:10.090 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2018-10-02 09:55:10.090 INFO  quickfix.SocketAcceptor - Listening for connections at 0.0.0.0/0.0.0.0:9878
+2018-10-02 09:55:21.278 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:65374
+2018-10-02 10:20:59.117 INFO  quickfix.QFixMessengerApplication - Server has rejected login with message user requested
+2018-10-02 10:20:59.117 INFO  quickfix.QFixMessengerApplication - fromAdmin: Logout received 8=FIX.4.29=7235=534=5349=INIT52=20181002-09:20:59.11756=ACCEPT58=user requested10=079
+2018-10-02 10:20:59.117 INFO  quickfix.Session - [FIX.4.2:ACCEPT->INIT] Disconnecting: Received logout request
+2018-10-02 10:21:03.414 INFO  quickfix.SocketAcceptor - No longer accepting connections on 0.0.0.0/0.0.0.0:9878
+2018-10-02 10:21:03.414 INFO  quickfix.SocketAcceptor - Logging out all sessions
+2018-10-02 10:21:03.414 INFO  qfixmessenger.QFixMessenger - Shutting down at Tue Oct 02 10:21:03 BST 2018...
+2018-10-02 10:21:10.400 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties
+
+2018-10-02 10:21:10.400 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties file (directory: cfg\acceptor\messenger.cfg)
+suffix.version:http://crpnycsfxbase01.corporate.local/version.txt
+messenger.dict.fix44:FIX44.xml
+messenger.dict.fix43:FIX43.xml
+messenger.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+messenger.dict.fix41:FIX41.xml
+messenger.dict.fix40:FIX40.xml
+messenger.license:resources/license.txt
+suffix.jar:http://crpnycsfxbase01.corporate.local/sufFIX.jar
+suffix.dict.fix43.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX43.xml
+messenger.dict.fixt11:FIXT11.xml
+messenger.home.url:https://code.google.com/p/quickfix-messenger/
+suffix.dict.fixt11.url:http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml
+suffix.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+suffix.dict.fix40.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX40.xml
+messenger.parser.threads:20
+messenger.dict.fix50sp2:FIX50SP2.xml
+messenger.dict.fix50:FIX50.xml
+suffix.dict.fix50.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50.xml
+suffix.messageTable.columns:
+messenger.icons:resources/icons/
+messenger.help.url:http://wiki.marketaxess.com/display/appdev/SufFIX
+messenger.file.path:../suffixData
+suffix.dict.fix44.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml
+messenger.environment:
+suffix.dict.fix50sp2.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml
+messenger.fixwiki.url:http://fixwiki.org/fixwiki/
+suffix.dict.fix41.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX41.xml
+
+2018-10-02 10:21:10.400 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/version.txt
+2018-10-02 10:21:10.556 INFO  util.URLUtil - Finished downloading elapsed time 156
+2018-10-02 10:21:10.556 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/quickfixversion.txt
+2018-10-02 10:21:10.634 INFO  util.URLUtil - Finished downloading elapsed time 78
+2018-10-02 10:21:10.634 ERROR cache.DataDictionaryCache - Problems downloading Quickfix Data Dictionary C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+java.net.MalformedURLException: no protocol: null?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4
+	at java.net.URL.<init>(URL.java:586)
+	at java.net.URL.<init>(URL.java:483)
+	at java.net.URL.<init>(URL.java:432)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.loadDataDictionaries(DataDictionaryCache.java:40)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.<init>(DataDictionaryCache.java:28)
+	at com.jramoyo.qfixmessenger.QFixMessenger.<init>(QFixMessenger.java:350)
+	at com.jramoyo.qfixmessenger.QFixMessenger.setSessionAndMessengerSettings(QFixMessenger.java:230)
+	at com.jramoyo.qfixmessenger.QFixMessenger.main(QFixMessenger.java:172)
+2018-10-02 10:21:10.697 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX44.xml
+2018-10-02 10:21:11.192 INFO  util.URLUtil - Finished downloading FIX44.xml elapsed time 495
+2018-10-02 10:21:11.223 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX50SP2.xml
+2018-10-02 10:21:11.391 INFO  util.URLUtil - Finished downloading FIX50SP2.xml elapsed time 168
+2018-10-02 10:21:11.438 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIXT11.xml
+2018-10-02 10:21:11.501 INFO  util.URLUtil - Finished downloading FIXT11.xml elapsed time 63
+2018-10-02 10:21:12.344 INFO  qfixmessenger.QFixMessenger - Starting acceptor with settings 
+[DEFAULT]
+NonStopSession=Y
+ConnectionType=acceptor
+InitiatorManualLogon=Y
+ReconnectInterval=5
+TargetCompID=INIT
+LogScreenHeartbeats=Y
+SocketConnectHost=localhost
+SenderCompID=ACCEPT
+HeartBtInt=30
+FileStorePath=data/messenger/acceptor
+FileLogPath=log/acceptor
+[SESSION]
+SocketAcceptPort=9878
+DataDictionary=C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+BeginString=FIX.4.2
+
+2018-10-02 10:21:12.516 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2018-10-02 10:21:12.516 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2018-10-02 10:21:12.516 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2018-10-02 10:21:12.516 INFO  quickfix.SocketAcceptor - Listening for connections at 0.0.0.0/0.0.0.0:9878
+2018-10-02 10:21:40.526 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:49332
+2018-10-02 10:23:16.143 INFO  listeners.SendActionListener - Sending message 8=FIX.4.29=40535=849=MA56=STPTC34=6752=20180815-12:22:43.19637=582212611=JBZ1808061810142557109=STP Test Client, Inc.17=5822126-laj1r20=0150=039=022=448=USP79171AE7955=FIXED54=164=2018081738=870000151=87000032=031=075=20180815381=014=06637=202409016620=201703016659=201703016609=MISC6=0.015=USD120=USD60=20180815-12:22:43223=7.45106=PROVINCE OF CORDOBA107=CORDO  7.450  9/1/24 (URegS)10=074
+2018-10-02 10:40:34.101 INFO  quickfix.SocketAcceptor - No longer accepting connections on 0.0.0.0/0.0.0.0:9878
+2018-10-02 10:40:34.101 INFO  quickfix.SocketAcceptor - Logging out all sessions
+2018-10-02 10:40:34.507 INFO  quickfix.QFixMessengerApplication - No text in logout, taking no action 8=FIX.4.29=5435=534=9249=INIT52=20181002-09:40:34.50756=ACCEPT10=244
+2018-10-02 10:40:34.507 INFO  quickfix.QFixMessengerApplication - fromAdmin: Logout received 8=FIX.4.29=5435=534=9249=INIT52=20181002-09:40:34.50756=ACCEPT10=244
+2018-10-02 10:40:34.507 INFO  quickfix.Session - [FIX.4.2:ACCEPT->INIT] Disconnecting: IO Session closed
+2018-10-02 10:40:34.538 INFO  qfixmessenger.QFixMessenger - Shutting down at Tue Oct 02 10:40:34 BST 2018...
+2018-10-02 10:40:41.450 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties
+
+2018-10-02 10:40:41.450 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties file (directory: cfg\acceptor\messenger.cfg)
+suffix.version:http://crpnycsfxbase01.corporate.local/version.txt
+messenger.dict.fix44:FIX44.xml
+messenger.dict.fix43:FIX43.xml
+messenger.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+messenger.dict.fix41:FIX41.xml
+messenger.dict.fix40:FIX40.xml
+messenger.license:resources/license.txt
+suffix.jar:http://crpnycsfxbase01.corporate.local/sufFIX.jar
+suffix.dict.fix43.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX43.xml
+messenger.dict.fixt11:FIXT11.xml
+messenger.home.url:https://code.google.com/p/quickfix-messenger/
+suffix.dict.fixt11.url:http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml
+suffix.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+suffix.dict.fix40.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX40.xml
+messenger.parser.threads:20
+messenger.dict.fix50sp2:FIX50SP2.xml
+messenger.dict.fix50:FIX50.xml
+suffix.dict.fix50.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50.xml
+suffix.messageTable.columns:
+messenger.icons:resources/icons/
+messenger.help.url:http://wiki.marketaxess.com/display/appdev/SufFIX
+messenger.file.path:../suffixData
+suffix.dict.fix44.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml
+messenger.environment:
+suffix.dict.fix50sp2.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml
+messenger.fixwiki.url:http://fixwiki.org/fixwiki/
+suffix.dict.fix41.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX41.xml
+
+2018-10-02 10:40:41.465 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/version.txt
+2018-10-02 10:40:41.622 INFO  util.URLUtil - Finished downloading elapsed time 157
+2018-10-02 10:40:41.622 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/quickfixversion.txt
+2018-10-02 10:40:41.700 INFO  util.URLUtil - Finished downloading elapsed time 78
+2018-10-02 10:40:41.715 ERROR cache.DataDictionaryCache - Problems downloading Quickfix Data Dictionary C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+java.net.MalformedURLException: no protocol: null?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4
+	at java.net.URL.<init>(URL.java:586)
+	at java.net.URL.<init>(URL.java:483)
+	at java.net.URL.<init>(URL.java:432)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.loadDataDictionaries(DataDictionaryCache.java:40)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.<init>(DataDictionaryCache.java:28)
+	at com.jramoyo.qfixmessenger.QFixMessenger.<init>(QFixMessenger.java:350)
+	at com.jramoyo.qfixmessenger.QFixMessenger.setSessionAndMessengerSettings(QFixMessenger.java:230)
+	at com.jramoyo.qfixmessenger.QFixMessenger.main(QFixMessenger.java:172)
+2018-10-02 10:40:41.778 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX44.xml
+2018-10-02 10:40:42.278 INFO  util.URLUtil - Finished downloading FIX44.xml elapsed time 500
+2018-10-02 10:40:42.325 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX50SP2.xml
+2018-10-02 10:40:42.481 INFO  util.URLUtil - Finished downloading FIX50SP2.xml elapsed time 156
+2018-10-02 10:40:42.512 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIXT11.xml
+2018-10-02 10:40:42.590 INFO  util.URLUtil - Finished downloading FIXT11.xml elapsed time 78
+2018-10-02 10:40:43.403 INFO  qfixmessenger.QFixMessenger - Starting acceptor with settings 
+[DEFAULT]
+NonStopSession=Y
+ConnectionType=acceptor
+InitiatorManualLogon=Y
+ReconnectInterval=5
+TargetCompID=INIT
+LogScreenHeartbeats=Y
+SocketConnectHost=localhost
+SenderCompID=ACCEPT
+HeartBtInt=30
+FileStorePath=data/messenger/acceptor
+FileLogPath=log/acceptor
+[SESSION]
+SocketAcceptPort=9878
+DataDictionary=C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+BeginString=FIX.4.2
+
+2018-10-02 10:40:43.575 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2018-10-02 10:40:43.575 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2018-10-02 10:40:43.575 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2018-10-02 10:40:43.590 INFO  quickfix.SocketAcceptor - Listening for connections at 0.0.0.0/0.0.0.0:9878
+2018-10-02 10:40:56.106 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:49607
+2018-10-02 10:43:45.063 INFO  quickfix.SocketAcceptor - No longer accepting connections on 0.0.0.0/0.0.0.0:9878
+2018-10-02 10:43:45.063 INFO  quickfix.SocketAcceptor - Logging out all sessions
+2018-10-02 10:43:45.579 INFO  quickfix.QFixMessengerApplication - No text in logout, taking no action 8=FIX.4.29=5435=534=9949=INIT52=20181002-09:43:45.57956=ACCEPT10=009
+2018-10-02 10:43:45.579 INFO  quickfix.Session - [FIX.4.2:ACCEPT->INIT] Disconnecting: IO Session closed
+2018-10-02 10:43:45.579 INFO  quickfix.QFixMessengerApplication - fromAdmin: Logout received 8=FIX.4.29=5435=534=9949=INIT52=20181002-09:43:45.57956=ACCEPT10=009
+2018-10-02 10:43:45.610 INFO  qfixmessenger.QFixMessenger - Shutting down at Tue Oct 02 10:43:45 BST 2018...
+2018-10-02 10:43:54.111 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties
+
+2018-10-02 10:43:54.127 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties file (directory: cfg\acceptor\messenger.cfg)
+suffix.version:http://crpnycsfxbase01.corporate.local/version.txt
+messenger.dict.fix44:FIX44.xml
+messenger.dict.fix43:FIX43.xml
+messenger.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+messenger.dict.fix41:FIX41.xml
+messenger.dict.fix40:FIX40.xml
+messenger.license:resources/license.txt
+suffix.jar:http://crpnycsfxbase01.corporate.local/sufFIX.jar
+suffix.dict.fix43.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX43.xml
+messenger.dict.fixt11:FIXT11.xml
+messenger.home.url:https://code.google.com/p/quickfix-messenger/
+suffix.dict.fixt11.url:http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml
+suffix.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+suffix.dict.fix40.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX40.xml
+messenger.parser.threads:20
+messenger.dict.fix50sp2:FIX50SP2.xml
+messenger.dict.fix50:FIX50.xml
+suffix.dict.fix50.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50.xml
+suffix.messageTable.columns:
+messenger.icons:resources/icons/
+messenger.help.url:http://wiki.marketaxess.com/display/appdev/SufFIX
+messenger.file.path:../suffixData
+suffix.dict.fix44.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml
+messenger.environment:
+suffix.dict.fix50sp2.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml
+messenger.fixwiki.url:http://fixwiki.org/fixwiki/
+suffix.dict.fix41.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX41.xml
+
+2018-10-02 10:43:54.127 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/version.txt
+2018-10-02 10:43:54.283 INFO  util.URLUtil - Finished downloading elapsed time 156
+2018-10-02 10:43:54.283 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/quickfixversion.txt
+2018-10-02 10:43:54.346 INFO  util.URLUtil - Finished downloading elapsed time 63
+2018-10-02 10:43:54.361 ERROR cache.DataDictionaryCache - Problems downloading Quickfix Data Dictionary C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+java.net.MalformedURLException: no protocol: null?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4
+	at java.net.URL.<init>(URL.java:586)
+	at java.net.URL.<init>(URL.java:483)
+	at java.net.URL.<init>(URL.java:432)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.loadDataDictionaries(DataDictionaryCache.java:40)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.<init>(DataDictionaryCache.java:28)
+	at com.jramoyo.qfixmessenger.QFixMessenger.<init>(QFixMessenger.java:350)
+	at com.jramoyo.qfixmessenger.QFixMessenger.setSessionAndMessengerSettings(QFixMessenger.java:230)
+	at com.jramoyo.qfixmessenger.QFixMessenger.main(QFixMessenger.java:172)
+2018-10-02 10:43:54.408 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX44.xml
+2018-10-02 10:43:54.908 INFO  util.URLUtil - Finished downloading FIX44.xml elapsed time 500
+2018-10-02 10:43:54.955 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX50SP2.xml
+2018-10-02 10:43:55.127 INFO  util.URLUtil - Finished downloading FIX50SP2.xml elapsed time 172
+2018-10-02 10:43:55.158 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIXT11.xml
+2018-10-02 10:43:55.237 INFO  util.URLUtil - Finished downloading FIXT11.xml elapsed time 79
+2018-10-02 10:43:56.096 INFO  qfixmessenger.QFixMessenger - Starting acceptor with settings 
+[DEFAULT]
+NonStopSession=Y
+ConnectionType=acceptor
+InitiatorManualLogon=Y
+ReconnectInterval=5
+TargetCompID=INIT
+LogScreenHeartbeats=Y
+SocketConnectHost=localhost
+SenderCompID=ACCEPT
+HeartBtInt=30
+FileStorePath=data/messenger/acceptor
+FileLogPath=log/acceptor
+[SESSION]
+SocketAcceptPort=9878
+DataDictionary=C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+BeginString=FIX.4.2
+
+2018-10-02 10:43:56.268 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2018-10-02 10:43:56.268 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2018-10-02 10:43:56.268 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2018-10-02 10:43:56.268 INFO  quickfix.SocketAcceptor - Listening for connections at 0.0.0.0/0.0.0.0:9878
+2018-10-02 10:44:02.526 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:49653
+2018-10-02 10:44:07.311 ERROR qfixmessenger.QFixMessenger - An unexpected exception occured!
+java.lang.NullPointerException
+	at com.jramoyo.qfixmessenger.ui.panels.FreeTextMessagePanel.showParsed(FreeTextMessagePanel.java:322)
+	at com.jramoyo.qfixmessenger.ui.MessageEditFrame$6.itemStateChanged(MessageEditFrame.java:375)
+	at javax.swing.AbstractButton.fireItemStateChanged(AbstractButton.java:2050)
+	at javax.swing.AbstractButton$Handler.itemStateChanged(AbstractButton.java:2353)
+	at javax.swing.DefaultButtonModel.fireItemStateChanged(DefaultButtonModel.java:455)
+	at javax.swing.JToggleButton$ToggleButtonModel.setSelected(JToggleButton.java:272)
+	at javax.swing.JToggleButton$ToggleButtonModel.setPressed(JToggleButton.java:289)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2739)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:746)
+	at java.awt.EventQueue.access$400(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.awt.EventQueue$3.run(EventQueue.java:691)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:719)
+	at java.awt.EventQueue$4.run(EventQueue.java:717)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:716)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2018-10-02 10:44:08.420 ERROR qfixmessenger.QFixMessenger - An unexpected exception occured!
+java.lang.NullPointerException
+	at com.jramoyo.qfixmessenger.ui.panels.FreeTextMessagePanel.showParsed(FreeTextMessagePanel.java:322)
+	at com.jramoyo.qfixmessenger.ui.MessageEditFrame$6.itemStateChanged(MessageEditFrame.java:378)
+	at javax.swing.AbstractButton.fireItemStateChanged(AbstractButton.java:2050)
+	at javax.swing.AbstractButton$Handler.itemStateChanged(AbstractButton.java:2353)
+	at javax.swing.DefaultButtonModel.fireItemStateChanged(DefaultButtonModel.java:455)
+	at javax.swing.JToggleButton$ToggleButtonModel.setSelected(JToggleButton.java:272)
+	at javax.swing.JToggleButton$ToggleButtonModel.setPressed(JToggleButton.java:289)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2739)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:746)
+	at java.awt.EventQueue.access$400(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.awt.EventQueue$3.run(EventQueue.java:691)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:719)
+	at java.awt.EventQueue$4.run(EventQueue.java:717)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:716)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2018-10-02 10:44:24.493 INFO  listeners.SendActionListener - Sending message 8=FIX.4.29=172435=849=MA56=STPTC34=6852=20180815-12:23:02.1839690=139691=WPACBIC9692=B9694=100.8109693=19695=8700009697=Done7761=19691=ABO1MPID9692=C9694=105.0009693=19695=8700009697=Covered7761=29691=GMSG9692=C9694=107.5009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=39691=GUCPUSM19692=B9694=108.3009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=49691=RBAIUS41XXX9692=B9694=114.1009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=59691=LAZA9692=C9694=115.4009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=69691=NITE9692=B9694=116.4009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=79691=AASIUS339692=B9694=117.5009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=89691=ANZBUS339692=B9696=Please Contact your ANZ Salesperson 1.9697=Passed7761=99691=CRLYUS339692=B9697=Passed7761=109691=CTBAAU2SFXD9692=B9696=None in TList9697=Passed7761=119691=RDOSUS319692=B9697=Passed7761=129691=SBSIUS339692=B9697=Timed Out 7761=153109=STP Test Client, Inc.76=WPACBIC17=One-USD_EMM-1662856-0-0-laxor37=582212611=JBZ180806181014255719=5822126-laj1r20=0150=239=264=2018081754=132=87000031=100.810151=014=8700006=100.8109805=438.9489806=421.2165645=439.4749804=439.4745961=Price75=2018081560=20180815-12:23:02.079381=877047.0038=8700006655=87000055=FIXED22=448=USP79171AE79200=202409205=1223=7.45106=PROVINCE OF CORDOBA6620=201703016659=20170301107=CORDO  7.450  9/1/24 (URegS)6608=7.2816637=202409016611=29886.926612=906933.926609=MISC6606=atrianine@marketxess.com15=USD120=USD9947=wpacus04157=16610=206
+2018-10-02 10:55:29.949 INFO  listeners.SendActionListener - Sending message 8=FIX.4.29=173535=849=MA56=STPTC34=7852=20180815-12:27:51.2289690=139691=WPACBIC9692=B9694=100.8109693=19695=8700009697=Cancelled7761=19691=ABO1MPID9692=C9694=105.0009693=19695=8700009697=Covered7761=29691=GMSG9692=C9694=107.5009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=39691=GUCPUSM19692=B9694=108.3009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=49691=RBAIUS41XXX9692=B9694=114.1009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=59691=LAZA9692=C9694=115.4009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=69691=NITE9692=B9694=116.4009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=79691=AASIUS339692=B9694=117.5009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=89691=ANZBUS339692=B9696=Please Contact your ANZ Salesperson 1.9697=Passed7761=99691=CRLYUS339692=B9697=Passed7761=109691=CTBAAU2SFXD9692=B9696=None in TList9697=Passed7761=119691=RDOSUS319692=B9697=Passed7761=129691=SBSIUS339692=B9697=Timed Out 7761=153109=STP Test Client, Inc.76=WPACBIC17=One-USD_EMM-1662856-0-0-lh4q237=582212611=JBZ180806181014255719=One-USD_EMM-1662856-0-0-laxor20=1150=439=464=2018081754=132=031=100.810151=014=06=100.8109805=438.9489806=421.2165645=439.4749804=439.4745961=Price75=2018081560=20180815-12:23:02.079381=877047.0038=8700006655=87000055=FIXED22=448=USP79171AE79200=202409205=1223=7.45106=PROVINCE OF CORDOBA6620=201703016659=20170301107=CORDO  7.450  9/1/24 (URegS)6608=7.2816637=202409016611=29886.926612=906933.926609=MISC6606=atrianine@marketxess.com15=USD120=USD9947=wpacus04157=16610=014
+2018-10-02 11:05:53.740 INFO  listeners.SendActionListener - Sending message 8=FIX.4.29=40635=849=MA56=STPTC34=1252=20180814-16:51:26.82137=581910111=JBZ1808061810142557109=STP Test Client, Inc.17=5819101-12zlxz20=0150=039=022=448=USP79171AE7955=FIXED54=164=2018081638=870000151=87000032=031=075=20180814381=014=06637=202409016620=201703016659=201703016609=MISC6=0.015=USD120=USD60=20180814-16:51:26223=7.45106=PROVINCE OF CORDOBA107=CORDO  7.450  9/1/24 (URegS)10=165
+2018-10-02 11:07:29.906 INFO  listeners.SendActionListener - Sending message 8=FIX.4.29=211335=849=MA56=STPTC34=1752=20180814-16:53:47.7489690=219691=DLR39692=B9694=84.6559693=19695=8700009697=Done7761=19691=MKTX9692=C9694=84.3369693=19695=8700009697=Covered7761=29691=WPACBIC9692=B9694=100.8209693=19695=8700009697=Missed7761=39691=ABO1MPID9692=C9694=104.0009693=19695=8700009697=Missed7761=49691=GMSG9692=C9694=104.5009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=59691=GUCPUSM19692=B9694=109.2009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=69691=NITE9692=B9694=112.9009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=79691=RBAIUS41XXX9692=B9694=113.2009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=89691=AASIUS339692=B9694=113.8009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=99691=LAZA9692=C9694=114.0009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=109691=ANZBUS339692=B9696=Please Contact your ANZ Salesperson 1.9697=Passed7761=119691=CRLYUS339692=B9697=Passed7761=129691=CTBAAU2SFXD9692=B9696=None in TList9697=Passed7761=139691=RDOSUS319692=B9697=Passed7761=149691=DLR19692=B9697=Timed Out7761=159691=GOLDUS339692=B9697=Timed Out7761=169691=SGSCUS339692=B9697=Timed Out7761=179691=STFL9692=C9697=Timed Out7761=1519691=WLMS9692=C9697=Timed Out7761=1529691=WYNS9692=C9697=Timed Out7761=1539691=ZKBKCHZZ80A9692=B9697=Timed Out7761=154109=STP Test Client, Inc.76=DLR317=One-USD_EMM-1662554-0-0-132mnh37=581910111=JBZ180806181014255719=5819101-12zlxz20=0150=239=264=2018081654=132=87000031=84.655151=014=8700006=84.6559805=808.6999806=828.3375645=809.5249804=809.5245961=Price75=2018081460=20180814-16:53:47.580381=736498.5038=8700006655=87000055=FIXED22=448=USP79171AE79200=202409205=1223=7.45106=PROVINCE OF CORDOBA6620=201703016659=20170301107=CORDO  7.450  9/1/24 (URegS)6608=10.9916637=202409016611=29706.876612=766205.376609=MISC6606=atrianine@marketxess.com15=USD120=USD9947=bsctrader3157=16510=137
+2018-10-02 11:09:05.772 INFO  listeners.SendActionListener - Sending message 8=FIX.4.29=196335=849=MA56=STPTC34=3052=20180814-17:00:02.6379690=179691=DLR39692=B9694=84.6559693=19695=8700009697=Cxl - Amended7761=19691=MKTX9692=C9694=84.3369693=19695=8700009697=Covered7761=29691=WPACBIC9692=B9694=100.8209693=19695=8700009697=Missed7761=39691=ABO1MPID9692=C9694=104.0009693=19695=8700009697=Missed7761=49691=GMSG9692=C9694=104.5009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=59691=GUCPUSM19692=B9694=109.2009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=69691=NITE9692=B9694=112.9009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=79691=RBAIUS41XXX9692=B9694=113.2009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=89691=AASIUS339692=B9694=113.8009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=99691=LAZA9692=C9694=114.0009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=109691=ANZBUS339692=B9696=Please Contact your ANZ Salesperson 1.9697=Passed7761=119691=CRLYUS339692=B9697=Passed7761=129691=CTBAAU2SFXD9692=B9696=None in TList9697=Passed7761=139691=RDOSUS319692=B9697=Passed7761=149691=DLR19692=B9697=Timed Out7761=159691=GOLDUS339692=B9697=Timed Out 7761=1539691=ZKBKCHZZ80A9692=B9697=Timed Out7761=154109=STP Test Client, Inc.76=DLR317=One-USD_EMM-1662554-0-0-13anxv37=581910111=JBZ180806181014255719=One-USD_EMM-1662554-0-0-132mnh20=139=2150=264=2018081654=132=031=84.655151=014=06=84.6559805=808.6999806=828.3375645=809.5249804=809.5245961=Price75=2018081460=20180814-16:53:47.580381=736498.5038=8700006655=87000055=FIXED22=448=USP79171AE79200=202409205=1223=7.45106=PROVINCE OF CORDOBA6620=201703016659=20170301107=CORDO  7.450  9/1/24 (URegS)6608=10.9916637=202409016611=29706.876612=766205.376609=MISC6606=atrianine@marketxess.com15=USD120=USD9947=bsctrader3157=16510=239
+2018-10-02 11:09:58.860 INFO  listeners.SendActionListener - Sending message 8=FIX.4.29=40535=849=MA56=STPTC34=2752=20180815-12:04:32.67837=582210711=JBZ1808061810142557109=STP Test Client, Inc.17=5822107-kn5lj20=0150=039=022=448=USP79171AE7955=FIXED54=164=2018081738=870000151=87000032=031=075=20180815381=014=06637=202409016620=201703016659=201703016609=MISC6=0.015=USD120=USD60=20180815-12:04:32223=7.45106=PROVINCE OF CORDOBA107=CORDO  7.450  9/1/24 (URegS)10=079
+2018-10-02 11:11:02.510 INFO  listeners.SendActionListener - Sending message 8=FIX.4.29=189235=849=MA56=STPTC34=3252=20180815-12:06:36.5339690=169691=SBSIUS339692=B9694=75.0109693=19695=1000009697=Done7761=19691=ABO1MPID9692=C9694=97.0009693=19695=2500009697=Covered7761=29691=WPACBIC9692=B9694=101.1009693=19695=2500009697=Missed7761=39691=LAZA9692=C9694=104.4009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=49691=AASIUS339692=B9694=106.9009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=59691=GMSG9692=C9694=108.7009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=69691=GUCPUSM19692=B9694=114.5009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=79691=RBAIUS41XXX9692=B9694=115.5009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=89691=NITE9692=B9694=120.1009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=99691=ANZBUS339692=B9696=Please Contact your ANZ Salesperson 1.9697=Passed7761=109691=CRLYUS339692=B9697=Passed7761=119691=CTBAAU2SFXD9692=B9696=None in TList9697=Passed7761=129691=RDOSUS319692=B9697=Passed7761=139691=GOLDUS339692=B9697=Timed Out7761=149691=FISA9692=C9697=Timed Out 7761=1529691=ZKBKCHZZ80A9692=B9697=Timed Out7761=153109=STP Test Client, Inc.76=SBSIUS3317=One-USD_AGN-1662852-0-0-kpt1r37=582210711=JBZ180806181014255719=5822107-kn5lj20=0150=139=164=2018081754=132=10000031=75.010151=77000014=1000006=75.0109805=1076.7239806=1153.7875645=1077.6129804=1077.6125961=Price75=2018081560=20180815-12:06:36.284381=75010.0038=8700006655=25000055=FIXED22=448=USP79171AE79200=202409205=1223=7.45106=PROVINCE OF CORDOBA6620=201703016659=20170301107=CORDO  7.450  9/1/24 (URegS)6608=13.6576637=202409016611=3435.286612=78445.286609=MISC6606=atrianine@marketxess.com15=USD120=USD9947=citiustrade157=16610=080
+2018-10-02 11:12:26.802 INFO  listeners.SendActionListener - Sending message 8=FIX.4.29=197735=849=MA56=STPTC34=3352=20180815-12:06:36.5709690=169691=SBSIUS339692=B9694=75.0109693=19695=1000009697=Done7761=19691=ABO1MPID9692=C9694=97.0009693=19695=2500009697=Covered7761=29691=WPACBIC9692=B9694=101.1009693=19695=2500009697=Missed7761=39691=LAZA9692=C9694=104.4009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=49691=AASIUS339692=B9694=106.9009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=59691=GMSG9692=C9694=108.7009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=69691=GUCPUSM19692=B9694=114.5009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=79691=RBAIUS41XXX9692=B9694=115.5009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=89691=NITE9692=B9694=120.1009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=99691=ANZBUS339692=B9696=Please Contact your ANZ Salesperson 1.9697=Passed7761=109691=CRLYUS339692=B9697=Passed7761=119691=CTBAAU2SFXD9692=B9696=None in TList9697=Passed7761=129691=RDOSUS319692=B9697=Passed7761=139691=GOLDUS339692=B9697=Timed Out7761=149691=FISA9692=C9697=Timed Out7761=159691=ACTI9692=C9697=Timed Out7761=169691=AMMS9692=C9697=Timed Out7761=1529691=ZKBKCHZZ80A9692=B9697=Timed Out7761=153109=STP Test Client, Inc.76=SBSIUS3317=One-USD_AGN-1662852-0-0-kpt6s37=582210711=JBZ180806181014255719=One-USD_AGN-1662852-0-0-kpt1r20=0150=439=464=2018081754=132=031=75.010151=014=1000006=75.0109805=1076.7239806=1153.7875645=1077.6129804=1077.6125961=Price75=2018081560=20180815-12:06:36.284381=75010.0038=8700006655=25000055=FIXED22=448=USP79171AE79200=202409205=1223=7.45106=PROVINCE OF CORDOBA6620=201703016659=20170301107=CORDO  7.450  9/1/24 (URegS)6608=13.6576637=202409016611=3435.286612=78445.286609=MISC6606=atrianine@marketxess.com15=USD120=USD9947=citiustrade157=16610=181
+2018-10-02 11:12:47.311 INFO  listeners.SendActionListener - Sending message 8=FIX.4.29=197735=849=MA56=STPTC34=3352=20180815-12:06:36.5709690=179691=SBSIUS339692=B9694=75.0109693=19695=1000009697=Done7761=19691=ABO1MPID9692=C9694=97.0009693=19695=2500009697=Covered7761=29691=WPACBIC9692=B9694=101.1009693=19695=2500009697=Missed7761=39691=LAZA9692=C9694=104.4009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=49691=AASIUS339692=B9694=106.9009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=59691=GMSG9692=C9694=108.7009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=69691=GUCPUSM19692=B9694=114.5009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=79691=RBAIUS41XXX9692=B9694=115.5009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=89691=NITE9692=B9694=120.1009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=99691=ANZBUS339692=B9696=Please Contact your ANZ Salesperson 1.9697=Passed7761=109691=CRLYUS339692=B9697=Passed7761=119691=CTBAAU2SFXD9692=B9696=None in TList9697=Passed7761=129691=RDOSUS319692=B9697=Passed7761=139691=GOLDUS339692=B9697=Timed Out7761=149691=FISA9692=C9697=Timed Out7761=159691=ACTI9692=C9697=Timed Out7761=169691=AMMS9692=C9697=Timed Out7761=1529691=ZKBKCHZZ80A9692=B9697=Timed Out7761=153109=STP Test Client, Inc.76=SBSIUS3317=One-USD_AGN-1662852-0-0-kpt6s37=582210711=JBZ180806181014255719=One-USD_AGN-1662852-0-0-kpt1r20=0150=439=464=2018081754=132=031=75.010151=014=1000006=75.0109805=1076.7239806=1153.7875645=1077.6129804=1077.6125961=Price75=2018081560=20180815-12:06:36.284381=75010.0038=8700006655=25000055=FIXED22=448=USP79171AE79200=202409205=1223=7.45106=PROVINCE OF CORDOBA6620=201703016659=20170301107=CORDO  7.450  9/1/24 (URegS)6608=13.6576637=202409016611=3435.286612=78445.286609=MISC6606=atrianine@marketxess.com15=USD120=USD9947=citiustrade157=16610=181
+2018-10-02 11:12:48.474 INFO  quickfix.QFixMessengerApplication - fromAppInvalid() Application received invalid message 8=FIX.4.29=6635=234=16049=INIT52=20181002-10:12:48.47456=ACCEPT7=16116=010=001
+2018-10-02 11:13:08.330 INFO  listeners.SendActionListener - Sending message 8=FIX.4.29=197735=849=MA56=STPTC34=3352=20180815-12:06:36.5709690=189691=SBSIUS339692=B9694=75.0109693=19695=1000009697=Done7761=19691=ABO1MPID9692=C9694=97.0009693=19695=2500009697=Covered7761=29691=WPACBIC9692=B9694=101.1009693=19695=2500009697=Missed7761=39691=LAZA9692=C9694=104.4009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=49691=AASIUS339692=B9694=106.9009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=59691=GMSG9692=C9694=108.7009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=69691=GUCPUSM19692=B9694=114.5009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=79691=RBAIUS41XXX9692=B9694=115.5009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=89691=NITE9692=B9694=120.1009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=99691=ANZBUS339692=B9696=Please Contact your ANZ Salesperson 1.9697=Passed7761=109691=CRLYUS339692=B9697=Passed7761=119691=CTBAAU2SFXD9692=B9696=None in TList9697=Passed7761=129691=RDOSUS319692=B9697=Passed7761=139691=GOLDUS339692=B9697=Timed Out7761=149691=FISA9692=C9697=Timed Out7761=159691=ACTI9692=C9697=Timed Out7761=169691=AMMS9692=C9697=Timed Out7761=1529691=ZKBKCHZZ80A9692=B9697=Timed Out7761=153109=STP Test Client, Inc.76=SBSIUS3317=One-USD_AGN-1662852-0-0-kpt6s37=582210711=JBZ180806181014255719=One-USD_AGN-1662852-0-0-kpt1r20=0150=439=464=2018081754=132=031=75.010151=014=1000006=75.0109805=1076.7239806=1153.7875645=1077.6129804=1077.6125961=Price75=2018081560=20180815-12:06:36.284381=75010.0038=8700006655=25000055=FIXED22=448=USP79171AE79200=202409205=1223=7.45106=PROVINCE OF CORDOBA6620=201703016659=20170301107=CORDO  7.450  9/1/24 (URegS)6608=13.6576637=202409016611=3435.286612=78445.286609=MISC6606=atrianine@marketxess.com15=USD120=USD9947=citiustrade157=16610=181
+2018-10-02 11:13:40.447 INFO  listeners.SendActionListener - Sending message 8=FIX.4.29=197735=849=MA56=STPTC34=3352=20180815-12:06:36.5709690=189691=SBSIUS339692=B9694=75.0109693=19695=1000009697=Done7761=19691=ABO1MPID9692=C9694=97.0009693=19695=2500009697=Covered7761=29691=WPACBIC9692=B9694=101.1009693=19695=2500009697=Missed7761=39691=LAZA9692=C9694=104.4009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=49691=AASIUS339692=B9694=106.9009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=59691=GMSG9692=C9694=108.7009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=69691=GUCPUSM19692=B9694=114.5009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=79691=RBAIUS41XXX9692=B9694=115.5009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=89691=NITE9692=B9694=120.1009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=99691=ANZBUS339692=B9696=Please Contact your ANZ Salesperson 1.9697=Passed7761=109691=CRLYUS339692=B9697=Passed7761=119691=CTBAAU2SFXD9692=B9696=None in TList9697=Passed7761=129691=RDOSUS319692=B9697=Passed7761=139691=GOLDUS339692=B9697=Timed Out7761=149691=FISA9692=C9697=Timed Out7761=159691=ACTI9692=C9697=Timed Out7761=169691=AMMS9692=C9697=Timed Out7761=1529691=ZKBKCHZZ80A9692=B9697=Timed Out7761=153109=STP Test Client, Inc.76=SBSIUS3317=One-USD_AGN-1662852-0-0-kpt6s37=582210711=JBZ180806181014255719=One-USD_AGN-1662852-0-0-kpt1r20=0150=439=464=2018081754=132=031=75.010151=014=1000006=75.0109805=1076.7239806=1153.7875645=1077.6129804=1077.6125961=Price75=2018081560=20180815-12:06:36.284381=75010.0038=8700006655=25000055=FIXED22=448=USP79171AE79200=202409205=1223=7.45106=PROVINCE OF CORDOBA6620=201703016659=20170301107=CORDO  7.450  9/1/24 (URegS)6608=13.6576637=202409016611=3435.286612=78445.286609=MISC6606=atrianine@marketxess.com15=USD120=USD9947=citiustrade157=16610=181
+2018-10-02 11:13:55.768 INFO  listeners.SendActionListener - Sending message 8=FIX.4.29=197735=849=MA56=STPTC34=3352=20180815-12:06:36.5709690=189691=SBSIUS339692=B9694=75.0109693=19695=1000009697=Done7761=19691=ABO1MPID9692=C9694=97.0009693=19695=2500009697=Covered7761=29691=WPACBIC9692=B9694=101.1009693=19695=2500009697=Missed7761=39691=LAZA9692=C9694=104.4009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=49691=AASIUS339692=B9694=106.9009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=59691=GMSG9692=C9694=108.7009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=69691=GUCPUSM19692=B9694=114.5009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=79691=RBAIUS41XXX9692=B9694=115.5009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=89691=NITE9692=B9694=120.1009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=99691=ANZBUS339692=B9696=Please Contact your ANZ Salesperson 1.9697=Passed7761=109691=CRLYUS339692=B9697=Passed7761=119691=CTBAAU2SFXD9692=B9696=None in TList9697=Passed7761=129691=RDOSUS319692=B9697=Passed7761=139691=GOLDUS339692=B9697=Timed Out7761=149691=FISA9692=C9697=Timed Out7761=159691=ACTI9692=C9697=Timed Out7761=169691=AMMS9692=C9697=Timed Out7761=1529691=ZKBKCHZZ80A9692=B9697=Timed Out7761=153109=STP Test Client, Inc.76=SBSIUS3317=One-USD_AGN-1662852-0-0-kpt6s37=582210711=JBZ180806181014255719=One-USD_AGN-1662852-0-0-kpt1r20=0150=439=464=2018081754=132=031=75.010151=014=1000006=75.0109805=1076.7239806=1153.7875645=1077.6129804=1077.6125961=Price75=2018081560=20180815-12:06:36.284381=75010.0038=8700006655=25000055=FIXED22=448=USP79171AE79200=202409205=1223=7.45106=PROVINCE OF CORDOBA6620=201703016659=20170301107=CORDO  7.450  9/1/24 (URegS)6608=13.6576637=202409016611=3435.286612=78445.286609=MISC6606=atrianine@marketxess.com15=USD120=USD9947=citiustrade157=16610=181
+2018-10-02 11:15:44.053 INFO  listeners.SendActionListener - Sending message 8=FIX.4.29=197735=849=MA56=STPTC34=3352=20180815-12:06:36.5709690=189691=SBSIUS339692=B9694=75.0109693=19695=1000009697=Done7761=19691=ABO1MPID9692=C9694=97.0009693=19695=2500009697=Covered7761=29691=WPACBIC9692=B9694=101.1009693=19695=2500009697=Missed7761=39691=LAZA9692=C9694=104.4009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=49691=AASIUS339692=B9694=106.9009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=59691=GMSG9692=C9694=108.7009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=69691=GUCPUSM19692=B9694=114.5009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=79691=RBAIUS41XXX9692=B9694=115.5009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=89691=NITE9692=B9694=120.1009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=99691=ANZBUS339692=B9696=Please Contact your ANZ Salesperson 1.9697=Passed7761=109691=CRLYUS339692=B9697=Passed7761=119691=CTBAAU2SFXD9692=B9696=None in TList9697=Passed7761=129691=RDOSUS319692=B9697=Passed7761=139691=GOLDUS339692=B9697=Timed Out7761=149691=FISA9692=C9697=Timed Out7761=159691=ACTI9692=C9697=Timed Out7761=169691=AMMS9692=C9697=Timed Out7761=1529691=ZKBKCHZZ80A9692=B9697=Timed Out7761=153109=STP Test Client, Inc.76=SBSIUS3317=One-USD_AGN-1662852-0-0-kpt6s37=582210711=JBZ180806181014255719=One-USD_AGN-1662852-0-0-kpt1r20=0150=439=464=2018081754=132=031=75.010151=014=1000006=75.0109805=1076.7239806=1153.7875645=1077.6129804=1077.6125961=Price75=2018081560=20180815-12:06:36.284381=75010.0038=8700006655=25000055=FIXED22=448=USP79171AE79200=202409205=1223=7.45106=PROVINCE OF CORDOBA6620=201703016659=20170301107=CORDO  7.450  9/1/24 (URegS)6608=13.6576637=202409016611=3435.286612=78445.286609=MISC6606=atrianine@marketxess.com15=USD120=USD9947=citiustrade157=16610=181
+2018-10-02 11:16:24.330 INFO  listeners.SendActionListener - Sending message 8=FIX.4.29=197735=849=MA56=STPTC34=3352=20180815-12:06:36.5709690=189691=SBSIUS339692=B9694=75.0109693=19695=1000009697=Done7761=19691=ABO1MPID9692=C9694=97.0009693=19695=2500009697=Covered7761=29691=WPACBIC9692=B9694=101.1009693=19695=2500009697=Missed7761=39691=LAZA9692=C9694=104.4009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=49691=AASIUS339692=B9694=106.9009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=59691=GMSG9692=C9694=108.7009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=69691=GUCPUSM19692=B9694=114.5009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=79691=RBAIUS41XXX9692=B9694=115.5009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=89691=NITE9692=B9694=120.1009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=99691=ANZBUS339692=B9696=Please Contact your ANZ Salesperson 1.9697=Passed7761=109691=CRLYUS339692=B9697=Passed7761=119691=CTBAAU2SFXD9692=B9696=None in TList9697=Passed7761=129691=RDOSUS319692=B9697=Passed7761=139691=GOLDUS339692=B9697=Timed Out7761=149691=FISA9692=C9697=Timed Out7761=159691=ACTI9692=C9697=Timed Out7761=169691=AMMS9692=C9697=Timed Out7761=1529691=ZKBKCHZZ80A9692=B9697=Timed Out7761=153109=STP Test Client, Inc.76=SBSIUS3317=One-USD_AGN-1662852-0-0-kpt6s37=582210711=JBZ180806181014255719=One-USD_AGN-1662852-0-0-kpt1r20=0150=439=464=2018081754=132=031=75.010151=014=1000006=75.0109805=1076.7239806=1153.7875645=1077.6129804=1077.6125961=Price75=2018081560=20180815-12:06:36.284381=75010.0038=8700006655=25000055=FIXED22=448=USP79171AE79200=202409205=1223=7.45106=PROVINCE OF CORDOBA6620=201703016659=20170301107=CORDO  7.450  9/1/24 (URegS)6608=13.6576637=202409016611=3435.286612=78445.286609=MISC6606=atrianine@marketxess.com15=USD120=USD9947=citiustrade157=16610=181
+2018-10-02 11:16:55.249 INFO  quickfix.QFixMessengerApplication - No text in logout, taking no action 8=FIX.4.29=5535=534=17049=INIT52=20181002-10:16:55.24956=ACCEPT10=035
+2018-10-02 11:16:55.249 INFO  quickfix.QFixMessengerApplication - fromAdmin: Logout received 8=FIX.4.29=5535=534=17049=INIT52=20181002-10:16:55.24956=ACCEPT10=035
+2018-10-02 11:16:55.249 INFO  quickfix.Session - [FIX.4.2:ACCEPT->INIT] Disconnecting: Received logout request
+2018-10-02 11:17:04.363 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:50075
+2018-10-02 11:17:04.472 INFO  quickfix.QFixMessengerApplication - Server has rejected login with message MsgSeqNum too low, expecting 166 but received 164
+2018-10-02 11:17:04.472 INFO  quickfix.QFixMessengerApplication - Attempting to reconcile sequence numbers FIX.4.2:ACCEPT->INIT[in:171,out:166] expected sequence number 166
+2018-10-02 11:17:04.472 INFO  quickfix.Session - [FIX.4.2:ACCEPT->INIT] Disconnecting: IO Session closed
+2018-10-02 11:17:04.472 INFO  quickfix.QFixMessengerApplication - Session sequence numbers reconciled: FIX.4.2:ACCEPT->INIT[in:171,out:166]
+2018-10-02 11:17:04.472 INFO  quickfix.QFixMessengerApplication - fromAdmin: Logout received 8=FIX.4.29=10835=534=17449=INIT52=20181002-10:17:04.47256=ACCEPT58=MsgSeqNum too low, expecting 166 but received 16410=187
+2018-10-02 11:17:34.466 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:50082
+2018-10-02 11:17:35.464 INFO  quickfix.QFixMessengerApplication - Server has rejected login with message MsgSeqNum too low, expecting 166 but received 1
+2018-10-02 11:17:35.464 INFO  quickfix.QFixMessengerApplication - Attempting to reconcile sequence numbers FIX.4.2:ACCEPT->INIT[in:1,out:3] expected sequence number 166
+2018-10-02 11:17:35.464 INFO  quickfix.QFixMessengerApplication - Session sequence numbers reconciled: FIX.4.2:ACCEPT->INIT[in:1,out:166]
+2018-10-02 11:17:35.464 INFO  quickfix.QFixMessengerApplication - fromAdmin: Logout received 8=FIX.4.29=10635=534=17649=INIT52=20181002-10:17:35.46456=ACCEPT58=MsgSeqNum too low, expecting 166 but received 110=086
+2018-10-02 11:17:35.464 INFO  quickfix.Session - [FIX.4.2:ACCEPT->INIT] Disconnecting: IO Session closed
+2018-10-02 11:18:00.635 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:50087
+2018-10-02 11:18:01.478 INFO  quickfix.QFixMessengerApplication - No text in logout, taking no action 8=FIX.4.29=5335=534=249=INIT52=20181002-10:18:01.47856=ACCEPT10=184
+2018-10-02 11:18:01.478 INFO  quickfix.QFixMessengerApplication - fromAdmin: Logout received 8=FIX.4.29=5335=534=249=INIT52=20181002-10:18:01.47856=ACCEPT10=184
+2018-10-02 11:18:01.478 INFO  quickfix.Session - [FIX.4.2:ACCEPT->INIT] Disconnecting: IO Session closed
+2018-10-02 11:18:37.469 INFO  quickfix.SocketAcceptor - No longer accepting connections on 0.0.0.0/0.0.0.0:9878
+2018-10-02 11:18:37.469 INFO  quickfix.SocketAcceptor - Logging out all sessions
+2018-10-02 11:18:37.469 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties
+
+2018-10-02 11:18:37.469 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties file (directory: cfg\acceptor\messenger.cfg)
+suffix.version:http://crpnycsfxbase01.corporate.local/version.txt
+messenger.dict.fix44:FIX44.xml
+messenger.dict.fix43:FIX43.xml
+messenger.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+messenger.dict.fix41:FIX41.xml
+messenger.dict.fix40:FIX40.xml
+messenger.license:resources/license.txt
+suffix.jar:http://crpnycsfxbase01.corporate.local/sufFIX.jar
+suffix.dict.fix43.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX43.xml
+messenger.dict.fixt11:FIXT11.xml
+messenger.home.url:https://code.google.com/p/quickfix-messenger/
+suffix.dict.fixt11.url:http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml
+suffix.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+suffix.dict.fix40.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX40.xml
+messenger.parser.threads:20
+messenger.dict.fix50sp2:FIX50SP2.xml
+messenger.dict.fix50:FIX50.xml
+suffix.dict.fix50.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50.xml
+suffix.messageTable.columns:
+messenger.icons:resources/icons/
+messenger.help.url:http://wiki.marketaxess.com/display/appdev/SufFIX
+messenger.file.path:../suffixData
+suffix.dict.fix44.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml
+messenger.environment:
+suffix.dict.fix50sp2.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml
+messenger.fixwiki.url:http://fixwiki.org/fixwiki/
+suffix.dict.fix41.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX41.xml
+
+2018-10-02 11:18:37.469 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/version.txt
+2018-10-02 11:18:37.610 INFO  util.URLUtil - Finished downloading elapsed time 141
+2018-10-02 11:18:37.610 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/quickfixversion.txt
+2018-10-02 11:18:37.688 INFO  util.URLUtil - Finished downloading elapsed time 78
+2018-10-02 11:18:37.688 ERROR cache.DataDictionaryCache - Problems downloading Quickfix Data Dictionary C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+java.net.MalformedURLException: no protocol: null?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4
+	at java.net.URL.<init>(URL.java:586)
+	at java.net.URL.<init>(URL.java:483)
+	at java.net.URL.<init>(URL.java:432)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.loadDataDictionaries(DataDictionaryCache.java:40)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.<init>(DataDictionaryCache.java:28)
+	at com.jramoyo.qfixmessenger.QFixMessenger.<init>(QFixMessenger.java:350)
+	at com.jramoyo.qfixmessenger.QFixMessenger.setSessionAndMessengerSettings(QFixMessenger.java:230)
+	at com.jramoyo.qfixmessenger.QFixMessenger.refresh(QFixMessenger.java:396)
+	at com.jramoyo.qfixmessenger.ui.QFixMessengerFrame.reload(QFixMessengerFrame.java:2398)
+	at com.jramoyo.qfixmessenger.ui.QFixMessengerFrame$1.actionPerformed(QFixMessengerFrame.java:445)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2739)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:746)
+	at java.awt.EventQueue.access$400(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.awt.EventQueue$3.run(EventQueue.java:691)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:719)
+	at java.awt.EventQueue$4.run(EventQueue.java:717)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:716)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2018-10-02 11:18:37.688 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX44.xml
+2018-10-02 11:18:38.204 INFO  util.URLUtil - Finished downloading FIX44.xml elapsed time 516
+2018-10-02 11:18:38.220 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX50SP2.xml
+2018-10-02 11:18:38.392 INFO  util.URLUtil - Finished downloading FIX50SP2.xml elapsed time 172
+2018-10-02 11:18:38.407 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIXT11.xml
+2018-10-02 11:18:38.470 INFO  util.URLUtil - Finished downloading FIXT11.xml elapsed time 63
+2018-10-02 11:18:38.485 INFO  qfixmessenger.QFixMessenger - Starting acceptor with settings 
+[DEFAULT]
+NonStopSession=Y
+ConnectionType=acceptor
+InitiatorManualLogon=Y
+ReconnectInterval=5
+TargetCompID=INIT
+LogScreenHeartbeats=Y
+SocketConnectHost=localhost
+SenderCompID=ACCEPT
+HeartBtInt=30
+FileStorePath=data/messenger/acceptor
+FileLogPath=log/acceptor
+[SESSION]
+SocketAcceptPort=9878
+DataDictionary=C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+BeginString=FIX.4.2
+
+2018-10-02 11:18:38.501 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2018-10-02 11:18:38.501 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2018-10-02 11:18:38.501 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2018-10-02 11:18:38.501 INFO  quickfix.SocketAcceptor - Listening for connections at 0.0.0.0/0.0.0.0:9878
+2018-10-02 11:18:47.060 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:50104
+2018-10-02 11:19:29.905 INFO  listeners.SendActionListener - Sending message 8=FIX.4.29=197735=849=MA56=STPTC34=3352=20180815-12:06:36.5709690=189691=SBSIUS339692=B9694=75.0109693=19695=1000009697=Done7761=19691=ABO1MPID9692=C9694=97.0009693=19695=2500009697=Covered7761=29691=WPACBIC9692=B9694=101.1009693=19695=2500009697=Missed7761=39691=LAZA9692=C9694=104.4009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=49691=AASIUS339692=B9694=106.9009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=59691=GMSG9692=C9694=108.7009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=69691=GUCPUSM19692=B9694=114.5009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=79691=RBAIUS41XXX9692=B9694=115.5009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=89691=NITE9692=B9694=120.1009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=99691=ANZBUS339692=B9696=Please Contact your ANZ Salesperson 1.9697=Passed7761=109691=CRLYUS339692=B9697=Passed7761=119691=CTBAAU2SFXD9692=B9696=None in TList9697=Passed7761=129691=RDOSUS319692=B9697=Passed7761=139691=GOLDUS339692=B9697=Timed Out7761=149691=FISA9692=C9697=Timed Out7761=159691=ACTI9692=C9697=Timed Out7761=169691=AMMS9692=C9697=Timed Out7761=1529691=ZKBKCHZZ80A9692=B9697=Timed Out7761=153109=STP Test Client, Inc.76=SBSIUS3317=One-USD_AGN-1662852-0-0-kpt6s37=582210711=JBZ180806181014255719=One-USD_AGN-1662852-0-0-kpt1r20=0150=439=464=2018081754=132=031=75.010151=014=1000006=75.0109805=1076.7239806=1153.7875645=1077.6129804=1077.6125961=Price75=2018081560=20180815-12:06:36.284381=75010.0038=8700006655=25000055=FIXED22=448=USP79171AE79200=202409205=1223=7.45106=PROVINCE OF CORDOBA6620=201703016659=20170301107=CORDO  7.450  9/1/24 (URegS)6608=13.6576637=202409016611=3435.286612=78445.286609=MISC6606=atrianine@marketxess.com15=USD120=USD9947=citiustrade157=16610=181
+2018-10-02 11:21:10.005 INFO  listeners.SendActionListener - Sending message 8=FIX.4.29=206135=849=MA56=STPTC34=3552=20180815-12:07:15.7799690=209691=SBSIUS339692=B9694=75.0109693=19695=1000009697=Cxl - Amended7761=19691=ABO1MPID9692=C9694=97.0009693=19695=2500009697=Covered7761=29691=WPACBIC9692=B9694=101.1009693=19695=2500009697=Missed7761=39691=LAZA9692=C9694=104.4009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=49691=AASIUS339692=B9694=106.9009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=59691=GMSG9692=C9694=108.7009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=69691=GUCPUSM19692=B9694=114.5009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=79691=RBAIUS41XXX9692=B9694=115.5009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=89691=NITE9692=B9694=120.1009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=99691=ANZBUS339692=B9696=Please Contact your ANZ Salesperson 1.9697=Passed7761=109691=CRLYUS339692=B9697=Passed7761=119691=CTBAAU2SFXD9692=B9696=None in TList9697=Passed7761=129691=RDOSUS319692=B9697=Passed7761=139691=GOLDUS339692=B9697=Timed Out7761=149691=FISA9692=C9697=Timed Out7761=159691=ACTI9692=C9697=Timed Out7761=169691=AMMS9692=C9697=Timed Out7761=179691=ACGP9692=C9697=Timed Out7761=189691=ALIR9692=C9697=Timed Out7761=1529691=ZKBKCHZZ80A9692=B9697=Timed Out7761=153109=STP Test Client, Inc.76=SBSIUS3317=One-USD_AGN-1662852-0-0-kqnfz37=582210711=JBZ180806181014255719=One-USD_AGN-1662852-0-0-kpt6s20=139=1150=164=2018081754=132=031=75.010151=014=06=75.0109805=1076.7239806=1153.7875645=1077.6129804=1077.6125961=Price75=2018081560=20180815-12:06:36.284381=75010.0038=8700006655=25000055=FIXED22=448=USP79171AE79200=202409205=1223=7.45106=PROVINCE OF CORDOBA6620=201703016659=20170301107=CORDO  7.450  9/1/24 (URegS)6608=13.6576637=202409016611=3435.286612=78445.286609=MISC6606=atrianine@marketxess.com15=USD120=USD9947=citiustrade157=16610=150
+2018-10-02 11:22:16.576 INFO  listeners.SendActionListener - Sending message 8=FIX.4.29=201235=849=MA56=STPTC34=3652=20180815-12:07:15.8209690=189691=SBSIUS339692=B9694=75.0109693=19695=1000009697=Done - Amended7761=19691=ABO1MPID9692=C9694=97.0009693=19695=2500009697=Covered7761=29691=WPACBIC9692=B9694=101.1009693=19695=2500009697=Missed7761=39691=LAZA9692=C9694=104.4009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=49691=AASIUS339692=B9694=106.9009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=59691=GMSG9692=C9694=108.7009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=69691=GUCPUSM19692=B9694=114.5009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=79691=RBAIUS41XXX9692=B9694=115.5009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=89691=NITE9692=B9694=120.1009693=19695=2500009696=Dealer response !! QuoteUpdate9697=Missed7761=99691=ANZBUS339692=B9696=Please Contact your ANZ Salesperson 1.9697=Passed7761=109691=CRLYUS339692=B9697=Passed7761=119691=CTBAAU2SFXD9692=B9696=None in TList9697=Passed7761=129691=RDOSUS319692=B9697=Passed7761=139691=GOLDUS339692=B9697=Timed Out7761=149691=FISA9692=C9697=Timed Out7761=159691=ACTI9692=C9697=Timed Out7761=169691=AMMS9692=C9697=Timed Out7761=1529691=ZKBKCHZZ80A9692=B9697=Timed Out7761=153109=STP Test Client, Inc.76=SBSIUS3317=One-USD_AGN-1662852-0-1-kqnh341=JBZ180806181014255737=582210711=JBZ180806181014255719=One-USD_AGN-1662852-0-0-kqnfz20=2150=139=164=2018081754=132=5000031=75.010151=014=500006=75.0109805=1076.6719806=1153.7235645=1077.5669804=1077.5665961=Price75=2018081560=20180815-12:06:36.284381=37505.0038=8700006655=25000055=FIXED22=448=USP79171AE79200=202409205=1223=7.45106=PROVINCE OF CORDOBA6620=201703016659=20170301107=CORDO  7.450  9/1/24 (URegS)6608=13.6576637=202409016611=1717.646612=39222.646609=MISC6606=atrianine@marketxess.com15=USD120=USD9947=citiustrade157=16610=062
+2018-10-02 15:14:09.660 INFO  quickfix.SocketAcceptor - No longer accepting connections on 0.0.0.0/0.0.0.0:9878
+2018-10-02 15:14:09.660 INFO  quickfix.SocketAcceptor - Logging out all sessions
+2018-10-02 15:14:09.660 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties
+
+2018-10-02 15:14:09.660 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties file (directory: cfg\acceptor\messenger.cfg)
+suffix.version:http://crpnycsfxbase01.corporate.local/version.txt
+messenger.dict.fix44:FIX44.xml
+messenger.dict.fix43:FIX43.xml
+messenger.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+messenger.dict.fix41:FIX41.xml
+messenger.dict.fix40:FIX40.xml
+messenger.license:resources/license.txt
+suffix.jar:http://crpnycsfxbase01.corporate.local/sufFIX.jar
+suffix.dict.fix43.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX43.xml
+messenger.dict.fixt11:FIXT11.xml
+messenger.home.url:https://code.google.com/p/quickfix-messenger/
+suffix.dict.fixt11.url:http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml
+suffix.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+suffix.dict.fix40.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX40.xml
+messenger.parser.threads:20
+messenger.dict.fix50sp2:FIX50SP2.xml
+messenger.dict.fix50:FIX50.xml
+suffix.dict.fix50.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50.xml
+suffix.messageTable.columns:
+messenger.icons:resources/icons/
+messenger.help.url:http://wiki.marketaxess.com/display/appdev/SufFIX
+messenger.file.path:../suffixData
+suffix.dict.fix44.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml
+messenger.environment:
+suffix.dict.fix50sp2.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml
+messenger.fixwiki.url:http://fixwiki.org/fixwiki/
+suffix.dict.fix41.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX41.xml
+
+2018-10-02 15:14:09.660 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/version.txt
+2018-10-02 15:14:09.801 INFO  util.URLUtil - Finished downloading elapsed time 141
+2018-10-02 15:14:09.801 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/quickfixversion.txt
+2018-10-02 15:14:09.879 INFO  util.URLUtil - Finished downloading elapsed time 78
+2018-10-02 15:14:09.879 ERROR cache.DataDictionaryCache - Problems downloading Quickfix Data Dictionary C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+java.net.MalformedURLException: no protocol: null?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4
+	at java.net.URL.<init>(URL.java:586)
+	at java.net.URL.<init>(URL.java:483)
+	at java.net.URL.<init>(URL.java:432)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.loadDataDictionaries(DataDictionaryCache.java:40)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.<init>(DataDictionaryCache.java:28)
+	at com.jramoyo.qfixmessenger.QFixMessenger.<init>(QFixMessenger.java:350)
+	at com.jramoyo.qfixmessenger.QFixMessenger.setSessionAndMessengerSettings(QFixMessenger.java:230)
+	at com.jramoyo.qfixmessenger.QFixMessenger.refresh(QFixMessenger.java:396)
+	at com.jramoyo.qfixmessenger.ui.QFixMessengerFrame.reload(QFixMessengerFrame.java:2398)
+	at com.jramoyo.qfixmessenger.ui.QFixMessengerFrame$1.actionPerformed(QFixMessengerFrame.java:445)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2739)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:746)
+	at java.awt.EventQueue.access$400(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.awt.EventQueue$3.run(EventQueue.java:691)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:719)
+	at java.awt.EventQueue$4.run(EventQueue.java:717)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:716)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2018-10-02 15:14:09.894 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX44.xml
+2018-10-02 15:14:10.410 INFO  util.URLUtil - Finished downloading FIX44.xml elapsed time 516
+2018-10-02 15:14:10.426 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX50SP2.xml
+2018-10-02 15:14:10.598 INFO  util.URLUtil - Finished downloading FIX50SP2.xml elapsed time 172
+2018-10-02 15:14:10.613 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIXT11.xml
+2018-10-02 15:14:10.692 INFO  util.URLUtil - Finished downloading FIXT11.xml elapsed time 79
+2018-10-02 15:14:10.692 INFO  qfixmessenger.QFixMessenger - Starting acceptor with settings 
+[DEFAULT]
+NonStopSession=Y
+ConnectionType=acceptor
+InitiatorManualLogon=Y
+ReconnectInterval=5
+TargetCompID=INIT
+LogScreenHeartbeats=Y
+SocketConnectHost=localhost
+SenderCompID=ACCEPT
+HeartBtInt=30
+FileStorePath=data/messenger/acceptor
+FileLogPath=log/acceptor
+[SESSION]
+SocketAcceptPort=9878
+DataDictionary=C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+BeginString=FIX.4.2
+
+2018-10-02 15:14:10.723 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2018-10-02 15:14:10.723 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2018-10-02 15:14:10.723 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2018-10-02 15:14:10.723 INFO  quickfix.SocketAcceptor - Listening for connections at 0.0.0.0/0.0.0.0:9878
+2018-10-02 15:14:33.446 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:51700
+2018-10-02 15:14:38.572 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:51720
+2018-10-02 15:14:43.697 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:51729
+2018-10-02 15:14:48.797 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:51739
+2018-10-02 15:14:53.891 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:51749
+2018-10-02 15:14:58.986 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:51759
+2018-10-02 15:15:04.072 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:51769
+2018-10-02 15:15:09.185 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:51779
+2018-10-02 15:15:14.261 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:51790
+2018-10-02 15:15:19.344 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:51800
+2018-10-02 15:15:24.458 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:51811
+2018-10-02 15:15:26.553 INFO  quickfix.SocketAcceptor - No longer accepting connections on 0.0.0.0/0.0.0.0:9878
+2018-10-02 15:15:26.553 INFO  quickfix.SocketAcceptor - Logging out all sessions
+2018-10-02 15:15:26.553 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties
+
+2018-10-02 15:15:26.553 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties file (directory: cfg\acceptor\messenger.cfg)
+suffix.version:http://crpnycsfxbase01.corporate.local/version.txt
+messenger.dict.fix44:FIX44.xml
+messenger.dict.fix43:FIX43.xml
+messenger.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+messenger.dict.fix41:FIX41.xml
+messenger.dict.fix40:FIX40.xml
+messenger.license:resources/license.txt
+suffix.jar:http://crpnycsfxbase01.corporate.local/sufFIX.jar
+suffix.dict.fix43.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX43.xml
+messenger.dict.fixt11:FIXT11.xml
+messenger.home.url:https://code.google.com/p/quickfix-messenger/
+suffix.dict.fixt11.url:http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml
+suffix.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+suffix.dict.fix40.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX40.xml
+messenger.parser.threads:20
+messenger.dict.fix50sp2:FIX50SP2.xml
+messenger.dict.fix50:FIX50.xml
+suffix.dict.fix50.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50.xml
+suffix.messageTable.columns:
+messenger.icons:resources/icons/
+messenger.help.url:http://wiki.marketaxess.com/display/appdev/SufFIX
+messenger.file.path:../suffixData
+suffix.dict.fix44.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml
+messenger.environment:
+suffix.dict.fix50sp2.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml
+messenger.fixwiki.url:http://fixwiki.org/fixwiki/
+suffix.dict.fix41.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX41.xml
+
+2018-10-02 15:15:26.553 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/version.txt
+2018-10-02 15:15:26.693 INFO  util.URLUtil - Finished downloading elapsed time 140
+2018-10-02 15:15:26.693 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/quickfixversion.txt
+2018-10-02 15:15:26.772 INFO  util.URLUtil - Finished downloading elapsed time 79
+2018-10-02 15:15:26.772 ERROR cache.DataDictionaryCache - Problems downloading Quickfix Data Dictionary C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+java.net.MalformedURLException: no protocol: null?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4
+	at java.net.URL.<init>(URL.java:586)
+	at java.net.URL.<init>(URL.java:483)
+	at java.net.URL.<init>(URL.java:432)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.loadDataDictionaries(DataDictionaryCache.java:40)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.<init>(DataDictionaryCache.java:28)
+	at com.jramoyo.qfixmessenger.QFixMessenger.<init>(QFixMessenger.java:350)
+	at com.jramoyo.qfixmessenger.QFixMessenger.setSessionAndMessengerSettings(QFixMessenger.java:230)
+	at com.jramoyo.qfixmessenger.QFixMessenger.refresh(QFixMessenger.java:396)
+	at com.jramoyo.qfixmessenger.ui.QFixMessengerFrame.reload(QFixMessengerFrame.java:2398)
+	at com.jramoyo.qfixmessenger.ui.QFixMessengerFrame$1.actionPerformed(QFixMessengerFrame.java:445)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2739)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:746)
+	at java.awt.EventQueue.access$400(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.awt.EventQueue$3.run(EventQueue.java:691)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:719)
+	at java.awt.EventQueue$4.run(EventQueue.java:717)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:716)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2018-10-02 15:15:26.772 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX44.xml
+2018-10-02 15:15:27.303 INFO  util.URLUtil - Finished downloading FIX44.xml elapsed time 531
+2018-10-02 15:15:27.318 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX50SP2.xml
+2018-10-02 15:15:27.490 INFO  util.URLUtil - Finished downloading FIX50SP2.xml elapsed time 172
+2018-10-02 15:15:27.522 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIXT11.xml
+2018-10-02 15:15:27.584 INFO  util.URLUtil - Finished downloading FIXT11.xml elapsed time 62
+2018-10-02 15:15:27.600 INFO  qfixmessenger.QFixMessenger - Starting acceptor with settings 
+[DEFAULT]
+NonStopSession=Y
+ConnectionType=acceptor
+InitiatorManualLogon=Y
+ReconnectInterval=5
+TargetCompID=INIT
+LogScreenHeartbeats=Y
+SocketConnectHost=localhost
+SenderCompID=ACCEPT
+HeartBtInt=30
+FileStorePath=data/messenger/acceptor
+FileLogPath=log/acceptor
+[SESSION]
+SocketAcceptPort=9878
+DataDictionary=C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+BeginString=FIX.4.2
+
+2018-10-02 15:15:27.615 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2018-10-02 15:15:27.615 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2018-10-02 15:15:27.615 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2018-10-02 15:15:27.631 INFO  quickfix.SocketAcceptor - Listening for connections at 0.0.0.0/0.0.0.0:9878
+2018-10-02 15:15:29.553 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:51824
+2018-10-02 15:15:34.648 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:51834
+2018-10-02 15:15:39.744 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:51844
+2018-10-02 15:15:44.854 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:51855
+2018-10-02 15:15:49.968 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:51865
+2018-10-02 15:15:55.094 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:51875
+2018-10-02 15:16:00.203 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:51885
+2018-10-02 15:16:05.298 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:51898
+2018-10-02 15:16:10.415 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:51915
+2018-10-02 15:16:16.263 INFO  quickfix.SocketAcceptor - No longer accepting connections on 0.0.0.0/0.0.0.0:9878
+2018-10-02 15:16:16.263 INFO  quickfix.SocketAcceptor - Logging out all sessions
+2018-10-02 15:16:16.263 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties
+
+2018-10-02 15:16:16.263 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties file (directory: cfg\acceptor\messenger.cfg)
+suffix.version:http://crpnycsfxbase01.corporate.local/version.txt
+messenger.dict.fix44:FIX44.xml
+messenger.dict.fix43:FIX43.xml
+messenger.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+messenger.dict.fix41:FIX41.xml
+messenger.dict.fix40:FIX40.xml
+messenger.license:resources/license.txt
+suffix.jar:http://crpnycsfxbase01.corporate.local/sufFIX.jar
+suffix.dict.fix43.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX43.xml
+messenger.dict.fixt11:FIXT11.xml
+messenger.home.url:https://code.google.com/p/quickfix-messenger/
+suffix.dict.fixt11.url:http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml
+suffix.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+suffix.dict.fix40.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX40.xml
+messenger.parser.threads:20
+messenger.dict.fix50sp2:FIX50SP2.xml
+messenger.dict.fix50:FIX50.xml
+suffix.dict.fix50.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50.xml
+suffix.messageTable.columns:
+messenger.icons:resources/icons/
+messenger.help.url:http://wiki.marketaxess.com/display/appdev/SufFIX
+messenger.file.path:../suffixData
+suffix.dict.fix44.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml
+messenger.environment:
+suffix.dict.fix50sp2.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml
+messenger.fixwiki.url:http://fixwiki.org/fixwiki/
+suffix.dict.fix41.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX41.xml
+
+2018-10-02 15:16:16.263 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/version.txt
+2018-10-02 15:16:16.404 INFO  util.URLUtil - Finished downloading elapsed time 141
+2018-10-02 15:16:16.404 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/quickfixversion.txt
+2018-10-02 15:16:16.482 INFO  util.URLUtil - Finished downloading elapsed time 78
+2018-10-02 15:16:16.482 ERROR cache.DataDictionaryCache - Problems downloading Quickfix Data Dictionary C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+java.net.MalformedURLException: no protocol: null?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4
+	at java.net.URL.<init>(URL.java:586)
+	at java.net.URL.<init>(URL.java:483)
+	at java.net.URL.<init>(URL.java:432)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.loadDataDictionaries(DataDictionaryCache.java:40)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.<init>(DataDictionaryCache.java:28)
+	at com.jramoyo.qfixmessenger.QFixMessenger.<init>(QFixMessenger.java:350)
+	at com.jramoyo.qfixmessenger.QFixMessenger.setSessionAndMessengerSettings(QFixMessenger.java:230)
+	at com.jramoyo.qfixmessenger.QFixMessenger.refresh(QFixMessenger.java:396)
+	at com.jramoyo.qfixmessenger.ui.QFixMessengerFrame.reload(QFixMessengerFrame.java:2398)
+	at com.jramoyo.qfixmessenger.ui.QFixMessengerFrame$1.actionPerformed(QFixMessengerFrame.java:445)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2739)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:746)
+	at java.awt.EventQueue.access$400(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.awt.EventQueue$3.run(EventQueue.java:691)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:719)
+	at java.awt.EventQueue$4.run(EventQueue.java:717)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:716)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2018-10-02 15:16:16.482 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX44.xml
+2018-10-02 15:16:16.966 INFO  util.URLUtil - Finished downloading FIX44.xml elapsed time 484
+2018-10-02 15:16:16.966 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX50SP2.xml
+2018-10-02 15:16:17.153 INFO  util.URLUtil - Finished downloading FIX50SP2.xml elapsed time 187
+2018-10-02 15:16:17.169 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIXT11.xml
+2018-10-02 15:16:17.247 INFO  util.URLUtil - Finished downloading FIXT11.xml elapsed time 78
+2018-10-02 15:16:17.247 INFO  qfixmessenger.QFixMessenger - Starting acceptor with settings 
+[DEFAULT]
+NonStopSession=Y
+ConnectionType=acceptor
+InitiatorManualLogon=Y
+ReconnectInterval=5
+TargetCompID=INIT
+LogScreenHeartbeats=Y
+SocketConnectHost=localhost
+SenderCompID=ACCEPT
+HeartBtInt=30
+FileStorePath=data/messenger/acceptor
+FileLogPath=log/acceptor
+[SESSION]
+SocketAcceptPort=9878
+DataDictionary=C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+BeginString=FIX.4.2
+
+2018-10-02 15:16:17.278 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2018-10-02 15:16:17.278 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2018-10-02 15:16:17.278 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2018-10-02 15:16:17.278 INFO  quickfix.SocketAcceptor - Listening for connections at 0.0.0.0/0.0.0.0:9878
+2018-10-02 15:16:35.998 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:51931
+2018-10-02 15:16:40.155 INFO  quickfix.QFixMessengerApplication - Server has rejected login with message MsgSeqNum too low, expecting 21 but received 1
+2018-10-02 15:16:40.155 INFO  quickfix.QFixMessengerApplication - Attempting to reconcile sequence numbers FIX.4.2:ACCEPT->INIT[in:1,out:3] expected sequence number 21
+2018-10-02 15:16:40.155 INFO  quickfix.QFixMessengerApplication - Session sequence numbers reconciled: FIX.4.2:ACCEPT->INIT[in:1,out:21]
+2018-10-02 15:16:40.155 INFO  quickfix.Session - [FIX.4.2:ACCEPT->INIT] Disconnecting: IO Session closed
+2018-10-02 15:16:40.155 INFO  quickfix.QFixMessengerApplication - fromAdmin: Logout received 8=FIX.4.29=10435=534=3549=INIT52=20181002-14:16:40.15556=ACCEPT58=MsgSeqNum too low, expecting 21 but received 110=224
+2018-10-02 15:16:41.121 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:51951
+2018-10-02 15:22:36.826 INFO  quickfix.QFixMessengerApplication - No text in logout, taking no action 8=FIX.4.29=5435=534=5049=INIT52=20181002-14:22:36.82656=ACCEPT10=240
+2018-10-02 15:22:36.826 INFO  quickfix.QFixMessengerApplication - fromAdmin: Logout received 8=FIX.4.29=5435=534=5049=INIT52=20181002-14:22:36.82656=ACCEPT10=240
+2018-10-02 15:22:36.826 INFO  quickfix.Session - [FIX.4.2:ACCEPT->INIT] Disconnecting: Received logout request
+2018-10-02 15:23:19.155 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:52339
+2018-10-02 15:23:20.114 INFO  quickfix.QFixMessengerApplication - Server has rejected login with message MsgSeqNum too low, expecting 206 but received 37
+2018-10-02 15:23:20.114 INFO  quickfix.QFixMessengerApplication - Attempting to reconcile sequence numbers FIX.4.2:ACCEPT->INIT[in:51,out:39] expected sequence number 206
+2018-10-02 15:23:20.115 INFO  quickfix.QFixMessengerApplication - Session sequence numbers reconciled: FIX.4.2:ACCEPT->INIT[in:51,out:206]
+2018-10-02 15:23:20.115 INFO  quickfix.QFixMessengerApplication - fromAdmin: Logout received 8=FIX.4.29=10735=534=20549=INIT52=20181002-14:23:20.10856=ACCEPT58=MsgSeqNum too low, expecting 206 but received 3710=122
+2018-10-02 15:23:20.116 INFO  quickfix.Session - [FIX.4.2:ACCEPT->INIT] Disconnecting: Received logout request
+2018-10-02 15:23:40.295 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:52346
+2018-10-02 15:24:04.387 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:52351
+2018-10-02 16:25:06.028 INFO  quickfix.QFixMessengerApplication - Server has rejected login with message user requested
+2018-10-02 16:25:06.028 INFO  quickfix.QFixMessengerApplication - fromAdmin: Logout received 8=FIX.4.29=7335=534=12249=INIT52=20181002-15:25:06.02856=ACCEPT58=user requested10=120
+2018-10-02 16:25:06.028 INFO  quickfix.Session - [FIX.4.2:ACCEPT->INIT] Disconnecting: Received logout request
+2018-10-02 16:25:08.532 INFO  quickfix.SocketAcceptor - No longer accepting connections on 0.0.0.0/0.0.0.0:9878
+2018-10-02 16:25:08.532 INFO  quickfix.SocketAcceptor - Logging out all sessions
+2018-10-02 16:25:08.532 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties
+
+2018-10-02 16:25:08.532 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties file (directory: cfg\acceptor\messenger.cfg)
+suffix.version:http://crpnycsfxbase01.corporate.local/version.txt
+messenger.dict.fix44:FIX44.xml
+messenger.dict.fix43:FIX43.xml
+messenger.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+messenger.dict.fix41:FIX41.xml
+messenger.dict.fix40:FIX40.xml
+messenger.license:resources/license.txt
+suffix.jar:http://crpnycsfxbase01.corporate.local/sufFIX.jar
+suffix.dict.fix43.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX43.xml
+messenger.dict.fixt11:FIXT11.xml
+messenger.home.url:https://code.google.com/p/quickfix-messenger/
+suffix.dict.fixt11.url:http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml
+suffix.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+suffix.dict.fix40.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX40.xml
+messenger.parser.threads:20
+messenger.dict.fix50sp2:FIX50SP2.xml
+messenger.dict.fix50:FIX50.xml
+suffix.dict.fix50.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50.xml
+suffix.messageTable.columns:
+messenger.icons:resources/icons/
+messenger.help.url:http://wiki.marketaxess.com/display/appdev/SufFIX
+messenger.file.path:../suffixData
+suffix.dict.fix44.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml
+messenger.environment:
+suffix.dict.fix50sp2.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml
+messenger.fixwiki.url:http://fixwiki.org/fixwiki/
+suffix.dict.fix41.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX41.xml
+
+2018-10-02 16:25:08.532 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/version.txt
+2018-10-02 16:25:08.673 INFO  util.URLUtil - Finished downloading elapsed time 141
+2018-10-02 16:25:08.673 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/quickfixversion.txt
+2018-10-02 16:25:08.751 INFO  util.URLUtil - Finished downloading elapsed time 78
+2018-10-02 16:25:08.751 ERROR cache.DataDictionaryCache - Problems downloading Quickfix Data Dictionary C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+java.net.MalformedURLException: no protocol: null?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4
+	at java.net.URL.<init>(URL.java:586)
+	at java.net.URL.<init>(URL.java:483)
+	at java.net.URL.<init>(URL.java:432)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.loadDataDictionaries(DataDictionaryCache.java:40)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.<init>(DataDictionaryCache.java:28)
+	at com.jramoyo.qfixmessenger.QFixMessenger.<init>(QFixMessenger.java:350)
+	at com.jramoyo.qfixmessenger.QFixMessenger.setSessionAndMessengerSettings(QFixMessenger.java:230)
+	at com.jramoyo.qfixmessenger.QFixMessenger.refresh(QFixMessenger.java:396)
+	at com.jramoyo.qfixmessenger.ui.QFixMessengerFrame.reload(QFixMessengerFrame.java:2398)
+	at com.jramoyo.qfixmessenger.ui.QFixMessengerFrame$1.actionPerformed(QFixMessengerFrame.java:445)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2739)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:746)
+	at java.awt.EventQueue.access$400(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.awt.EventQueue$3.run(EventQueue.java:691)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:719)
+	at java.awt.EventQueue$4.run(EventQueue.java:717)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:716)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2018-10-02 16:25:08.751 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX44.xml
+2018-10-02 16:25:09.282 INFO  util.URLUtil - Finished downloading FIX44.xml elapsed time 531
+2018-10-02 16:25:09.313 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX50SP2.xml
+2018-10-02 16:25:09.470 INFO  util.URLUtil - Finished downloading FIX50SP2.xml elapsed time 157
+2018-10-02 16:25:09.485 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIXT11.xml
+2018-10-02 16:25:09.548 INFO  util.URLUtil - Finished downloading FIXT11.xml elapsed time 63
+2018-10-02 16:25:09.548 INFO  qfixmessenger.QFixMessenger - Starting acceptor with settings 
+[DEFAULT]
+NonStopSession=Y
+ConnectionType=acceptor
+InitiatorManualLogon=Y
+ReconnectInterval=5
+TargetCompID=INIT
+LogScreenHeartbeats=Y
+SocketConnectHost=localhost
+SenderCompID=ACCEPT
+HeartBtInt=90
+FileStorePath=data/messenger/acceptor
+FileLogPath=log/acceptor
+[SESSION]
+SocketAcceptPort=9878
+DataDictionary=C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+BeginString=FIX.4.2
+
+2018-10-02 16:25:09.579 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2018-10-02 16:25:09.579 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2018-10-02 16:25:09.579 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2018-10-02 16:25:09.579 INFO  quickfix.SocketAcceptor - Listening for connections at 0.0.0.0/0.0.0.0:9878
+2018-10-02 16:25:14.997 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:52835

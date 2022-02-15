@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<message name="ListCancelRequest" msgType="K" isRequiredOnly="false" beginString="FIX.4.4">
+    <body>
+        <field name="ListID" id="66">@LASTVALUE:8:66</field>
+        <field name="TransactTime" id="60">@UTCTIMESTAMP</field>
+        <field name="TradeDate" id="75">@LASTVALUE:8:75</field>
+        <component name="Parties">
+            <groups name="NoPartyIDs" id="453" count="1">
+                <group>
+                    <field name="PartyID" id="448">blkrockvk</field>
+                    <field name="PartyIDSource" id="447">C</field>
+                    <field name="PartyRole" id="452">11</field>
+                    <groups name="NoPartySubIDs" id="802" count="0"/>
+                </group>
+            </groups>
+        </component>
+    </body>
+</message>

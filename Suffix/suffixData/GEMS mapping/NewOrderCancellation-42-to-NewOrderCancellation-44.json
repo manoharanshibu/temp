@@ -1,0 +1,23 @@
+{
+    "fromMessageType": "F",
+    "toMessageType": "F",
+    "fromSystem": "FRONT_ARENA",
+    "toSystem": "MA_EMS",
+    "outputBeginString": "FIX.4.4",
+    "outputFormat": [
+      {"MsgType": "'F'"},
+      {"OrderID": "[OrderID]"},
+      {"OrigClOrdID": "[OrigClOrdID]"},
+      {"ClOrdID": "[ClOrdID]"},
+      {"SecurityIDSource": "'4'"},
+      {"NoPartyIDs": "countExists(6606)"},
+      {"PartyID": "ifExists(6606, [TraderID])"},
+      {"PartyIDSource": "ifExists(6606, 'C')"},
+      {"PartyRole": "ifExists(6606, '11')"},       
+      {"Symbol": "[Symbol]"},
+      {"SecurityID": "[SecurityID]"},     
+      {"Side": "[Side]"},
+      {"TransactTime": "[TransactTime]"},
+      {"OrderQty": "[OrderQty]"}
+    ]
+}

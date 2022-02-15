@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<message name="NewOrderSingle" msgType="D" isRequiredOnly="false" beginString="FIX.4.2">
+    <body>
+        <field name="TraderID" id="6606">MMADTrader1</field>
+        <field name="ClOrdID" id="11">@MMAD261019-:increment</field>
+        <field name="TradingProtocol" id="5961">RFQ</field>
+        <field name="ClientID" id="109">DummyClientID1</field>
+        <field name="ExecBroker" id="76">DummyExecBroker1</field>
+        <field name="Account" id="1">A</field>
+        <groups name="NoAllocs" id="78" count="1">
+            <group>
+                <field name="AllocAccount" id="79">DummyAllocAccount1</field>
+                <field name="AllocShares" id="80">1000000</field>
+            </group>
+        </groups>
+        <field name="SettlmntTyp" id="63">3</field>
+        <field name="FutSettDate" id="64">20190208</field>
+        <field name="PortfolioName" id="9864">DummyPortfolioName</field>
+        <field name="CustomBenchmarkSecurityID" id="6693">DummyCustomBenchmarkSecurityID</field>
+        <field name="CustomBenchmarkSecurityIDSource" id="6697">4</field>
+        <field name="HandlInst" id="21">1</field>
+        <field name="ExecInst" id="18">2</field>
+        <field name="MinQty" id="110">100000</field>
+        <field name="MaxFloor" id="111">1000000</field>
+        <field name="ExDestination" id="100">MAEL</field>
+        <groups name="NoTradingSessions" id="386" count="1">
+            <group>
+                <field name="TradingSessionID" id="336">DummyTradingSessions</field>
+            </group>
+        </groups>
+        <field name="ProcessCode" id="81">0</field>
+        <field name="Symbol" id="55">NA</field>
+        <field name="SymbolSfx" id="65">[NONE]</field>
+        <field name="SecurityID" id="48">US124661AA71</field>
+        <field name="IDSource" id="22">4</field>
+        <field name="SecurityType" id="167">CORP</field>
+        <field name="MaturityMonthYear" id="200">202511</field>
+        <field name="MaturityDay" id="205">5</field>
+        <field name="PutOrCall" id="201">0</field>
+        <field name="StrikePrice" id="202">100.2</field>
+        <field name="OptAttribute" id="206">D</field>
+        <field name="ContractMultiplier" id="231">1.35</field>
+        <field name="CouponRate" id="223">0.056</field>
+        <field name="SecurityExchange" id="207">MAEL</field>
+        <field name="Issuer" id="106">C&amp;D TECHNOLGIES</field>
+        <field name="EncodedIssuerLen" id="348">265</field>
+        <field name="SecurityDesc" id="107">KPSCP  5.250  11/25 pc18 (144a)</field>
+        <field name="EncodedSecurityDescLen" id="350">120</field>
+        <field name="PrevClosePx" id="140">99.2541</field>
+        <field name="Side" id="54">1</field>
+        <field name="LocateReqd" id="114">N</field>
+        <field name="TransactTime" id="60">@UTCTIMESTAMP</field>
+        <field name="OrderQty" id="38">1000000</field>
+        <field name="CashOrderQty" id="152">1000000</field>
+        <field name="OrdType" id="40">2</field>
+        <field name="Price" id="44">100.25</field>
+        <field name="MKTXPriceType" id="6614">1</field>
+        <field name="StopPx" id="99">100</field>
+        <field name="Currency" id="15">USD</field>
+        <field name="ComplianceID" id="376">DummyComplianceID</field>
+        <field name="SolicitedFlag" id="377">Y</field>
+        <field name="IOIid" id="23">DummyIOIid</field>
+        <field name="QuoteID" id="117">DummyQuoteIF</field>
+        <field name="TimeInForce" id="59">0</field>
+        <field name="EffectiveTime" id="168">@UTCTIMESTAMP</field>
+        <field name="ExpireDate" id="432">@LOCALMKTDATE</field>
+        <field name="ExpireTime" id="126">@UTCTIMESTAMP</field>
+        <field name="GTBookingInst" id="427">0</field>
+        <field name="Commission" id="12">132.24</field>
+        <field name="CommType" id="13">2</field>
+        <field name="Rule80A" id="47">P</field>
+        <field name="ForexReq" id="121">N</field>
+        <field name="Notes" id="6122">DummyNotes</field>
+        <field name="SettlCurrency" id="120">USD</field>
+        <field name="Text" id="58">DummyText</field>
+        <field name="EncodedTextLen" id="354">10</field>
+        <field name="FutSettDate2" id="193">@LOCALMKTDATE</field>
+        <field name="OrderQty2" id="192">1000000</field>
+        <field name="OpenClose" id="77">O</field>
+        <field name="CoveredOrUncovered" id="203">1</field>
+        <field name="CustomerOrFirm" id="204">0</field>
+        <field name="MaxShow" id="210">1000000</field>
+        <field name="PegDifference" id="211">50</field>
+        <field name="DiscretionInst" id="388">1</field>
+        <field name="DiscretionOffset" id="389">1000</field>
+        <field name="ClearingFirm" id="439">LondonClearingHouse</field>
+        <field name="ClearingAccount" id="440">DummyClearingAccount</field>
+        <groups name="NoDealers" id="9690" count="1">
+            <group>
+                <field name="DealerID" id="9691">ABNAMRO</field>
+                <field name="DealerIDSource" id="9692">C</field>
+            </group>
+        </groups>
+        <field name="MKTXTypeDiscriminator" id="20129">DummyMKTXTypeDiscriminator</field>
+        <field name="MKTXAlgoID" id="22200">DummyMKTXAlgoID</field>
+        <field name="MKTXESCBStblty" id="22204">S</field>
+        <field name="MKTXClientID" id="22205">MMAD-MKTXClientID</field>
+        <field name="MKTXByrSlrDcsnMkr" id="22206">DummyMKTXByrSlrDcsnMkr</field>
+        <field name="MKTXInvDcsnMkr" id="22207">MMAD-MKTXInvDcsnMkr</field>
+        <field name="MKTXClientTraderShortCode" id="22208">MKTXClientTraderShortCode</field>
+        <field name="ClientBook" id="9597">DummyClientBook</field>
+    </body>
+</message>

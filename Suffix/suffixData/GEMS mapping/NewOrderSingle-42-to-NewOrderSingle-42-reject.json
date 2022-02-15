@@ -1,0 +1,26 @@
+{
+    "fromMessageType": "D",
+    "toMessageType": "8",
+    "fromSystem": "FRONT_ARENA",
+    "toSystem": "FRONT_ARENA",
+    "outputBeginString": "FIX.4.2",
+    "outputFormat": [
+      {"MsgType": "'8'"},
+      {"OrderID": "ifExists(11, [ClOrdID])"},
+      {"ClOrdID": "ifExists(11, [ClOrdID])"},
+      {"ExecID": "'N/A'"},
+      {"ExecType": "'8'"},
+      {"ExecTransType": "'3'"},
+      {"OrdStatus": "'4'"},
+      {"OrdRejReason": "'1'"}, //NOTE: value of 70 is not valid for this field
+      {"Symbol": "ifExists(55, [Symbol])"},
+      {"SecurityID": "[SecurityID]"},
+      {"IDSource": "[IDSource]"},
+      {"Side": "[Side]"},
+      {"CumQty": "'0'"},
+      {"LeavesQty": "'0'"},
+      {"AvgPx": "'0'"},
+
+      {"Text": "{reason}"}
+    ]
+}

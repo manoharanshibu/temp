@@ -1,0 +1,2280 @@
+2021-11-25 15:56:40.120 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties
+
+2021-11-25 15:56:40.164 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties file (directory: cfg\initiator\messenger.cfg)
+suffix.version:http://crpnycsfxbase01.corporate.local/version.txt
+messenger.dict.fix44:C:/Suffix/suffixData/templates/FIX.4.4/FIX44-min.xml
+messenger.dict.fix43:FIX43.xml
+messenger.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42-min.xml
+messenger.dict.fix41:FIX41.xml
+messenger.dict.fix40:FIX40.xml
+messenger.license:resources/license.txt
+suffix.jar:http://crpnycsfxbase01.corporate.local/sufFIX.jar
+suffix.dict.fix43.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX43.xml
+messenger.dict.fixt11:FIXT11.xml
+messenger.home.url:https://code.google.com/p/quickfix-messenger/
+suffix.dict.fixt11.url:http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml
+suffix.dict.fix40.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX40.xml
+messenger.parser.threads:20
+messenger.dict.fix50sp2:FIX50SP2.xml
+messenger.dict.fix50:FIX50.xml
+suffix.dict.fix50.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50.xml
+suffix.messageTable.columns:
+messenger.icons:resources/icons/
+messenger.help.url:http://wiki.marketaxess.com/display/appdev/SufFIX
+suffix.dict.fix42.url:C:/Suffix/suffixData/templates/FIX.4.2/FIX42-min.xml
+messenger.file.path:../suffixData
+suffix.dict.fix44.url:C:/Suffix/suffixData/templates/FIX.4.4/FIX44-min.xml
+messenger.environment:
+suffix.dict.fix50sp2.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml
+messenger.fixwiki.url:http://fixwiki.org/fixwiki/
+suffix.dict.fix41.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX41.xml
+
+2021-11-25 15:56:40.208 INFO  util.URLUtil - Started downloading http://crpnbgsfxbase01.corporate.local/version.txt
+2021-11-25 15:56:40.837 INFO  util.URLUtil - Finished downloading elapsed time 628
+2021-11-25 15:56:40.841 ERROR config.QFixMessengerConfig - Error talking to server
+java.lang.NullPointerException
+	at com.jramoyo.qfixmessenger.config.QFixMessengerConfig.getAppropriateURLString(QFixMessengerConfig.java:450)
+	at com.jramoyo.qfixmessenger.config.QFixMessengerConfig.checkForUpdates(QFixMessengerConfig.java:331)
+	at com.jramoyo.qfixmessenger.QFixMessenger.<init>(QFixMessenger.java:341)
+	at com.jramoyo.qfixmessenger.QFixMessenger.setSessionAndMessengerSettings(QFixMessenger.java:230)
+	at com.jramoyo.qfixmessenger.QFixMessenger.main(QFixMessenger.java:172)
+2021-11-25 15:56:40.944 ERROR cache.DataDictionaryCache - Problems downloading Quickfix Data Dictionary C:/Suffix/suffixData/templates/FIX.4.2/FIX42-min.xml
+java.net.MalformedURLException: unknown protocol: c
+	at java.net.URL.<init>(URL.java:593)
+	at java.net.URL.<init>(URL.java:483)
+	at java.net.URL.<init>(URL.java:432)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.loadDataDictionaries(DataDictionaryCache.java:40)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.<init>(DataDictionaryCache.java:28)
+	at com.jramoyo.qfixmessenger.QFixMessenger.<init>(QFixMessenger.java:350)
+	at com.jramoyo.qfixmessenger.QFixMessenger.setSessionAndMessengerSettings(QFixMessenger.java:230)
+	at com.jramoyo.qfixmessenger.QFixMessenger.main(QFixMessenger.java:172)
+2021-11-25 15:56:41.358 ERROR cache.DataDictionaryCache - Problems downloading Quickfix Data Dictionary C:/Suffix/suffixData/templates/FIX.4.4/FIX44-min.xml
+java.net.MalformedURLException: unknown protocol: c
+	at java.net.URL.<init>(URL.java:593)
+	at java.net.URL.<init>(URL.java:483)
+	at java.net.URL.<init>(URL.java:432)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.loadDataDictionaries(DataDictionaryCache.java:40)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.<init>(DataDictionaryCache.java:28)
+	at com.jramoyo.qfixmessenger.QFixMessenger.<init>(QFixMessenger.java:350)
+	at com.jramoyo.qfixmessenger.QFixMessenger.setSessionAndMessengerSettings(QFixMessenger.java:230)
+	at com.jramoyo.qfixmessenger.QFixMessenger.main(QFixMessenger.java:172)
+2021-11-25 15:56:41.785 INFO  util.URLUtil - Started downloading http://crpnbgsfxbase01.corporate.local/TRAX/FIX50SP2.xml?Username=rjaen&Hostname=LONL284&SufFIXVersion=3.0.0rc5 to FIX50SP2.xml
+2021-11-25 15:56:45.615 INFO  util.URLUtil - Finished downloading FIX50SP2.xml elapsed time 3829
+2021-11-25 15:56:45.883 INFO  util.URLUtil - Started downloading http://crpnbgsfxbase01.corporate.local/TRAX/FIXT11.xml?Username=rjaen&Hostname=LONL284&SufFIXVersion=3.0.0rc5 to FIXT11.xml
+2021-11-25 15:56:46.081 INFO  util.URLUtil - Finished downloading FIXT11.xml elapsed time 197
+2021-11-25 15:56:52.304 INFO  qfixmessenger.QFixMessenger - Starting initiator with settings 
+[DEFAULT]
+NonStopSession=Y
+ConnectionType=initiator
+InitiatorManualLogon=Y
+ReconnectInterval=5
+LogScreenHeartbeats=Y
+HeartBtInt=90
+SocketUseSSL=Y
+FileStorePath=data/messenger/initiator
+FileLogPath=log/initiator
+[SESSION]
+Alias=MMABAXUK_ABQA2
+BeginString=FIX.4.4
+SessionQualifier=MMABAXUK_ABQA2
+TargetCompID=MA
+Aggressor_Trader_PartyID=MMABAXUK
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abQA2.vip.marketaxess.com
+SenderCompID=MMABAXUK
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=80
+SenderCompID=APAQA3
+SocketConnectHost=fixapa-qa3.vip.traxmarkets.com
+BeginString=FIXT.1.1
+Alias=APAQA3
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=80
+SenderCompID=APAQA2_Verion5
+SocketConnectHost=fixapa-qa2.vip.traxmarkets.com
+BeginString=FIXT.1.1
+Alias=APAQA2_Verion5
+[SESSION]
+TargetSubID=TEST
+TargetCompID=BATS
+SocketConnectPort=10866
+SenderCompID=TRAX
+SocketConnectHost=95.130.110.11
+BeginString=FIX.4.4
+SenderSubID=0003
+Alias=FIX44_BATS_03
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=80
+SenderCompID=HEMAQA1_APA
+SocketConnectHost=fixapa-qa2.vip.traxmarkets.com
+BeginString=FIXT.1.1
+Alias=HEMAQA1_APA
+[SESSION]
+TargetCompID=MA_GEMS
+SocketConnectPort=443
+SenderCompID=QA1_DUM_MAEMS
+SocketConnectHost=fixgems-qa1.vip.traxmarkets.com
+SessionQualifier=QA1_DUM_MAEMS
+BeginString=FIX.4.4
+Alias=QA1_DUM_MAEMS
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=1234
+SenderCompID=RECEIVERAPA
+SocketConnectHost=localhost
+BeginString=FIXT.1.1
+Alias=FIX4.4_RECEIVERAPA
+[SESSION]
+Alias=MMMAQA_ABQA2
+BeginString=FIX.4.4
+SessionQualifier=MMMAQA_ABQA2
+TargetCompID=MA
+Aggressor_Trader_PartyID=MMMAQA
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abQA2.vip.marketaxess.com
+SenderCompID=MMMAQA
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+TargetCompID=TRAX
+SocketConnectPort=80
+SenderCompID=QA3Ver4_PUB
+SocketConnectHost=fixapa-qa3.vip.traxmarkets.com
+BeginString=FIX.4.4
+Alias=QA3Ver4_PUB
+[SESSION]
+Alias=MMMAQA_ABQA3
+BeginString=FIX.4.4
+SessionQualifier=MMMAQA_ABQA3
+TargetCompID=MA
+Aggressor_Trader_PartyID=MMMAQA
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abQA3.vip.marketaxess.com
+SenderCompID=MMMAQA
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+Alias=T2Kauaiblk3_ABQA3
+BeginString=FIX.4.4
+SessionQualifier=T2Kauaiblk3_ABQA3
+TargetCompID=MA
+Aggressor_Trader_PartyID=T2Kauaiblk3
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA3.vip.marketaxess.com
+SenderCompID=T2Kauaiblk3
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+Alias=T2Kauaiblk3_ABQA2
+BeginString=FIX.4.4
+SessionQualifier=T2Kauaiblk3_ABQA2
+TargetCompID=MA
+Aggressor_Trader_PartyID=T2Kauaiblk3
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abQA2.vip.marketaxess.com
+SenderCompID=T2Kauaiblk3
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+Alias=T1Kauaiblk3_ABQA1
+BeginString=FIX.4.4
+SessionQualifier=T1Kauaiblk3_ABQA1
+TargetCompID=MA
+Aggressor_Trader_PartyID=T1Kauaiblk3
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA1.vip.marketaxess.com
+SenderCompID=T1Kauaiblk3
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+Alias=T2Kauaiblk3_ABQA1
+BeginString=FIX.4.4
+SessionQualifier=T2Kauaiblk3_ABQA1
+TargetCompID=MA
+Aggressor_Trader_PartyID=T2Kauaiblk3
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA1.vip.marketaxess.com
+SenderCompID=T2Kauaiblk3
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+TargetSubID=TEST
+TargetCompID=BATS
+SocketConnectPort=10873
+SenderCompID=TRAX
+SocketConnectHost=95.130.110.11
+BeginString=FIX.4.4
+SenderSubID=0010
+Alias=FIX44_BATS_10
+[SESSION]
+Alias=T1Kauaiblk3_ABQA3
+BeginString=FIX.4.4
+SessionQualifier=T1Kauaiblk3_ABQA3
+TargetCompID=MA
+Aggressor_Trader_PartyID=T1Kauaiblk3
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA3.vip.marketaxess.com
+SenderCompID=T1Kauaiblk3
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+Alias=T1Kauaiblk3_ABQA2
+BeginString=FIX.4.4
+SessionQualifier=T1Kauaiblk3_ABQA2
+TargetCompID=MA
+Aggressor_Trader_PartyID=T1Kauaiblk3
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abQA2.vip.marketaxess.com
+SenderCompID=T1Kauaiblk3
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+Alias=T1Kauaiblk3_ABQA4
+BeginString=FIX.4.4
+SessionQualifier=T1Kauaiblk3_ABQA4
+TargetCompID=MA
+Aggressor_Trader_PartyID=T1Kauaiblk3
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA4.vip.marketaxess.com
+SenderCompID=T1Kauaiblk3
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+Alias=T2Kauaiblk3_ABQA4
+BeginString=FIX.4.4
+SessionQualifier=T2Kauaiblk3_ABQA4
+TargetCompID=MA
+Aggressor_Trader_PartyID=T2Kauaiblk3
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA4.vip.marketaxess.com
+SenderCompID=T2Kauaiblk3
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=80
+SenderCompID=HEMA_RTS2728_TRAX
+SocketConnectHost=fixapa-qa1.vip.traxmarkets.com
+BeginString=FIXT.1.1
+Alias=HEMA_RTS2728_TRAX
+[SESSION]
+Alias=T2Kauaiblk1_ABQA3
+BeginString=FIX.4.4
+SessionQualifier=T2Kauaiblk1_ABQA3
+TargetCompID=MA
+Aggressor_Trader_PartyID=T2Kauaiblk1
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA3.vip.marketaxess.com
+SenderCompID=T2Kauaiblk1
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+Alias=T2Kauaiblk1_ABQA2
+BeginString=FIX.4.4
+SessionQualifier=T2Kauaiblk1_ABQA2
+TargetCompID=MA
+Aggressor_Trader_PartyID=T2Kauaiblk1
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abQA2.vip.marketaxess.com
+SenderCompID=T2Kauaiblk1
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+TargetCompID=TRAX
+SocketConnectPort=80
+SenderCompID=APAQA3Version4
+SocketConnectHost=fixapa-qa3.vip.traxmarkets.com
+BeginString=FIX.4.4
+Alias=APAQA3Version4
+[SESSION]
+Alias=T1Kauaiblk1_ABQA1
+BeginString=FIX.4.4
+SessionQualifier=T1Kauaiblk1_ABQA1
+TargetCompID=MA
+Aggressor_Trader_PartyID=T1Kauaiblk1
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA1.vip.marketaxess.com
+SenderCompID=T1Kauaiblk1
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+Alias=T2Kauaiblk1_ABQA1
+BeginString=FIX.4.4
+SessionQualifier=T2Kauaiblk1_ABQA1
+TargetCompID=MA
+Aggressor_Trader_PartyID=T2Kauaiblk1
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA1.vip.marketaxess.com
+SenderCompID=T2Kauaiblk1
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=9151
+SenderCompID=inttestclient2
+SocketConnectHost=localhost
+SessionQualifier=inst1
+BeginString=FIXT.1.1
+Alias=L-inttestclient2
+[SESSION]
+Alias=T1Kauaiblk1_ABQA3
+BeginString=FIX.4.4
+SessionQualifier=T1Kauaiblk1_ABQA3
+TargetCompID=MA
+Aggressor_Trader_PartyID=T1Kauaiblk1
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA3.vip.marketaxess.com
+SenderCompID=T1Kauaiblk1
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=9151
+SenderCompID=inttestclient2
+SocketConnectHost=localhost
+SessionQualifier=inst2
+BeginString=FIXT.1.1
+Alias=L-inttestclient2-INST2
+[SESSION]
+Alias=T1Kauaiblk1_ABQA2
+BeginString=FIX.4.4
+SessionQualifier=T1Kauaiblk1_ABQA2
+TargetCompID=MA
+Aggressor_Trader_PartyID=T1Kauaiblk1
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abQA2.vip.marketaxess.com
+SenderCompID=T1Kauaiblk1
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+Alias=T1Kauaiblk1_ABQA4
+BeginString=FIX.4.4
+SessionQualifier=T1Kauaiblk1_ABQA4
+TargetCompID=MA
+Aggressor_Trader_PartyID=T1Kauaiblk1
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA4.vip.marketaxess.com
+SenderCompID=T1Kauaiblk1
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+Alias=T2Kauaiblk1_ABQA4
+BeginString=FIX.4.4
+SessionQualifier=T2Kauaiblk1_ABQA4
+TargetCompID=MA
+Aggressor_Trader_PartyID=T2Kauaiblk1
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA4.vip.marketaxess.com
+SenderCompID=T2Kauaiblk1
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=80
+SenderCompID=MTFQA2PUB
+SocketConnectHost=fixapa-qa2.vip.traxmarkets.com
+BeginString=FIXT.1.1
+Alias=QA2_MTFQA2PUB
+[SESSION]
+TargetCompID=TRAX
+SocketConnectPort=80
+SenderCompID=QA3APA_4.4
+SocketConnectHost=fixapa-qa3.vip.traxmarkets.com
+BeginString=FIX.4.4
+Alias=QA3APA_4.4
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=80
+SenderCompID=MTFQA2APA
+SocketConnectHost=fixapa-qa2.vip.traxmarkets.com
+BeginString=FIXT.1.1
+Alias=QA2_MTFQA2APA
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=80
+SenderCompID=APAQA2_Verion4
+SocketConnectHost=fixapa-qa2.vip.traxmarkets.com
+BeginString=FIX.4.4
+Alias=APAQA2_Verion4
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=9151
+SenderCompID=inttestclient
+SocketConnectHost=localhost
+BeginString=FIXT.1.1
+Alias=L-inttestclient
+[SESSION]
+TargetSubID=TEST
+TargetCompID=BATS
+SocketConnectPort=10869
+SenderCompID=TRAX
+SocketConnectHost=95.130.110.11
+BeginString=FIX.4.4
+SenderSubID=0006
+Alias=FIX44_BATS_06
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=80
+SenderCompID=QAAPA001
+SocketConnectHost=fixapa-qa2.vip.traxmarkets.com
+BeginString=FIXT.1.1
+Alias=QAAPA001
+[SESSION]
+Executing_Trader_PartyRole=12
+SocketConnectPort=80
+SenderCompID=ABN_US_TAPI
+SocketConnectHost=fixtapi-ABQA2.vip.marketaxess.com
+AutoSendInterval=10
+LPD_Firm_PartyID=MKTX_US
+Executing_Firm_PartyID=BRSE
+Executing_Firm_PartyIDSource=B
+SessionQualifier=ABN_US_TAPI-Auto_QA2
+TargetCompID=MA
+AutoRespondXML=AutoRespondXML/ABN_TAPI_Response.xml
+LPD_Firm_PartyRole=17
+Executing_Trader_PartyID=kb_abn_us
+BeginString=FIXT.1.1
+AutoRespondMessageTypes=R
+Alias=ABN_US_TAPI-Auto
+LPD_Firm_PartyIDSource=D
+AutoRespond=Y
+DefaultApplVerID=9
+Executing_Firm_PartyRole=1
+Executing_Trader_PartyIDSource=D
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=9999
+SenderCompID=PRODSUPP01
+SocketConnectHost=localhost
+BeginString=FIXT.1.1
+Alias=FIXT1.1_STG_PRODSUPP01
+[SESSION]
+Alias=omblckrcktrader2_QA4
+BeginString=FIX.4.4
+SessionQualifier=omblckrcktrader2ABQA4
+TargetCompID=MA
+Aggressor_Trader_PartyID=omblckrcktrader2
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA4.vip.marketaxess.com
+SenderCompID=omblckrcktrader2
+DefaultApplVerID=9
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+Alias=omblckrcktrader2_QA2
+BeginString=FIX.4.4
+SessionQualifier=omblckrcktrader2ABQA3
+TargetCompID=MA
+Aggressor_Trader_PartyID=omblckrcktrader2
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA3.vip.marketaxess.com
+SenderCompID=omblckrcktrader2
+DefaultApplVerID=9
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=9999
+SenderCompID=FRENCH01
+SocketConnectHost=localhost
+BeginString=FIXT.1.1
+Alias=FIXT1.1_FRENCH01
+[SESSION]
+Alias=T2Kauaiblk6_ABQA2
+BeginString=FIX.4.4
+SessionQualifier=T2Kauaiblk6_ABQA2
+TargetCompID=MA
+Aggressor_Trader_PartyID=T2Kauaiblk6
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abQA2.vip.marketaxess.com
+SenderCompID=T2Kauaiblk6
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+Alias=omblckrcktrader2_QA2
+BeginString=FIX.4.4
+SessionQualifier=omblckrcktrader2ABQA2
+TargetCompID=MA
+Aggressor_Trader_PartyID=omblckrcktrader2
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abqa2.vip.marketaxess.com
+SenderCompID=omblckrcktrader2
+DefaultApplVerID=9
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TraxNeptune
+SocketConnectPort=4321
+SenderCompID=Client1
+SocketConnectHost=localhost
+BeginString=FIXT.1.1
+Alias=LOCAL_EMAX_1
+[SESSION]
+Alias=omblckrcktrader2_QA1
+BeginString=FIX.4.4
+SessionQualifier=omblckrcktrader2ABQA1
+TargetCompID=MA
+Aggressor_Trader_PartyID=omblckrcktrader2
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA1.vip.marketaxess.com
+SenderCompID=omblckrcktrader2
+DefaultApplVerID=9
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+Alias=T2Kauaiblk6_ABQA3
+BeginString=FIX.4.4
+SessionQualifier=T2Kauaiblk6_ABQA3
+TargetCompID=MA
+Aggressor_Trader_PartyID=T2Kauaiblk6
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA3.vip.marketaxess.com
+SenderCompID=T2Kauaiblk6
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+TargetSubID=TEST
+TargetCompID=BATS
+SocketConnectPort=10870
+SenderCompID=TRAX
+SocketConnectHost=95.130.110.13
+BeginString=FIX.4.4
+SenderSubID=0007
+Alias=FIX44_BATS_07
+[SESSION]
+TargetCompID=TRAX
+SocketConnectPort=80
+SenderCompID=PUBQA3Version4
+SocketConnectHost=fixapa-qa3.vip.traxmarkets.com
+BeginString=FIX.4.4
+Alias=PUBQA3Version4
+[SESSION]
+Alias=T1Kauaiblk5_ABQA1
+BeginString=FIX.4.4
+SessionQualifier=T1Kauaiblk5_ABQA1
+TargetCompID=MA
+Aggressor_Trader_PartyID=T1Kauaiblk5
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA1.vip.marketaxess.com
+SenderCompID=T1Kauaiblk5
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+Alias=T1Kauaiblk5_ABQA2
+BeginString=FIX.4.4
+SessionQualifier=T1Kauaiblk5_ABQA2
+TargetCompID=MA
+Aggressor_Trader_PartyID=T1Kauaiblk5
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abQA2.vip.marketaxess.com
+SenderCompID=T1Kauaiblk5
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+Alias=T1Kauaiblk5_ABQA3
+BeginString=FIX.4.4
+SessionQualifier=T1Kauaiblk5_ABQA3
+TargetCompID=MA
+Aggressor_Trader_PartyID=T1Kauaiblk5
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA3.vip.marketaxess.com
+SenderCompID=T1Kauaiblk5
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+Alias=T1Kauaiblk5_ABQA4
+BeginString=FIX.4.4
+SessionQualifier=T1Kauaiblk5_ABQA4
+TargetCompID=MA
+Aggressor_Trader_PartyID=T1Kauaiblk5
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA4.vip.marketaxess.com
+SenderCompID=T1Kauaiblk5
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+Alias=T2Kauaiblk6_ABQA1
+BeginString=FIX.4.4
+SessionQualifier=T2Kauaiblk6_ABQA1
+TargetCompID=MA
+Aggressor_Trader_PartyID=T2Kauaiblk6
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA1.vip.marketaxess.com
+SenderCompID=T2Kauaiblk6
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAXQA3
+SocketConnectPort=9999
+SenderCompID=EUCI1001
+SocketConnectHost=localhost
+BeginString=FIXT.1.1
+Alias=FIXT1.1_QA3_EUCI1001
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=ANNA
+SocketConnectPort=9111
+SenderCompID=TRAXTEST
+SocketConnectHost=localhost
+BeginString=FIXT.1.1
+Alias=TST_SFX
+[SESSION]
+DefaultApplVerID=2
+TargetCompID=MA_FIX_GTW
+SocketConnectPort=4321
+SenderCompID=EMS_TEST
+SocketConnectHost=ems-fix-gtw.pbe-561.dev.ems.aws.qad.root
+SessionQualifier=STRATEGIC_EMS
+BeginString=FIX.4.2
+Alias=STRATEGIC_EMS
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAXTRN
+SocketConnectPort=9998
+SenderCompID=MARL0001
+SocketConnectHost=localhost
+BeginString=FIXT.1.1
+Alias=FIXT1.1_MARL
+[SESSION]
+Alias=kauaiblckrcktrader2_QA4
+BeginString=FIX.4.4
+SessionQualifier=kauaiblckrcktrader2ABQA4
+TargetCompID=MA
+Aggressor_Trader_PartyID=kauaiblckrcktrader2
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA4.vip.marketaxess.com
+SenderCompID=kauaiblckrcktrader2
+DefaultApplVerID=9
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+Alias=T2Kauaiblk4_ABQA1
+BeginString=FIX.4.4
+SessionQualifier=T2Kauaiblk4_ABQA1
+TargetCompID=MA
+Aggressor_Trader_PartyID=T2Kauaiblk4
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA1.vip.marketaxess.com
+SenderCompID=T2Kauaiblk4
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+Alias=kauaiblckrcktrader2_QA2
+BeginString=FIX.4.4
+SessionQualifier=kauaiblckrcktrader2ABQA3
+TargetCompID=MA
+Aggressor_Trader_PartyID=kauaiblckrcktrader2
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA3.vip.marketaxess.com
+SenderCompID=kauaiblckrcktrader2
+DefaultApplVerID=9
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+TargetSubID=TEST
+TargetCompID=BATS
+SocketConnectPort=10872
+SenderCompID=TRAX
+SocketConnectHost=95.130.110.13
+BeginString=FIX.4.4
+SenderSubID=0009
+Alias=FIX44_BATS_09
+[SESSION]
+Alias=kauaiblckrcktrader2_QA2
+BeginString=FIX.4.4
+SessionQualifier=kauaiblckrcktrader2ABQA2
+TargetCompID=MA
+Aggressor_Trader_PartyID=kauaiblckrcktrader2
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abqa2.vip.marketaxess.com
+SenderCompID=kauaiblckrcktrader2
+DefaultApplVerID=9
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+Alias=kauaiblckrcktrader2_QA1
+BeginString=FIX.4.4
+SessionQualifier=kauaiblckrcktrader2ABQA1
+TargetCompID=MA
+Aggressor_Trader_PartyID=kauaiblckrcktrader2
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA1.vip.marketaxess.com
+SenderCompID=kauaiblckrcktrader2
+DefaultApplVerID=9
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+Alias=T2Kauaiblk4_ABQA4
+BeginString=FIX.4.4
+SessionQualifier=T2Kauaiblk4_ABQA4
+TargetCompID=MA
+Aggressor_Trader_PartyID=T2Kauaiblk4
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA4.vip.marketaxess.com
+SenderCompID=T2Kauaiblk4
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+Alias=T2Kauaiblk4_ABQA3
+BeginString=FIX.4.4
+SessionQualifier=T2Kauaiblk4_ABQA3
+TargetCompID=MA
+Aggressor_Trader_PartyID=T2Kauaiblk4
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA3.vip.marketaxess.com
+SenderCompID=T2Kauaiblk4
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+Alias=T2Kauaiblk4_ABQA2
+BeginString=FIX.4.4
+SessionQualifier=T2Kauaiblk4_ABQA2
+TargetCompID=MA
+Aggressor_Trader_PartyID=T2Kauaiblk4
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abQA2.vip.marketaxess.com
+SenderCompID=T2Kauaiblk4
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+Alias=MMMAQA_ABQA4
+BeginString=FIX.4.4
+SessionQualifier=MMMAQA_ABQA4
+TargetCompID=MA
+Aggressor_Trader_PartyID=MMMAQA
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abQA4.vip.marketaxess.com
+SenderCompID=MMMAQA
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=9999
+SenderCompID=QA3TEST_002
+SocketConnectHost=localhost
+BeginString=FIXT.1.1
+Alias=L-QA3TEST_002
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAXQA3
+SocketConnectPort=9993
+SenderCompID=QA3TESTID
+SocketConnectHost=localhost
+BeginString=FIXT.1.1
+Alias=L-QA3-QA3TESTID
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=80
+SenderCompID=HEMA_RTS2728_MTF
+SocketConnectHost=fixapa-qa1.vip.traxmarkets.com
+BeginString=FIXT.1.1
+Alias=HEMA_RTS2728_MTF
+[SESSION]
+TargetCompID=ACCEPT
+SocketConnectPort=9878
+SenderCompID=INIT
+DataDictionary=C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+SocketConnectHost=localhost
+BeginString=FIX.4.2
+[SESSION]
+Alias=MMABAXUK_ABQA4
+BeginString=FIX.4.4
+SessionQualifier=MMABAXUK_ABQA4
+TargetCompID=MA
+Aggressor_Trader_PartyID=MMABAXUK
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abQA4.vip.marketaxess.com
+SenderCompID=MMABAXUK
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=80
+SenderCompID=HEMAAPAPUB
+SocketConnectHost=fixapa-qa1.vip.traxmarkets.com
+BeginString=FIXT.1.1
+Alias=HEMAAPAPUB
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=4321
+SenderCompID=rtt
+SocketConnectHost=localhost
+BeginString=FIXT.1.1
+Alias=QA2_rtt
+[SESSION]
+Executing_Trader_PartyRole=12
+SocketConnectPort=80
+Aggressor_Trader_PartyIDSource=D
+SenderCompID=ABN_US_TAPI
+SocketConnectHost=fixtapi-abqa1.vip.marketaxess.com
+Aggressor_Firm_PartyIDSource=B
+AutoSendInterval=10
+LPD_Firm_PartyID=MKTX_US
+Executing_Firm_PartyID=BRSE
+Aggressor_Firm_PartyRole=13
+Executing_Firm_PartyIDSource=B
+SessionQualifier=ABQA1_ABN_US_TAPI
+TargetCompID=MA
+AutoRespondXML=AutoRespondXML/Dlr-Price-Update.xml
+LPD_Firm_PartyRole=17
+Aggressor_Trader_PartyID=abnus_ss
+Aggressor_Firm_PartyID=BRSE
+Executing_Trader_PartyID=abnus_ss
+BeginString=FIXT.1.1
+AutoRespondMessageTypes=R
+Alias=FIX5.0_ABQA1_ABN_US_TAPI
+Aggressor_Trader_PartyRole=11
+LPD_Firm_PartyIDSource=D
+AutoRespond=Y
+Executing_Trader_PartyIDSource=D
+Executing_Firm_PartyRole=1
+DefaultApplVerID=9
+[SESSION]
+Alias=EHABAXUK_NYQA3
+BeginString=FIX.4.4
+SessionQualifier=EHABAXUK_NYQA3
+TargetCompID=MA
+Aggressor_Trader_PartyID=eh_abaxuk
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-nyQA3.vip.marketaxess.com
+SenderCompID=EHABAXUK
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+TargetSubID=TEST
+TargetCompID=BATS
+SocketConnectPort=10871
+SenderCompID=TRAX
+SocketConnectHost=95.130.110.9
+BeginString=FIX.4.4
+SenderSubID=0008
+Alias=FIX44_BATS_08
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAXQA3
+SocketConnectPort=80
+SenderCompID=HEMAQA3_INBOUND_001
+SocketConnectHost=fixapa-qa3.vip.traxmarkets.com
+BeginString=FIXT.1.1
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=9151
+SenderCompID=inttestclient2
+SocketConnectHost=localhost
+BeginString=FIXT.1.1
+Alias=L-inttestclient2
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=80
+SenderCompID=HEMAAPA
+SocketConnectHost=fixapa-qa1.vip.traxmarkets.com
+BeginString=FIXT.1.1
+Alias=HEMAAPA
+[SESSION]
+Alias=STG_JB_FRONT_ARENA
+BeginString=FIX.4.2
+SessionQualifier=STG_JB_FRONT_ARENA
+TargetCompID=MA
+OnBehalfOfCompID=CLIENT
+SocketConnectHost=fixgems-stg.vip.marketaxess.com
+SenderCompID=JBFIXHUBPRD
+DataDictionary=C:/Suffix/suffixData/templates/FIX.4.2/FIX42-min.xml
+UseDataDictionary=N
+SocketConnectPort=80
+[SESSION]
+Alias=T2Kauaiblk6_ABQA2
+BeginString=FIX.4.4
+SessionQualifier=T2Kauaiblk7_ABQA2
+TargetCompID=MA
+Aggressor_Trader_PartyID=T2Kauaiblk7
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abQA2.vip.marketaxess.com
+SenderCompID=T2Kauaiblk7
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+Alias=T2Kauaiblk6_ABQA3
+BeginString=FIX.4.4
+SessionQualifier=T2Kauaiblk7_ABQA3
+TargetCompID=MA
+Aggressor_Trader_PartyID=T2Kauaiblk7
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA3.vip.marketaxess.com
+SenderCompID=T2Kauaiblk7
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAXA
+SocketConnectPort=9151
+SenderCompID=DEVINTEST
+SocketConnectHost=localhost
+BeginString=FIXT.1.1
+Alias=L-DEVINTEST1a
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAXB
+SocketConnectPort=9151
+SenderCompID=DEVINTEST
+SocketConnectHost=localhost
+BeginString=FIXT.1.1
+Alias=L-DEVINTEST1b
+[SESSION]
+Alias=T1Kauaiblk7_ABQA1
+BeginString=FIX.4.4
+SessionQualifier=T1Kauaiblk7_ABQA1
+TargetCompID=MA
+Aggressor_Trader_PartyID=T1Kauaiblk7
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA1.vip.marketaxess.com
+SenderCompID=T1Kauaiblk7
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+Alias=T2Kauaiblk6_ABQA1
+BeginString=FIX.4.4
+SessionQualifier=T2Kauaiblk7_ABQA1
+TargetCompID=MA
+Aggressor_Trader_PartyID=T2Kauaiblk7
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA1.vip.marketaxess.com
+SenderCompID=T2Kauaiblk7
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+Alias=T1Kauaiblk7_ABQA2
+BeginString=FIX.4.4
+SessionQualifier=T1Kauaiblk7_ABQA2
+TargetCompID=MA
+Aggressor_Trader_PartyID=T1Kauaiblk7
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abQA2.vip.marketaxess.com
+SenderCompID=T1Kauaiblk7
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=9152
+SenderCompID=inttestclient2
+SocketConnectHost=localhost
+SessionQualifier=port2
+BeginString=FIXT.1.1
+Alias=L-inttestclient2-PORT2
+[SESSION]
+Alias=T1Kauaiblk7_ABQA3
+BeginString=FIX.4.4
+SessionQualifier=T1Kauaiblk7_ABQA3
+TargetCompID=MA
+Aggressor_Trader_PartyID=T1Kauaiblk7
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA3.vip.marketaxess.com
+SenderCompID=T1Kauaiblk7
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+TargetSubID=UAT
+Alias=EXT_ANNA_UAT
+BeginString=FIXT.1.1
+SenderSubID=IS
+TargetCompID=DSB
+SocketConnectHost=localhost
+SenderCompID=TraxMarkets
+DefaultApplVerID=9
+SocketConnectPort=9001
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=80
+SenderCompID=MAQA 005
+SocketConnectHost=fixapa-qa2.vip.traxmarkets.com
+BeginString=FIXT.1.1
+Alias=QA2_MAQA 005
+[SESSION]
+Alias=MMABAXUK_NYQA3
+BeginString=FIX.4.4
+SessionQualifier=MMABAXUK_NYQA3
+TargetCompID=MA
+Aggressor_Trader_PartyID=MMABAXUK
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-nyQA3.vip.marketaxess.com
+SenderCompID=MMABAXUK
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=80
+SenderCompID=HEMATRAXRTS27QA2_PUB
+SocketConnectHost=fixapa-qa2.vip.traxmarkets.com
+BeginString=FIXT.1.1
+Alias=HEMATRAXRTS27QA2_PUB
+[SESSION]
+Alias=TRN_JB_FRONT_ARENA
+BeginString=FIX.4.2
+SessionQualifier=TRN_JB_FRONT_ARENA
+TargetCompID=MA
+OnBehalfOfCompID=CLIENT
+SocketConnectHost=fixgems-trn.vip.marketaxess.com
+SenderCompID=JBFIXHUBPRD
+DataDictionary=C:/Suffix/suffixData/templates/FIX.4.2/FIX42-min.xml
+UseDataDictionary=Y
+SocketConnectPort=80
+[SESSION]
+TargetSubID=TEST
+TargetCompID=BATS
+SocketConnectPort=10868
+SenderCompID=TRAX
+SocketConnectHost=95.130.110.9
+BeginString=FIX.4.4
+SenderSubID=0005
+Alias=FIX44_BATS_05
+[SESSION]
+Alias=T1Kauaiblk2_ABQA1
+BeginString=FIX.4.4
+SessionQualifier=T1Kauaiblk2_ABQA1
+TargetCompID=MA
+Aggressor_Trader_PartyID=T1Kauaiblk2
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA1.vip.marketaxess.com
+SenderCompID=T1Kauaiblk2
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+Alias=T2Kauaiblk2_ABQA4
+BeginString=FIX.4.4
+SessionQualifier=T2Kauaiblk2_ABQA4
+TargetCompID=MA
+Aggressor_Trader_PartyID=T2Kauaiblk2
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA4.vip.marketaxess.com
+SenderCompID=T2Kauaiblk2
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+Alias=T1Kauaiblk2_ABQA3
+BeginString=FIX.4.4
+SessionQualifier=T1Kauaiblk2_ABQA3
+TargetCompID=MA
+Aggressor_Trader_PartyID=T1Kauaiblk2
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA3.vip.marketaxess.com
+SenderCompID=T1Kauaiblk2
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+Alias=T2Kauaiblk2_ABQA3
+BeginString=FIX.4.4
+SessionQualifier=T2Kauaiblk2_ABQA3
+TargetCompID=MA
+Aggressor_Trader_PartyID=T2Kauaiblk2
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA3.vip.marketaxess.com
+SenderCompID=T2Kauaiblk2
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+Alias=T1Kauaiblk2_ABQA2
+BeginString=FIX.4.4
+SessionQualifier=T1Kauaiblk2_ABQA2
+TargetCompID=MA
+Aggressor_Trader_PartyID=T1Kauaiblk2
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abQA2.vip.marketaxess.com
+SenderCompID=T1Kauaiblk2
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+Alias=T2Kauaiblk2_ABQA2
+BeginString=FIX.4.4
+SessionQualifier=T2Kauaiblk2_ABQA2
+TargetCompID=MA
+Aggressor_Trader_PartyID=T2Kauaiblk2
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abQA2.vip.marketaxess.com
+SenderCompID=T2Kauaiblk2
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+Alias=MMJBAER_NYQA3
+BeginString=FIX.4.4
+SessionQualifier=MMJBAER_NYQA3
+TargetCompID=MA
+Aggressor_Trader_PartyID=MMJBAER
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-nyQA3.vip.marketaxess.com
+SenderCompID=MMJBAER
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+Alias=MMMAQAUK_ABQA4
+BeginString=FIX.4.4
+SessionQualifier=MMMAQAUK_ABQA4
+TargetCompID=MA
+Aggressor_Trader_PartyID=MMMAQAUK
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abQA4.vip.marketaxess.com
+SenderCompID=MMMAQAUK
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=MA_DEV01
+SocketConnectPort=80
+SenderCompID=TRAX_MA_MTF_TRADES
+SocketConnectHost=fixapa-qa1.vip.traxmarkets.com
+BeginString=FIXT.1.1
+Alias=FIXT1.1_DEVINTEST1
+[SESSION]
+Alias=T1Kauaiblk2_ABQA4
+BeginString=FIX.4.4
+SessionQualifier=T1Kauaiblk2_ABQA4
+TargetCompID=MA
+Aggressor_Trader_PartyID=T1Kauaiblk2
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA4.vip.marketaxess.com
+SenderCompID=T1Kauaiblk2
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=MA_DEV02
+SocketConnectPort=80
+SenderCompID=TRAX_MA_MTF_TRADES
+SocketConnectHost=fixapa-qa1.vip.traxmarkets.com
+BeginString=FIXT.1.1
+Alias=FIXT1.1_DEVINTEST2
+[SESSION]
+Alias=MMMAQA_NYQA3
+BeginString=FIX.4.4
+SessionQualifier=MMMAQA_NYQA3
+TargetCompID=MA
+Aggressor_Trader_PartyID=MMMAQA
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-nyQA3.vip.marketaxess.com
+SenderCompID=MMMAQA
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+Alias=T2Kauaiblk2_ABQA1
+BeginString=FIX.4.4
+SessionQualifier=T2Kauaiblk2_ABQA1
+TargetCompID=MA
+Aggressor_Trader_PartyID=T2Kauaiblk2
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA1.vip.marketaxess.com
+SenderCompID=T2Kauaiblk2
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAXQA3
+SocketConnectPort=80
+SenderCompID=RHAQA3_INBOUND_001
+SocketConnectHost=fixapa-qa3.vip.traxmarkets.com
+BeginString=FIXT.1.1
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TraxTest
+SocketConnectPort=1500
+SenderCompID=AnnaTest
+SocketConnectHost=localhost
+BeginString=FIXT.1.1
+Alias=FIXT1.1_annatest1
+[SESSION]
+Alias=kauaiblckrcktrader1_QA1
+BeginString=FIX.4.4
+SessionQualifier=kauaiblckrcktrader1ABQA1
+TargetCompID=MA
+Aggressor_Trader_PartyID=kauaiblckrcktrader1
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA1.vip.marketaxess.com
+SenderCompID=kauaiblckrcktrader1
+DefaultApplVerID=9
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+Alias=kauaiblckrcktrader1_QA2
+BeginString=FIX.4.4
+SessionQualifier=kauaiblckrcktrader1ABQA2
+TargetCompID=MA
+Aggressor_Trader_PartyID=kauaiblckrcktrader1
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abqa2.vip.marketaxess.com
+SenderCompID=kauaiblckrcktrader1
+DefaultApplVerID=9
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=80
+SenderCompID=HEMATRAXRTS27QA2
+SocketConnectHost=fixapa-qa2.vip.traxmarkets.com
+BeginString=FIXT.1.1
+Alias=HEMATRAXRTS27QA2
+[SESSION]
+Alias=QA1_JB_FRONT_ARENA
+BeginString=FIX.4.2
+DeliverToSubID=MA
+SessionQualifier=QA1_JB_FRONT_ARENA
+TargetCompID=MA
+OnBehalfOfCompID=CLIENT
+SocketConnectHost=fixgems-qa1.vip.traxmarkets.com
+SenderCompID=JBFIXHUBPRD
+DataDictionary=C:/Suffix/suffixData/templates/FIX.4.2/FIX42-min.xml
+UseDataDictionary=Y
+SocketConnectPort=80
+[SESSION]
+Alias=kauaiblckrcktrader1_QA2
+BeginString=FIX.4.4
+SessionQualifier=kauaiblckrcktrader1ABQA3
+TargetCompID=MA
+Aggressor_Trader_PartyID=kauaiblckrcktrader1
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA3.vip.marketaxess.com
+SenderCompID=kauaiblckrcktrader1
+DefaultApplVerID=9
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+Alias=kauaiblckrcktrader1_QA4
+BeginString=FIX.4.4
+SessionQualifier=kauaiblckrcktrader1ABQA4
+TargetCompID=MA
+Aggressor_Trader_PartyID=kauaiblckrcktrader1
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA4.vip.marketaxess.com
+SenderCompID=kauaiblckrcktrader1
+DefaultApplVerID=9
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=80
+SenderCompID=APA_QA3
+SocketConnectHost=fixapa-qa3.vip.traxmarkets.com
+BeginString=FIXT.1.1
+Alias=APA_QA3
+[SESSION]
+Alias=T1Kauaiblk6_ABQA1
+BeginString=FIX.4.4
+SessionQualifier=T1Kauaiblk6_ABQA1
+TargetCompID=MA
+Aggressor_Trader_PartyID=T1Kauaiblk6
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA1.vip.marketaxess.com
+SenderCompID=T1Kauaiblk6
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+Alias=MMMAQAUK_ABQA2
+BeginString=FIX.4.4
+SessionQualifier=MMMAQAUK_ABQA2
+TargetCompID=MA
+Aggressor_Trader_PartyID=MMMAQAUK
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abQA2.vip.marketaxess.com
+SenderCompID=MMMAQAUK
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+Alias=T1Kauaiblk6_ABQA2
+BeginString=FIX.4.4
+SessionQualifier=T1Kauaiblk6_ABQA2
+TargetCompID=MA
+Aggressor_Trader_PartyID=T1Kauaiblk6
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abQA2.vip.marketaxess.com
+SenderCompID=T1Kauaiblk6
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=4321
+SenderCompID=MAQA 001
+SocketConnectHost=localhost
+BeginString=FIXT.1.1
+Alias=QA2_MAQA001
+[SESSION]
+Alias=T1Kauaiblk6_ABQA3
+BeginString=FIX.4.4
+SessionQualifier=T1Kauaiblk6_ABQA3
+TargetCompID=MA
+Aggressor_Trader_PartyID=T1Kauaiblk6
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA3.vip.marketaxess.com
+SenderCompID=T1Kauaiblk6
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+Password=fdsaasdf
+SocketConnectPort=1500
+SenderCompID=JDAPA003
+SocketConnectHost=localhost
+BeginString=FIXT.1.1
+Alias=FIXT1.1_qa1_JDAPA003
+[SESSION]
+Alias=T2Kauaiblk5_ABQA2
+BeginString=FIX.4.4
+SessionQualifier=T2Kauaiblk5_ABQA2
+TargetCompID=MA
+Aggressor_Trader_PartyID=T2Kauaiblk5
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abQA2.vip.marketaxess.com
+SenderCompID=T2Kauaiblk5
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+TargetSubID=TEST
+TargetCompID=BATS
+SocketConnectPort=10864
+SenderCompID=TRAX
+SocketConnectHost=95.130.110.9
+BeginString=FIX.4.4
+SenderSubID=0001
+Alias=FIX44_BATS_01
+[SESSION]
+Alias=T2Kauaiblk5_ABQA3
+BeginString=FIX.4.4
+SessionQualifier=T2Kauaiblk5_ABQA3
+TargetCompID=MA
+Aggressor_Trader_PartyID=T2Kauaiblk5
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA3.vip.marketaxess.com
+SenderCompID=T2Kauaiblk5
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+TargetCompID=TRAX
+SocketConnectPort=80
+SenderCompID=QA3Ver4_APA
+SocketConnectHost=fixapa-qa3.vip.traxmarkets.com
+BeginString=FIX.4.4
+Alias=QA3Ver4_APA
+[SESSION]
+Alias=T2Kauaiblk5_ABQA1
+BeginString=FIX.4.4
+SessionQualifier=T2Kauaiblk5_ABQA1
+TargetCompID=MA
+Aggressor_Trader_PartyID=T2Kauaiblk5
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA1.vip.marketaxess.com
+SenderCompID=T2Kauaiblk5
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+Alias=T2Kauaiblk5_ABQA4
+BeginString=FIX.4.4
+SessionQualifier=T2Kauaiblk5_ABQA4
+TargetCompID=MA
+Aggressor_Trader_PartyID=T2Kauaiblk5
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA4.vip.marketaxess.com
+SenderCompID=T2Kauaiblk5
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=80
+SenderCompID=HEMAMTFRTS27QA2_PUB
+SocketConnectHost=fixapa-qa2.vip.traxmarkets.com
+BeginString=FIXT.1.1
+Alias=HEMAMTFRTS27QA2_PUB
+[SESSION]
+Alias=EHABAXUK_ABQA4
+BeginString=FIX.4.4
+SessionQualifier=EHABAXUK_ABQA4
+TargetCompID=MA
+Aggressor_Trader_PartyID=eh_abaxuk
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abQA4.vip.marketaxess.com
+SenderCompID=EHABAXUK
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+TargetSubID=TEST
+TargetCompID=BATS
+SocketConnectPort=10867
+SenderCompID=TRAX
+SocketConnectHost=95.130.110.13
+BeginString=FIX.4.4
+SenderSubID=0004
+Alias=FIX44_BATS_04
+[SESSION]
+TargetSubID=TEST
+TargetCompID=BATS
+SocketConnectPort=10865
+SenderCompID=TRAX
+SocketConnectHost=95.130.110.11
+BeginString=FIX.4.4
+SenderSubID=0002
+Alias=FIX44_BATS_02
+[SESSION]
+Alias=MMJBAER_ABQA2
+BeginString=FIX.4.4
+SessionQualifier=MMJBAER_ABQA2
+TargetCompID=MA
+Aggressor_Trader_PartyID=MMJBAER
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abQA2.vip.marketaxess.com
+SenderCompID=MMJBAER
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+Alias=MMMAQAUK_NYQA3
+BeginString=FIX.4.4
+SessionQualifier=MMMAQAUK_NYQA3
+TargetCompID=MA
+Aggressor_Trader_PartyID=MMMAQAUK
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-nyQA3.vip.marketaxess.com
+SenderCompID=MMMAQAUK
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+Alias=MMJBAER_ABQA4
+BeginString=FIX.4.4
+SessionQualifier=MMJBAER_ABQA4
+TargetCompID=MA
+Aggressor_Trader_PartyID=MMJBAER
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abQA4.vip.marketaxess.com
+SenderCompID=MMJBAER
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+Alias=T1Kauaiblk4_ABQA1
+BeginString=FIX.4.4
+SessionQualifier=T1Kauaiblk4_ABQA1
+TargetCompID=MA
+Aggressor_Trader_PartyID=T1Kauaiblk4
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA1.vip.marketaxess.com
+SenderCompID=T1Kauaiblk4
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+Alias=T1Kauaiblk4_ABQA2
+BeginString=FIX.4.4
+SessionQualifier=T1Kauaiblk4_ABQA2
+TargetCompID=MA
+Aggressor_Trader_PartyID=T1Kauaiblk4
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abQA2.vip.marketaxess.com
+SenderCompID=T1Kauaiblk4
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=80
+SenderCompID=HEMAMTFRTS27QA2
+SocketConnectHost=fixapa-qa2.vip.traxmarkets.com
+BeginString=FIXT.1.1
+Alias=HEMAMTFRTS27QA2
+[SESSION]
+Alias=T1Kauaiblk4_ABQA3
+BeginString=FIX.4.4
+SessionQualifier=T1Kauaiblk4_ABQA3
+TargetCompID=MA
+Aggressor_Trader_PartyID=T1Kauaiblk4
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA3.vip.marketaxess.com
+SenderCompID=T1Kauaiblk4
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+Alias=EHABAXUK_ABQA2
+BeginString=FIX.4.4
+SessionQualifier=EHABAXUK_ABQA2
+TargetCompID=MA
+Aggressor_Trader_PartyID=eh_abaxuk
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abQA2.vip.marketaxess.com
+SenderCompID=EHABAXUK
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=80
+SenderCompID=PUBQA2_Verion5
+SocketConnectHost=fixapa-qa2.vip.traxmarkets.com
+BeginString=FIXT.1.1
+Alias=PUBQA2_Verion5
+[SESSION]
+Alias=omblckrcktrader1_QA2
+BeginString=FIX.4.4
+SessionQualifier=omblckrcktrader1ABQA2
+TargetCompID=MA
+Aggressor_Trader_PartyID=omblckrcktrader1
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-abqa2.vip.marketaxess.com
+SenderCompID=omblckrcktrader1
+DefaultApplVerID=9
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+Alias=omblckrcktrader1_QA1
+BeginString=FIX.4.4
+SessionQualifier=omblckrcktrader1ABQA1
+TargetCompID=MA
+Aggressor_Trader_PartyID=omblckrcktrader1
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA1.vip.marketaxess.com
+SenderCompID=omblckrcktrader1
+DefaultApplVerID=9
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+Alias=omblckrcktrader1_QA4
+BeginString=FIX.4.4
+SessionQualifier=omblckrcktrader1ABQA4
+TargetCompID=MA
+Aggressor_Trader_PartyID=omblckrcktrader1
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA4.vip.marketaxess.com
+SenderCompID=omblckrcktrader1
+DefaultApplVerID=9
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+Alias=omblckrcktrader1_QA2
+BeginString=FIX.4.4
+SessionQualifier=omblckrcktrader1ABQA3
+TargetCompID=MA
+Aggressor_Trader_PartyID=omblckrcktrader1
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA3.vip.marketaxess.com
+SenderCompID=omblckrcktrader1
+DefaultApplVerID=9
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=443
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=80
+SenderCompID=PUBQA3
+SocketConnectHost=fixapa-qa3.vip.traxmarkets.com
+BeginString=FIXT.1.1
+Alias=PUBQA3
+[SESSION]
+Alias=T1Kauaiblk4_ABQA4
+BeginString=FIX.4.4
+SessionQualifier=T1Kauaiblk4_ABQA4
+TargetCompID=MA
+Aggressor_Trader_PartyID=T1Kauaiblk4
+Aggressor_Trader_PartyRole=11
+SocketConnectHost=fixptm-ABQA4.vip.marketaxess.com
+SenderCompID=T1Kauaiblk4
+Aggressor_Trader_PartyIDSource=C
+SocketConnectPort=80
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=SenderFirmId 1
+SocketConnectPort=9151
+SenderCompID=TargetFirmId 1
+SocketConnectHost=localhost
+BeginString=FIXT.1.1
+Alias=LOCAL_TargetFirmId 1
+[SESSION]
+DefaultApplVerID=9
+TargetCompID=TRAX
+SocketConnectPort=9151
+SenderCompID=inttestclient3
+SocketConnectHost=localhost
+BeginString=FIXT.1.1
+Alias=L-inttestclient3
+
+2021-11-25 15:56:59.772 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:56:59.773 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:56:59.773 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.001 INFO  initiator.IoSessionInitiator - [FIX.4.4:MMABAXUK->MA:MMABAXUK_ABQA2] [fixptm-abQA2.vip.marketaxess.com/10.32.193.251:80]
+2021-11-25 15:57:01.018 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.019 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.019 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.019 INFO  initiator.IoSessionInitiator - [FIXT.1.1:APAQA3->TRAX] [fixapa-qa3.vip.traxmarkets.com/10.8.193.104:80]
+2021-11-25 15:57:01.035 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.036 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.036 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.036 INFO  initiator.IoSessionInitiator - [FIXT.1.1:APAQA2_Verion5->TRAX] [fixapa-qa2.vip.traxmarkets.com/10.8.192.104:80]
+2021-11-25 15:57:01.037 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.037 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.037 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.037 INFO  initiator.IoSessionInitiator - [FIX.4.4:TRAX/0003->BATS/TEST] [/95.130.110.11:10866]
+2021-11-25 15:57:01.037 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.038 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.038 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.038 INFO  initiator.IoSessionInitiator - [FIXT.1.1:HEMAQA1_APA->TRAX] [fixapa-qa2.vip.traxmarkets.com/10.8.192.104:80]
+2021-11-25 15:57:01.055 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.055 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.056 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.056 INFO  initiator.IoSessionInitiator - [FIX.4.4:QA1_DUM_MAEMS->MA_GEMS:QA1_DUM_MAEMS] [fixgems-qa1.vip.traxmarkets.com/10.8.191.102:443]
+2021-11-25 15:57:01.058 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.058 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.059 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.059 INFO  initiator.IoSessionInitiator - [FIXT.1.1:RECEIVERAPA->TRAX] [localhost/127.0.0.1:1234]
+2021-11-25 15:57:01.059 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.059 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.060 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.060 INFO  initiator.IoSessionInitiator - [FIX.4.4:MMMAQA->MA:MMMAQA_ABQA2] [fixptm-abQA2.vip.marketaxess.com/10.32.193.251:80]
+2021-11-25 15:57:01.060 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.060 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.061 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.061 INFO  initiator.IoSessionInitiator - [FIX.4.4:QA3Ver4_PUB->TRAX] [fixapa-qa3.vip.traxmarkets.com/10.8.193.104:80]
+2021-11-25 15:57:01.079 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.079 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.080 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.080 INFO  initiator.IoSessionInitiator - [FIX.4.4:MMMAQA->MA:MMMAQA_ABQA3] [fixptm-abQA3.vip.marketaxess.com/10.33.193.251:80]
+2021-11-25 15:57:01.080 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.081 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.081 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.081 INFO  initiator.IoSessionInitiator - [FIX.4.4:T2Kauaiblk3->MA:T2Kauaiblk3_ABQA3] [fixptm-abQA3.vip.marketaxess.com/10.33.193.251:443]
+2021-11-25 15:57:01.082 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.082 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.082 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.082 INFO  initiator.IoSessionInitiator - [FIX.4.4:T2Kauaiblk3->MA:T2Kauaiblk3_ABQA2] [fixptm-abQA2.vip.marketaxess.com/10.32.193.251:80]
+2021-11-25 15:57:01.101 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.102 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.102 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.102 INFO  initiator.IoSessionInitiator - [FIX.4.4:T1Kauaiblk3->MA:T1Kauaiblk3_ABQA1] [fixptm-ABQA1.vip.marketaxess.com/10.31.193.251:443]
+2021-11-25 15:57:01.102 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.103 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.103 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.103 INFO  initiator.IoSessionInitiator - [FIX.4.4:T2Kauaiblk3->MA:T2Kauaiblk3_ABQA1] [fixptm-ABQA1.vip.marketaxess.com/10.31.193.251:443]
+2021-11-25 15:57:01.103 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.103 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.103 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.104 INFO  initiator.IoSessionInitiator - [FIX.4.4:TRAX/0010->BATS/TEST] [/95.130.110.11:10873]
+2021-11-25 15:57:01.104 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.104 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.104 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.104 INFO  initiator.IoSessionInitiator - [FIX.4.4:T1Kauaiblk3->MA:T1Kauaiblk3_ABQA3] [fixptm-abQA3.vip.marketaxess.com/10.33.193.251:443]
+2021-11-25 15:57:01.105 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.105 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.105 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.105 INFO  initiator.IoSessionInitiator - [FIX.4.4:T1Kauaiblk3->MA:T1Kauaiblk3_ABQA2] [fixptm-abQA2.vip.marketaxess.com/10.32.193.251:80]
+2021-11-25 15:57:01.125 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.126 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.126 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.126 INFO  initiator.IoSessionInitiator - [FIX.4.4:T1Kauaiblk3->MA:T1Kauaiblk3_ABQA4] [fixptm-ABQA4.vip.marketaxess.com/10.31.193.35:80]
+2021-11-25 15:57:01.126 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.126 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.127 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.127 INFO  initiator.IoSessionInitiator - [FIX.4.4:T2Kauaiblk3->MA:T2Kauaiblk3_ABQA4] [fixptm-ABQA4.vip.marketaxess.com/10.31.193.35:80]
+2021-11-25 15:57:01.156 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.156 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.157 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.157 INFO  initiator.IoSessionInitiator - [FIXT.1.1:HEMA_RTS2728_TRAX->TRAX] [fixapa-qa1.vip.traxmarkets.com/10.8.191.104:80]
+2021-11-25 15:57:01.157 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.157 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.157 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.158 INFO  initiator.IoSessionInitiator - [FIX.4.4:T2Kauaiblk1->MA:T2Kauaiblk1_ABQA3] [fixptm-abQA3.vip.marketaxess.com/10.33.193.251:443]
+2021-11-25 15:57:01.158 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.158 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.158 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.158 INFO  initiator.IoSessionInitiator - [FIX.4.4:T2Kauaiblk1->MA:T2Kauaiblk1_ABQA2] [fixptm-abQA2.vip.marketaxess.com/10.32.193.251:80]
+2021-11-25 15:57:01.159 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.159 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.159 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.159 INFO  initiator.IoSessionInitiator - [FIX.4.4:APAQA3Version4->TRAX] [fixapa-qa3.vip.traxmarkets.com/10.8.193.104:80]
+2021-11-25 15:57:01.159 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.160 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.160 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.160 INFO  initiator.IoSessionInitiator - [FIX.4.4:T1Kauaiblk1->MA:T1Kauaiblk1_ABQA1] [fixptm-ABQA1.vip.marketaxess.com/10.31.193.251:443]
+2021-11-25 15:57:01.160 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.160 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.160 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.161 INFO  initiator.IoSessionInitiator - [FIX.4.4:T2Kauaiblk1->MA:T2Kauaiblk1_ABQA1] [fixptm-ABQA1.vip.marketaxess.com/10.31.193.251:443]
+2021-11-25 15:57:01.161 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.161 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.162 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.162 INFO  initiator.IoSessionInitiator - [FIXT.1.1:inttestclient2->TRAX:inst1] [localhost/127.0.0.1:9151]
+2021-11-25 15:57:01.162 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.163 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.163 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.163 INFO  initiator.IoSessionInitiator - [FIX.4.4:T1Kauaiblk1->MA:T1Kauaiblk1_ABQA3] [fixptm-abQA3.vip.marketaxess.com/10.33.193.251:443]
+2021-11-25 15:57:01.163 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.164 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.164 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.164 INFO  initiator.IoSessionInitiator - [FIXT.1.1:inttestclient2->TRAX:inst2] [localhost/127.0.0.1:9151]
+2021-11-25 15:57:01.164 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.164 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.164 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.165 INFO  initiator.IoSessionInitiator - [FIX.4.4:T1Kauaiblk1->MA:T1Kauaiblk1_ABQA2] [fixptm-abQA2.vip.marketaxess.com/10.32.193.251:80]
+2021-11-25 15:57:01.165 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.165 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.165 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.166 INFO  initiator.IoSessionInitiator - [FIX.4.4:T1Kauaiblk1->MA:T1Kauaiblk1_ABQA4] [fixptm-ABQA4.vip.marketaxess.com/10.31.193.35:80]
+2021-11-25 15:57:01.166 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.166 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.166 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.166 INFO  initiator.IoSessionInitiator - [FIX.4.4:T2Kauaiblk1->MA:T2Kauaiblk1_ABQA4] [fixptm-ABQA4.vip.marketaxess.com/10.31.193.35:80]
+2021-11-25 15:57:01.167 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.167 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.167 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.167 INFO  initiator.IoSessionInitiator - [FIXT.1.1:MTFQA2PUB->TRAX] [fixapa-qa2.vip.traxmarkets.com/10.8.192.104:80]
+2021-11-25 15:57:01.167 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.168 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.168 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.168 INFO  initiator.IoSessionInitiator - [FIX.4.4:QA3APA_4.4->TRAX] [fixapa-qa3.vip.traxmarkets.com/10.8.193.104:80]
+2021-11-25 15:57:01.169 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.169 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.169 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.169 INFO  initiator.IoSessionInitiator - [FIXT.1.1:MTFQA2APA->TRAX] [fixapa-qa2.vip.traxmarkets.com/10.8.192.104:80]
+2021-11-25 15:57:01.170 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.170 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.170 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.170 INFO  initiator.IoSessionInitiator - [FIX.4.4:APAQA2_Verion4->TRAX] [fixapa-qa2.vip.traxmarkets.com/10.8.192.104:80]
+2021-11-25 15:57:01.171 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.171 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.171 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.171 INFO  initiator.IoSessionInitiator - [FIXT.1.1:inttestclient->TRAX] [localhost/127.0.0.1:9151]
+2021-11-25 15:57:01.171 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.171 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.172 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.172 INFO  initiator.IoSessionInitiator - [FIX.4.4:TRAX/0006->BATS/TEST] [/95.130.110.11:10869]
+2021-11-25 15:57:01.172 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.172 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.172 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.173 INFO  initiator.IoSessionInitiator - [FIXT.1.1:QAAPA001->TRAX] [fixapa-qa2.vip.traxmarkets.com/10.8.192.104:80]
+2021-11-25 15:57:01.193 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.193 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.194 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.194 INFO  initiator.IoSessionInitiator - [FIXT.1.1:ABN_US_TAPI->MA:ABN_US_TAPI-Auto_QA2] [fixtapi-ABQA2.vip.marketaxess.com/10.32.193.250:80]
+2021-11-25 15:57:01.194 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.194 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.195 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.195 INFO  initiator.IoSessionInitiator - [FIXT.1.1:PRODSUPP01->TRAX] [localhost/127.0.0.1:9999]
+2021-11-25 15:57:01.195 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.195 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.196 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.196 INFO  initiator.IoSessionInitiator - [FIX.4.4:omblckrcktrader2->MA:omblckrcktrader2ABQA4] [fixptm-ABQA4.vip.marketaxess.com/10.31.193.35:80]
+2021-11-25 15:57:01.196 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.196 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.196 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.197 INFO  initiator.IoSessionInitiator - [FIX.4.4:omblckrcktrader2->MA:omblckrcktrader2ABQA3] [fixptm-abQA3.vip.marketaxess.com/10.33.193.251:443]
+2021-11-25 15:57:01.197 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.197 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.197 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.198 INFO  initiator.IoSessionInitiator - [FIXT.1.1:FRENCH01->TRAX] [localhost/127.0.0.1:9999]
+2021-11-25 15:57:01.198 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.198 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.198 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.199 INFO  initiator.IoSessionInitiator - [FIX.4.4:T2Kauaiblk6->MA:T2Kauaiblk6_ABQA2] [fixptm-abQA2.vip.marketaxess.com/10.32.193.251:80]
+2021-11-25 15:57:01.199 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.199 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.200 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.200 INFO  initiator.IoSessionInitiator - [FIX.4.4:omblckrcktrader2->MA:omblckrcktrader2ABQA2] [fixptm-abQA2.vip.marketaxess.com/10.32.193.251:80]
+2021-11-25 15:57:01.200 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.201 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.201 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.201 INFO  initiator.IoSessionInitiator - [FIXT.1.1:Client1->TraxNeptune] [localhost/127.0.0.1:4321]
+2021-11-25 15:57:01.201 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.202 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.202 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.202 INFO  initiator.IoSessionInitiator - [FIX.4.4:omblckrcktrader2->MA:omblckrcktrader2ABQA1] [fixptm-ABQA1.vip.marketaxess.com/10.31.193.251:443]
+2021-11-25 15:57:01.202 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.203 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.203 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.203 INFO  initiator.IoSessionInitiator - [FIX.4.4:T2Kauaiblk6->MA:T2Kauaiblk6_ABQA3] [fixptm-abQA3.vip.marketaxess.com/10.33.193.251:443]
+2021-11-25 15:57:01.203 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.203 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.204 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.204 INFO  initiator.IoSessionInitiator - [FIX.4.4:TRAX/0007->BATS/TEST] [/95.130.110.13:10870]
+2021-11-25 15:57:01.204 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.204 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.204 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.205 INFO  initiator.IoSessionInitiator - [FIX.4.4:PUBQA3Version4->TRAX] [fixapa-qa3.vip.traxmarkets.com/10.8.193.104:80]
+2021-11-25 15:57:01.205 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.205 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.205 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.205 INFO  initiator.IoSessionInitiator - [FIX.4.4:T1Kauaiblk5->MA:T1Kauaiblk5_ABQA1] [fixptm-ABQA1.vip.marketaxess.com/10.31.193.251:443]
+2021-11-25 15:57:01.206 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.206 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.206 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.206 INFO  initiator.IoSessionInitiator - [FIX.4.4:T1Kauaiblk5->MA:T1Kauaiblk5_ABQA2] [fixptm-abQA2.vip.marketaxess.com/10.32.193.251:80]
+2021-11-25 15:57:01.207 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.207 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.207 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.207 INFO  initiator.IoSessionInitiator - [FIX.4.4:T1Kauaiblk5->MA:T1Kauaiblk5_ABQA3] [fixptm-abQA3.vip.marketaxess.com/10.33.193.251:443]
+2021-11-25 15:57:01.208 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.208 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.208 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.208 INFO  initiator.IoSessionInitiator - [FIX.4.4:T1Kauaiblk5->MA:T1Kauaiblk5_ABQA4] [fixptm-ABQA4.vip.marketaxess.com/10.31.193.35:80]
+2021-11-25 15:57:01.208 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.208 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.209 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.209 INFO  initiator.IoSessionInitiator - [FIX.4.4:T2Kauaiblk6->MA:T2Kauaiblk6_ABQA1] [fixptm-ABQA1.vip.marketaxess.com/10.31.193.251:443]
+2021-11-25 15:57:01.209 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.209 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.209 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.210 INFO  initiator.IoSessionInitiator - [FIXT.1.1:EUCI1001->TRAXQA3] [localhost/127.0.0.1:9999]
+2021-11-25 15:57:01.210 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.210 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.210 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.210 INFO  initiator.IoSessionInitiator - [FIXT.1.1:TRAXTEST->ANNA] [localhost/127.0.0.1:9111]
+2021-11-25 15:57:01.310 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.310 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.310 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.311 INFO  initiator.IoSessionInitiator - [FIX.4.2:EMS_TEST->MA_FIX_GTW:STRATEGIC_EMS] [ems-fix-gtw.pbe-561.dev.ems.aws.qad.root/10.68.11.56:4321]
+2021-11-25 15:57:01.311 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.311 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.311 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.312 INFO  initiator.IoSessionInitiator - [FIXT.1.1:MARL0001->TRAXTRN] [localhost/127.0.0.1:9998]
+2021-11-25 15:57:01.312 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.312 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.312 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.312 INFO  initiator.IoSessionInitiator - [FIX.4.4:kauaiblckrcktrader2->MA:kauaiblckrcktrader2ABQA4] [fixptm-ABQA4.vip.marketaxess.com/10.31.193.35:80]
+2021-11-25 15:57:01.313 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.313 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.313 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.314 INFO  initiator.IoSessionInitiator - [FIX.4.4:T2Kauaiblk4->MA:T2Kauaiblk4_ABQA1] [fixptm-ABQA1.vip.marketaxess.com/10.31.193.251:443]
+2021-11-25 15:57:01.314 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.314 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.315 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.315 INFO  initiator.IoSessionInitiator - [FIX.4.4:kauaiblckrcktrader2->MA:kauaiblckrcktrader2ABQA3] [fixptm-abQA3.vip.marketaxess.com/10.33.193.251:443]
+2021-11-25 15:57:01.316 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.316 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.316 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.317 INFO  initiator.IoSessionInitiator - [FIX.4.4:TRAX/0009->BATS/TEST] [/95.130.110.13:10872]
+2021-11-25 15:57:01.317 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.317 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.317 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.317 INFO  initiator.IoSessionInitiator - [FIX.4.4:kauaiblckrcktrader2->MA:kauaiblckrcktrader2ABQA2] [fixptm-abQA2.vip.marketaxess.com/10.32.193.251:80]
+2021-11-25 15:57:01.318 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.318 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.318 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.318 INFO  initiator.IoSessionInitiator - [FIX.4.4:kauaiblckrcktrader2->MA:kauaiblckrcktrader2ABQA1] [fixptm-ABQA1.vip.marketaxess.com/10.31.193.251:443]
+2021-11-25 15:57:01.318 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.319 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.319 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.319 INFO  initiator.IoSessionInitiator - [FIX.4.4:T2Kauaiblk4->MA:T2Kauaiblk4_ABQA4] [fixptm-ABQA4.vip.marketaxess.com/10.31.193.35:80]
+2021-11-25 15:57:01.319 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.319 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.319 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.320 INFO  initiator.IoSessionInitiator - [FIX.4.4:T2Kauaiblk4->MA:T2Kauaiblk4_ABQA3] [fixptm-abQA3.vip.marketaxess.com/10.33.193.251:443]
+2021-11-25 15:57:01.320 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.320 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.320 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.320 INFO  initiator.IoSessionInitiator - [FIX.4.4:T2Kauaiblk4->MA:T2Kauaiblk4_ABQA2] [fixptm-abQA2.vip.marketaxess.com/10.32.193.251:80]
+2021-11-25 15:57:01.320 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.320 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.321 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.321 INFO  initiator.IoSessionInitiator - [FIX.4.4:MMMAQA->MA:MMMAQA_ABQA4] [fixptm-ABQA4.vip.marketaxess.com/10.31.193.35:80]
+2021-11-25 15:57:01.321 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.321 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.321 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.321 INFO  initiator.IoSessionInitiator - [FIXT.1.1:QA3TEST_002->TRAX] [localhost/127.0.0.1:9999]
+2021-11-25 15:57:01.322 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.322 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.322 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.322 INFO  initiator.IoSessionInitiator - [FIXT.1.1:QA3TESTID->TRAXQA3] [localhost/127.0.0.1:9993]
+2021-11-25 15:57:01.322 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.322 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.323 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.323 INFO  initiator.IoSessionInitiator - [FIXT.1.1:HEMA_RTS2728_MTF->TRAX] [fixapa-qa1.vip.traxmarkets.com/10.8.191.104:80]
+2021-11-25 15:57:01.323 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.323 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.323 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.324 INFO  initiator.IoSessionInitiator - [FIX.4.2:INIT->ACCEPT] [localhost/127.0.0.1:9878]
+2021-11-25 15:57:01.324 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.324 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.324 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.324 INFO  initiator.IoSessionInitiator - [FIX.4.4:MMABAXUK->MA:MMABAXUK_ABQA4] [fixptm-ABQA4.vip.marketaxess.com/10.31.193.35:80]
+2021-11-25 15:57:01.324 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.325 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.325 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.325 INFO  initiator.IoSessionInitiator - [FIXT.1.1:HEMAAPAPUB->TRAX] [fixapa-qa1.vip.traxmarkets.com/10.8.191.104:80]
+2021-11-25 15:57:01.325 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.325 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.325 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.325 INFO  initiator.IoSessionInitiator - [FIXT.1.1:rtt->TRAX] [localhost/127.0.0.1:4321]
+2021-11-25 15:57:01.343 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.343 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.343 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.343 INFO  initiator.IoSessionInitiator - [FIXT.1.1:ABN_US_TAPI->MA:ABQA1_ABN_US_TAPI] [fixtapi-abqa1.vip.marketaxess.com/10.31.193.250:80]
+2021-11-25 15:57:01.360 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.360 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.360 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.361 INFO  initiator.IoSessionInitiator - [FIX.4.4:EHABAXUK->MA:EHABAXUK_NYQA3] [fixptm-nyQA3.vip.marketaxess.com/10.50.93.251:80]
+2021-11-25 15:57:01.361 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.361 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.361 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.361 INFO  initiator.IoSessionInitiator - [FIX.4.4:TRAX/0008->BATS/TEST] [/95.130.110.9:10871]
+2021-11-25 15:57:01.361 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.362 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.362 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.362 INFO  initiator.IoSessionInitiator - [FIXT.1.1:HEMAQA3_INBOUND_001->TRAXQA3] [fixapa-qa3.vip.traxmarkets.com/10.8.193.104:80]
+2021-11-25 15:57:01.362 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.362 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.363 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.363 INFO  initiator.IoSessionInitiator - [FIXT.1.1:inttestclient2->TRAX] [localhost/127.0.0.1:9151]
+2021-11-25 15:57:01.363 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.363 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.363 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.363 INFO  initiator.IoSessionInitiator - [FIXT.1.1:HEMAAPA->TRAX] [fixapa-qa1.vip.traxmarkets.com/10.8.191.104:80]
+2021-11-25 15:57:01.396 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.396 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.396 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.397 INFO  initiator.IoSessionInitiator - [FIX.4.2:JBFIXHUBPRD->MA:STG_JB_FRONT_ARENA] [fixgems-stg.vip.marketaxess.com/10.30.194.111:80]
+2021-11-25 15:57:01.397 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.397 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.397 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.397 INFO  initiator.IoSessionInitiator - [FIX.4.4:T2Kauaiblk7->MA:T2Kauaiblk7_ABQA2] [fixptm-abQA2.vip.marketaxess.com/10.32.193.251:80]
+2021-11-25 15:57:01.398 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.398 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.398 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.398 INFO  initiator.IoSessionInitiator - [FIX.4.4:T2Kauaiblk7->MA:T2Kauaiblk7_ABQA3] [fixptm-abQA3.vip.marketaxess.com/10.33.193.251:443]
+2021-11-25 15:57:01.398 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.399 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.399 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.399 INFO  initiator.IoSessionInitiator - [FIXT.1.1:DEVINTEST->TRAXA] [localhost/127.0.0.1:9151]
+2021-11-25 15:57:01.399 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.399 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.399 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.400 INFO  initiator.IoSessionInitiator - [FIXT.1.1:DEVINTEST->TRAXB] [localhost/127.0.0.1:9151]
+2021-11-25 15:57:01.400 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.400 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.400 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.400 INFO  initiator.IoSessionInitiator - [FIX.4.4:T1Kauaiblk7->MA:T1Kauaiblk7_ABQA1] [fixptm-ABQA1.vip.marketaxess.com/10.31.193.251:443]
+2021-11-25 15:57:01.400 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.401 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.401 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.401 INFO  initiator.IoSessionInitiator - [FIX.4.4:T2Kauaiblk7->MA:T2Kauaiblk7_ABQA1] [fixptm-ABQA1.vip.marketaxess.com/10.31.193.251:443]
+2021-11-25 15:57:01.401 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.401 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.401 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.402 INFO  initiator.IoSessionInitiator - [FIX.4.4:T1Kauaiblk7->MA:T1Kauaiblk7_ABQA2] [fixptm-abQA2.vip.marketaxess.com/10.32.193.251:80]
+2021-11-25 15:57:01.402 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.402 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.402 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.402 INFO  initiator.IoSessionInitiator - [FIXT.1.1:inttestclient2->TRAX:port2] [localhost/127.0.0.1:9152]
+2021-11-25 15:57:01.402 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.402 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.403 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.403 INFO  initiator.IoSessionInitiator - [FIX.4.4:T1Kauaiblk7->MA:T1Kauaiblk7_ABQA3] [fixptm-abQA3.vip.marketaxess.com/10.33.193.251:443]
+2021-11-25 15:57:01.403 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.403 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.404 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.404 INFO  initiator.IoSessionInitiator - [FIXT.1.1:TraxMarkets/IS->DSB/UAT] [localhost/127.0.0.1:9001]
+2021-11-25 15:57:01.404 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.405 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.405 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.405 INFO  initiator.IoSessionInitiator - [FIXT.1.1:MAQA 005->TRAX] [fixapa-qa2.vip.traxmarkets.com/10.8.192.104:80]
+2021-11-25 15:57:01.405 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.406 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.406 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.406 INFO  initiator.IoSessionInitiator - [FIX.4.4:MMABAXUK->MA:MMABAXUK_NYQA3] [fixptm-nyQA3.vip.marketaxess.com/10.50.93.251:80]
+2021-11-25 15:57:01.407 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.407 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.407 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.407 INFO  initiator.IoSessionInitiator - [FIXT.1.1:HEMATRAXRTS27QA2_PUB->TRAX] [fixapa-qa2.vip.traxmarkets.com/10.8.192.104:80]
+2021-11-25 15:57:01.429 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.429 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.429 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.429 INFO  initiator.IoSessionInitiator - [FIX.4.2:JBFIXHUBPRD->MA:TRN_JB_FRONT_ARENA] [fixgems-trn.vip.marketaxess.com/10.30.195.111:80]
+2021-11-25 15:57:01.430 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.430 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.430 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.430 INFO  initiator.IoSessionInitiator - [FIX.4.4:TRAX/0005->BATS/TEST] [/95.130.110.9:10868]
+2021-11-25 15:57:01.431 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.431 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.431 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.431 INFO  initiator.IoSessionInitiator - [FIX.4.4:T1Kauaiblk2->MA:T1Kauaiblk2_ABQA1] [fixptm-ABQA1.vip.marketaxess.com/10.31.193.251:443]
+2021-11-25 15:57:01.432 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.432 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.432 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.432 INFO  initiator.IoSessionInitiator - [FIX.4.4:T2Kauaiblk2->MA:T2Kauaiblk2_ABQA4] [fixptm-ABQA4.vip.marketaxess.com/10.31.193.35:80]
+2021-11-25 15:57:01.432 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.432 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.433 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.433 INFO  initiator.IoSessionInitiator - [FIX.4.4:T1Kauaiblk2->MA:T1Kauaiblk2_ABQA3] [fixptm-abQA3.vip.marketaxess.com/10.33.193.251:443]
+2021-11-25 15:57:01.433 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.433 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.433 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.433 INFO  initiator.IoSessionInitiator - [FIX.4.4:T2Kauaiblk2->MA:T2Kauaiblk2_ABQA3] [fixptm-abQA3.vip.marketaxess.com/10.33.193.251:443]
+2021-11-25 15:57:01.434 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.434 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.434 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.434 INFO  initiator.IoSessionInitiator - [FIX.4.4:T1Kauaiblk2->MA:T1Kauaiblk2_ABQA2] [fixptm-abQA2.vip.marketaxess.com/10.32.193.251:80]
+2021-11-25 15:57:01.435 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.435 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.435 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.435 INFO  initiator.IoSessionInitiator - [FIX.4.4:T2Kauaiblk2->MA:T2Kauaiblk2_ABQA2] [fixptm-abQA2.vip.marketaxess.com/10.32.193.251:80]
+2021-11-25 15:57:01.436 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.436 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.436 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.436 INFO  initiator.IoSessionInitiator - [FIX.4.4:MMJBAER->MA:MMJBAER_NYQA3] [fixptm-nyQA3.vip.marketaxess.com/10.50.93.251:80]
+2021-11-25 15:57:01.436 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.436 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.436 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.437 INFO  initiator.IoSessionInitiator - [FIX.4.4:MMMAQAUK->MA:MMMAQAUK_ABQA4] [fixptm-ABQA4.vip.marketaxess.com/10.31.193.35:80]
+2021-11-25 15:57:01.437 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.437 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.437 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.437 INFO  initiator.IoSessionInitiator - [FIXT.1.1:TRAX_MA_MTF_TRADES->MA_DEV01] [fixapa-qa1.vip.traxmarkets.com/10.8.191.104:80]
+2021-11-25 15:57:01.438 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.438 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.438 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.438 INFO  initiator.IoSessionInitiator - [FIX.4.4:T1Kauaiblk2->MA:T1Kauaiblk2_ABQA4] [fixptm-ABQA4.vip.marketaxess.com/10.31.193.35:80]
+2021-11-25 15:57:01.438 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.438 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.439 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.439 INFO  initiator.IoSessionInitiator - [FIXT.1.1:TRAX_MA_MTF_TRADES->MA_DEV02] [fixapa-qa1.vip.traxmarkets.com/10.8.191.104:80]
+2021-11-25 15:57:01.439 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.439 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.439 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.440 INFO  initiator.IoSessionInitiator - [FIX.4.4:MMMAQA->MA:MMMAQA_NYQA3] [fixptm-nyQA3.vip.marketaxess.com/10.50.93.251:80]
+2021-11-25 15:57:01.440 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.440 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.440 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.440 INFO  initiator.IoSessionInitiator - [FIX.4.4:T2Kauaiblk2->MA:T2Kauaiblk2_ABQA1] [fixptm-ABQA1.vip.marketaxess.com/10.31.193.251:443]
+2021-11-25 15:57:01.440 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.440 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.440 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.441 INFO  initiator.IoSessionInitiator - [FIXT.1.1:RHAQA3_INBOUND_001->TRAXQA3] [fixapa-qa3.vip.traxmarkets.com/10.8.193.104:80]
+2021-11-25 15:57:01.441 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.441 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.441 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.441 INFO  initiator.IoSessionInitiator - [FIXT.1.1:AnnaTest->TraxTest] [localhost/127.0.0.1:1500]
+2021-11-25 15:57:01.441 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.442 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.442 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.442 INFO  initiator.IoSessionInitiator - [FIX.4.4:kauaiblckrcktrader1->MA:kauaiblckrcktrader1ABQA1] [fixptm-ABQA1.vip.marketaxess.com/10.31.193.251:443]
+2021-11-25 15:57:01.442 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.442 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.443 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.443 INFO  initiator.IoSessionInitiator - [FIX.4.4:kauaiblckrcktrader1->MA:kauaiblckrcktrader1ABQA2] [fixptm-abQA2.vip.marketaxess.com/10.32.193.251:80]
+2021-11-25 15:57:01.443 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.444 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.444 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.444 INFO  initiator.IoSessionInitiator - [FIXT.1.1:HEMATRAXRTS27QA2->TRAX] [fixapa-qa2.vip.traxmarkets.com/10.8.192.104:80]
+2021-11-25 15:57:01.445 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.445 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.445 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.445 INFO  initiator.IoSessionInitiator - [FIX.4.2:JBFIXHUBPRD->MA:QA1_JB_FRONT_ARENA] [fixgems-qa1.vip.traxmarkets.com/10.8.191.102:80]
+2021-11-25 15:57:01.446 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.446 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.446 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.447 INFO  initiator.IoSessionInitiator - [FIX.4.4:kauaiblckrcktrader1->MA:kauaiblckrcktrader1ABQA3] [fixptm-abQA3.vip.marketaxess.com/10.33.193.251:443]
+2021-11-25 15:57:01.447 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.447 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.448 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.448 INFO  initiator.IoSessionInitiator - [FIX.4.4:kauaiblckrcktrader1->MA:kauaiblckrcktrader1ABQA4] [fixptm-ABQA4.vip.marketaxess.com/10.31.193.35:80]
+2021-11-25 15:57:01.448 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.448 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.448 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.449 INFO  initiator.IoSessionInitiator - [FIXT.1.1:APA_QA3->TRAX] [fixapa-qa3.vip.traxmarkets.com/10.8.193.104:80]
+2021-11-25 15:57:01.449 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.449 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.450 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.450 INFO  initiator.IoSessionInitiator - [FIX.4.4:T1Kauaiblk6->MA:T1Kauaiblk6_ABQA1] [fixptm-ABQA1.vip.marketaxess.com/10.31.193.251:443]
+2021-11-25 15:57:01.450 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.450 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.451 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.451 INFO  initiator.IoSessionInitiator - [FIX.4.4:MMMAQAUK->MA:MMMAQAUK_ABQA2] [fixptm-abQA2.vip.marketaxess.com/10.32.193.251:80]
+2021-11-25 15:57:01.451 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.451 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.452 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.452 INFO  initiator.IoSessionInitiator - [FIX.4.4:T1Kauaiblk6->MA:T1Kauaiblk6_ABQA2] [fixptm-abQA2.vip.marketaxess.com/10.32.193.251:80]
+2021-11-25 15:57:01.452 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.452 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.452 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.453 INFO  initiator.IoSessionInitiator - [FIXT.1.1:MAQA 001->TRAX] [localhost/127.0.0.1:4321]
+2021-11-25 15:57:01.453 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.453 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.453 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.454 INFO  initiator.IoSessionInitiator - [FIX.4.4:T1Kauaiblk6->MA:T1Kauaiblk6_ABQA3] [fixptm-abQA3.vip.marketaxess.com/10.33.193.251:443]
+2021-11-25 15:57:01.454 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.454 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.454 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.455 INFO  initiator.IoSessionInitiator - [FIXT.1.1:JDAPA003->TRAX] [localhost/127.0.0.1:1500]
+2021-11-25 15:57:01.455 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.455 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.455 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.455 INFO  initiator.IoSessionInitiator - [FIX.4.4:T2Kauaiblk5->MA:T2Kauaiblk5_ABQA2] [fixptm-abQA2.vip.marketaxess.com/10.32.193.251:80]
+2021-11-25 15:57:01.456 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.456 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.456 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.456 INFO  initiator.IoSessionInitiator - [FIX.4.4:TRAX/0001->BATS/TEST] [/95.130.110.9:10864]
+2021-11-25 15:57:01.457 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.457 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.457 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.457 INFO  initiator.IoSessionInitiator - [FIX.4.4:T2Kauaiblk5->MA:T2Kauaiblk5_ABQA3] [fixptm-abQA3.vip.marketaxess.com/10.33.193.251:443]
+2021-11-25 15:57:01.458 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.458 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.458 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.458 INFO  initiator.IoSessionInitiator - [FIX.4.4:QA3Ver4_APA->TRAX] [fixapa-qa3.vip.traxmarkets.com/10.8.193.104:80]
+2021-11-25 15:57:01.458 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.459 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.459 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.459 INFO  initiator.IoSessionInitiator - [FIX.4.4:T2Kauaiblk5->MA:T2Kauaiblk5_ABQA1] [fixptm-ABQA1.vip.marketaxess.com/10.31.193.251:443]
+2021-11-25 15:57:01.459 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.459 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.459 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.460 INFO  initiator.IoSessionInitiator - [FIX.4.4:T2Kauaiblk5->MA:T2Kauaiblk5_ABQA4] [fixptm-ABQA4.vip.marketaxess.com/10.31.193.35:80]
+2021-11-25 15:57:01.460 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.460 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.460 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.460 INFO  initiator.IoSessionInitiator - [FIXT.1.1:HEMAMTFRTS27QA2_PUB->TRAX] [fixapa-qa2.vip.traxmarkets.com/10.8.192.104:80]
+2021-11-25 15:57:01.460 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.460 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.460 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.461 INFO  initiator.IoSessionInitiator - [FIX.4.4:EHABAXUK->MA:EHABAXUK_ABQA4] [fixptm-ABQA4.vip.marketaxess.com/10.31.193.35:80]
+2021-11-25 15:57:01.461 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.461 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.461 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.461 INFO  initiator.IoSessionInitiator - [FIX.4.4:TRAX/0004->BATS/TEST] [/95.130.110.13:10867]
+2021-11-25 15:57:01.462 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.462 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.462 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.462 INFO  initiator.IoSessionInitiator - [FIX.4.4:TRAX/0002->BATS/TEST] [/95.130.110.11:10865]
+2021-11-25 15:57:01.462 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.463 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.463 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.463 INFO  initiator.IoSessionInitiator - [FIX.4.4:MMJBAER->MA:MMJBAER_ABQA2] [fixptm-abQA2.vip.marketaxess.com/10.32.193.251:80]
+2021-11-25 15:57:01.463 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.463 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.464 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.464 INFO  initiator.IoSessionInitiator - [FIX.4.4:MMMAQAUK->MA:MMMAQAUK_NYQA3] [fixptm-nyQA3.vip.marketaxess.com/10.50.93.251:80]
+2021-11-25 15:57:01.464 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.464 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.464 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.464 INFO  initiator.IoSessionInitiator - [FIX.4.4:MMJBAER->MA:MMJBAER_ABQA4] [fixptm-ABQA4.vip.marketaxess.com/10.31.193.35:80]
+2021-11-25 15:57:01.465 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.465 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.465 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.465 INFO  initiator.IoSessionInitiator - [FIX.4.4:T1Kauaiblk4->MA:T1Kauaiblk4_ABQA1] [fixptm-ABQA1.vip.marketaxess.com/10.31.193.251:443]
+2021-11-25 15:57:01.466 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.466 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.466 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.466 INFO  initiator.IoSessionInitiator - [FIX.4.4:T1Kauaiblk4->MA:T1Kauaiblk4_ABQA2] [fixptm-abQA2.vip.marketaxess.com/10.32.193.251:80]
+2021-11-25 15:57:01.466 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.467 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.467 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.467 INFO  initiator.IoSessionInitiator - [FIXT.1.1:HEMAMTFRTS27QA2->TRAX] [fixapa-qa2.vip.traxmarkets.com/10.8.192.104:80]
+2021-11-25 15:57:01.467 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.467 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.467 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.467 INFO  initiator.IoSessionInitiator - [FIX.4.4:T1Kauaiblk4->MA:T1Kauaiblk4_ABQA3] [fixptm-abQA3.vip.marketaxess.com/10.33.193.251:443]
+2021-11-25 15:57:01.468 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.468 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.468 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.468 INFO  initiator.IoSessionInitiator - [FIX.4.4:EHABAXUK->MA:EHABAXUK_ABQA2] [fixptm-abQA2.vip.marketaxess.com/10.32.193.251:80]
+2021-11-25 15:57:01.468 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.469 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.469 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.469 INFO  initiator.IoSessionInitiator - [FIXT.1.1:PUBQA2_Verion5->TRAX] [fixapa-qa2.vip.traxmarkets.com/10.8.192.104:80]
+2021-11-25 15:57:01.469 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.469 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.470 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.470 INFO  initiator.IoSessionInitiator - [FIX.4.4:omblckrcktrader1->MA:omblckrcktrader1ABQA2] [fixptm-abQA2.vip.marketaxess.com/10.32.193.251:80]
+2021-11-25 15:57:01.470 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.470 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.470 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.470 INFO  initiator.IoSessionInitiator - [FIX.4.4:omblckrcktrader1->MA:omblckrcktrader1ABQA1] [fixptm-ABQA1.vip.marketaxess.com/10.31.193.251:443]
+2021-11-25 15:57:01.471 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.471 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.471 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.471 INFO  initiator.IoSessionInitiator - [FIX.4.4:omblckrcktrader1->MA:omblckrcktrader1ABQA4] [fixptm-ABQA4.vip.marketaxess.com/10.31.193.35:80]
+2021-11-25 15:57:01.471 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.471 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.471 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.472 INFO  initiator.IoSessionInitiator - [FIX.4.4:omblckrcktrader1->MA:omblckrcktrader1ABQA3] [fixptm-abQA3.vip.marketaxess.com/10.33.193.251:443]
+2021-11-25 15:57:01.472 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.472 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.472 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.472 INFO  initiator.IoSessionInitiator - [FIXT.1.1:PUBQA3->TRAX] [fixapa-qa3.vip.traxmarkets.com/10.8.193.104:80]
+2021-11-25 15:57:01.472 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.472 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.472 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.473 INFO  initiator.IoSessionInitiator - [FIX.4.4:T1Kauaiblk4->MA:T1Kauaiblk4_ABQA4] [fixptm-ABQA4.vip.marketaxess.com/10.31.193.35:80]
+2021-11-25 15:57:01.473 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.473 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.473 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.473 INFO  initiator.IoSessionInitiator - [FIXT.1.1:TargetFirmId 1->SenderFirmId 1] [localhost/127.0.0.1:9151]
+2021-11-25 15:57:01.474 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2021-11-25 15:57:01.474 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2021-11-25 15:57:01.474 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2021-11-25 15:57:01.474 INFO  initiator.IoSessionInitiator - [FIXT.1.1:inttestclient3->TRAX] [localhost/127.0.0.1:9151]
+2021-11-25 15:57:01.552 ERROR qfixmessenger.QFixMessenger - IO Exception: 
+java.io.FileNotFoundException: C:\Suffix\suffixData\AutoRespondXML\ABN_TAPI_Response.xml (The system cannot find the path specified)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:90)
+	at sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:188)
+	at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:622)
+	at com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:189)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:812)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.jdom.input.SAXBuilder.build(SAXBuilder.java:518)
+	at org.jdom.input.SAXBuilder.build(SAXBuilder.java:905)
+	at org.jdom.input.SAXBuilder.build(SAXBuilder.java:884)
+	at com.jramoyo.qfixmessenger.QFixMessenger.getTypeToMethodMap(QFixMessenger.java:587)
+	at com.jramoyo.qfixmessenger.QFixMessenger.processSessions(QFixMessenger.java:504)
+	at com.jramoyo.qfixmessenger.QFixMessenger.logon(QFixMessenger.java:459)
+	at com.jramoyo.qfixmessenger.QFixMessenger.main(QFixMessenger.java:182)
+2021-11-25 15:57:01.553 ERROR qfixmessenger.QFixMessenger - Failed to parse xml file
+2021-11-25 15:57:01.556 ERROR qfixmessenger.QFixMessenger - IO Exception: 
+java.io.FileNotFoundException: C:\Suffix\suffixData\AutoRespondXML\Dlr-Price-Update.xml (The system cannot find the path specified)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:90)
+	at sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:188)
+	at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:622)
+	at com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:189)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:812)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.jdom.input.SAXBuilder.build(SAXBuilder.java:518)
+	at org.jdom.input.SAXBuilder.build(SAXBuilder.java:905)
+	at org.jdom.input.SAXBuilder.build(SAXBuilder.java:884)
+	at com.jramoyo.qfixmessenger.QFixMessenger.getTypeToMethodMap(QFixMessenger.java:587)
+	at com.jramoyo.qfixmessenger.QFixMessenger.processSessions(QFixMessenger.java:504)
+	at com.jramoyo.qfixmessenger.QFixMessenger.logon(QFixMessenger.java:459)
+	at com.jramoyo.qfixmessenger.QFixMessenger.main(QFixMessenger.java:182)
+2021-11-25 15:57:01.557 ERROR qfixmessenger.QFixMessenger - Failed to parse xml file
+2021-11-25 15:58:31.901 INFO  initiator.InitiatorIoHandler - MINA session created for FIX.4.4:T1Kauaiblk6->MA:T1Kauaiblk6_ABQA1: local=/10.8.142.235:53026, class org.apache.mina.transport.socket.nio.SocketSessionImpl, remote=fixptm-ABQA1.vip.marketaxess.com/10.31.193.251:443
+2021-11-25 15:59:03.247 INFO  listeners.SendFavMessageListener - Sending message NewOrderList
+2021-11-25 15:59:03.294 INFO  qfixmessenger.QFixMessenger - Sending message: 8=FIX.4.49=66235=E66=ListID-041321-rodrigo-24475394=268=573=511=ClOrdID-2447622=438=10000044=10048=US06051GEN5154=155=[N/A/]63=367=1423=129726=100.25453=1448=T1Kauaiblk6447=C452=1111=ClOrdID-2447722=438=10000044=10148=US40434AAB5254=155=[N/A]63=367=229726=101.2511=ClOrdID-2447822=438=13000044=10248=US95709TAH3254=155=[N/A/]63=367=129726=102.25453=1448=T1Kauaiblk6447=C452=1111=ClOrdID-2447922=438=25000044=10348=US427866AZ1554=155=[N/A/]63=367=129726=103.25453=1448=T1Kauaiblk6447=C452=1111=ClOrdID-2448022=438=35000044=10448=US29379VAW3754=155=[N/A/]63=367=129726=104.25453=1448=T1Kauaiblk6447=C452=1110=156

@@ -1,0 +1,41 @@
+/*
+  'D'                 -  Literal 'D'
+  [MsgType]           -  Value of tag 35 from the map (tag 35 is MsgType).
+  [35]                -  Value of tag 35 from the map
+*/
+{
+    "fromMessageType": "D",
+    "toMessageType": "D",
+    "fromSystem": "FRONT_ARENA",
+    "toSystem": "MA_EMS",
+    "outputBeginString": "FIX.4.4",
+    "outputFormat": [
+      {"MsgType": "'D'"},
+      {"ClOrdID": "[ClOrdID]"},
+      {"NoPartyIDs": "countExists(6606,6606,22205,22207)"},
+      {"PartyID": "[TraderID]"},
+      {"PartyIDSource": "'C'"},
+      {"PartyRole": "'11'"},
+      {"PartyID": "[TraderID]"},
+      {"PartyIDSource": "'P'"},
+      {"PartyRole": "'12'"},
+      {"PartyID": "ifExists(22205,[MKTXClientID])"},
+      {"PartyIDSource": "ifExists(22205,'P')"},
+      {"PartyRole": "ifExists(22205,'3')"},
+      {"PartyID": "ifExists(22207,[MKTXInvDcsnMkr])"},
+      {"PartyIDSource": "ifExists(22207,'P')"},
+      {"PartyRole": "ifExists(22207,'122')"},
+      {"HandlInst": "[HandlInst]"},
+      {"Symbol": "[Symbol]"},
+      {"SecurityID": "[SecurityID]"},
+      {"SecurityIDSource": "'4'"},
+      {"Side": "[Side]"},
+      {"TransactTime": "[TransactTime]"},
+      {"OrderQty": "[OrderQty]"},
+      {"OrdType": "[OrdType]"},
+      {"PriceType": "[MKTXPriceType]"},
+      {"Price": "[Price]"},
+      {"TimeInForce": "[TimeInForce]"}//,
+      //{"OrderCapacity": "[OrderCapacity]"}  Not in dictionary?
+    ]
+}

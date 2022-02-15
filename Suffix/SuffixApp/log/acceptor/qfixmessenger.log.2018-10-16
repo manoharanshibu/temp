@@ -1,0 +1,80 @@
+2018-10-16 09:32:05.214 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties
+
+2018-10-16 09:32:05.219 INFO  config.QFixMessengerConfig - Starting SufFIX with the following messenger.cfg properties file (directory: cfg\acceptor\messenger.cfg)
+suffix.version:http://crpnycsfxbase01.corporate.local/version.txt
+messenger.dict.fix44:FIX44.xml
+messenger.dict.fix43:FIX43.xml
+messenger.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+messenger.dict.fix41:FIX41.xml
+messenger.dict.fix40:FIX40.xml
+messenger.license:resources/license.txt
+suffix.jar:http://crpnycsfxbase01.corporate.local/sufFIX.jar
+suffix.dict.fix43.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX43.xml
+messenger.dict.fixt11:FIXT11.xml
+messenger.home.url:https://code.google.com/p/quickfix-messenger/
+suffix.dict.fixt11.url:http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml
+suffix.dict.fix42:C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+suffix.dict.fix40.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX40.xml
+messenger.parser.threads:20
+messenger.dict.fix50sp2:FIX50SP2.xml
+messenger.dict.fix50:FIX50.xml
+suffix.dict.fix50.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50.xml
+suffix.messageTable.columns:
+messenger.icons:resources/icons/
+messenger.help.url:http://wiki.marketaxess.com/display/appdev/SufFIX
+messenger.file.path:../suffixData
+suffix.dict.fix44.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml
+messenger.environment:
+suffix.dict.fix50sp2.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml
+messenger.fixwiki.url:http://fixwiki.org/fixwiki/
+suffix.dict.fix41.url:http://crpnycsfxbase01.corporate.local/TRAX/FIX41.xml
+
+2018-10-16 09:32:05.221 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/version.txt
+2018-10-16 09:32:05.377 INFO  util.URLUtil - Finished downloading elapsed time 156
+2018-10-16 09:32:05.377 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/quickfixversion.txt
+2018-10-16 09:32:05.448 INFO  util.URLUtil - Finished downloading elapsed time 71
+2018-10-16 09:32:05.455 ERROR cache.DataDictionaryCache - Problems downloading Quickfix Data Dictionary C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+java.net.MalformedURLException: no protocol: null?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4
+	at java.net.URL.<init>(URL.java:586)
+	at java.net.URL.<init>(URL.java:483)
+	at java.net.URL.<init>(URL.java:432)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.loadDataDictionaries(DataDictionaryCache.java:40)
+	at com.marketaxess.suffix.cache.DataDictionaryCache.<init>(DataDictionaryCache.java:28)
+	at com.jramoyo.qfixmessenger.QFixMessenger.<init>(QFixMessenger.java:350)
+	at com.jramoyo.qfixmessenger.QFixMessenger.setSessionAndMessengerSettings(QFixMessenger.java:230)
+	at com.jramoyo.qfixmessenger.QFixMessenger.main(QFixMessenger.java:172)
+2018-10-16 09:32:05.520 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX44.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX44.xml
+2018-10-16 09:32:06.017 INFO  util.URLUtil - Finished downloading FIX44.xml elapsed time 497
+2018-10-16 09:32:06.052 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIX50SP2.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIX50SP2.xml
+2018-10-16 09:32:06.206 INFO  util.URLUtil - Finished downloading FIX50SP2.xml elapsed time 154
+2018-10-16 09:32:06.240 INFO  util.URLUtil - Started downloading http://crpnycsfxbase01.corporate.local/TRAX/FIXT11.xml?Username=mmad&Hostname=LOND195&SufFIXVersion=3.0.0rc4 to FIXT11.xml
+2018-10-16 09:32:06.313 INFO  util.URLUtil - Finished downloading FIXT11.xml elapsed time 72
+2018-10-16 09:32:07.214 INFO  qfixmessenger.QFixMessenger - Starting acceptor with settings 
+[DEFAULT]
+NonStopSession=Y
+ConnectionType=acceptor
+InitiatorManualLogon=Y
+ReconnectInterval=5
+TargetCompID=INIT
+LogScreenHeartbeats=Y
+SocketConnectHost=localhost
+SenderCompID=ACCEPT
+HeartBtInt=90
+FileStorePath=data/messenger/acceptor
+FileLogPath=log/acceptor
+[SESSION]
+SocketAcceptPort=9878
+DataDictionary=C:/Suffix/suffixData/templates/FIX.4.2/FIX42Mick.xml
+BeginString=FIX.4.2
+
+2018-10-16 09:32:07.399 INFO  mina.NetworkingOptions - Socket option: SocketTcpNoDelay=true
+2018-10-16 09:32:07.399 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWrites=false
+2018-10-16 09:32:07.399 INFO  mina.NetworkingOptions - Socket option: SocketSynchronousWriteTimeout=30000
+2018-10-16 09:32:07.411 INFO  quickfix.SocketAcceptor - Listening for connections at 0.0.0.0/0.0.0.0:9878
+2018-10-16 09:32:40.207 INFO  acceptor.AcceptorIoHandler - MINA session created: /127.0.0.1:52018
+2018-10-16 09:34:18.571 INFO  listeners.SendActionListener - Sending message 8=FIX.4.29=40535=849=MA56=STPTC34=6752=20180815-12:22:43.19637=582212611=JBZ1808061810142557109=STP Test Client, Inc.17=5822126-laj1r20=0150=039=022=448=USP79171AE7955=FIXED54=164=2018081738=870000151=87000032=031=075=20180815381=014=06637=202409016620=201703016659=201703016609=MISC6=0.015=USD120=USD60=20180815-12:22:43223=7.45106=PROVINCE OF CORDOBA107=CORDO  7.450  9/1/24 (URegS)10=074
+2018-10-16 09:34:50.944 INFO  listeners.SendActionListener - Sending message 8=FIX.4.29=172435=849=MA56=STPTC34=6852=20180815-12:23:02.1839690=139691=WPACBIC9692=B9694=100.8109693=19695=8700009697=Done7761=19691=ABO1MPID9692=C9694=105.0009693=19695=8700009697=Covered7761=29691=GMSG9692=C9694=107.5009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=39691=GUCPUSM19692=B9694=108.3009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=49691=RBAIUS41XXX9692=B9694=114.1009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=59691=LAZA9692=C9694=115.4009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=69691=NITE9692=B9694=116.4009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=79691=AASIUS339692=B9694=117.5009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=89691=ANZBUS339692=B9696=Please Contact your ANZ Salesperson 1.9697=Passed7761=99691=CRLYUS339692=B9697=Passed7761=109691=CTBAAU2SFXD9692=B9696=None in TList9697=Passed7761=119691=RDOSUS319692=B9697=Passed7761=129691=SBSIUS339692=B9697=Timed Out 7761=153109=STP Test Client, Inc.76=WPACBIC17=One-USD_EMM-1662856-0-0-laxor37=582212611=JBZ180806181014255719=5822126-laj1r20=0150=239=264=2018081754=132=87000031=100.810151=014=8700006=100.8109805=438.9489806=421.2165645=439.4749804=439.4745961=Price75=2018081560=20180815-12:23:02.079381=877047.0038=8700006655=87000055=FIXED22=448=USP79171AE79200=202409205=1223=7.45106=PROVINCE OF CORDOBA6620=201703016659=20170301107=CORDO  7.450  9/1/24 (URegS)6608=7.2816637=202409016611=29886.926612=906933.926609=MISC6606=atrianine@marketxess.com15=USD120=USD9947=wpacus04157=16610=206
+2018-10-16 09:35:19.553 INFO  listeners.SendActionListener - Sending message 8=FIX.4.29=173535=849=MA56=STPTC34=7852=20180815-12:27:51.2289690=139691=WPACBIC9692=B9694=100.8109693=19695=8700009697=Cancelled7761=19691=ABO1MPID9692=C9694=105.0009693=19695=8700009697=Covered7761=29691=GMSG9692=C9694=107.5009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=39691=GUCPUSM19692=B9694=108.3009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=49691=RBAIUS41XXX9692=B9694=114.1009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=59691=LAZA9692=C9694=115.4009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=69691=NITE9692=B9694=116.4009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=79691=AASIUS339692=B9694=117.5009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=89691=ANZBUS339692=B9696=Please Contact your ANZ Salesperson 1.9697=Passed7761=99691=CRLYUS339692=B9697=Passed7761=109691=CTBAAU2SFXD9692=B9696=None in TList9697=Passed7761=119691=RDOSUS319692=B9697=Passed7761=129691=SBSIUS339692=B9697=Timed Out 7761=153109=STP Test Client, Inc.76=WPACBIC17=One-USD_EMM-1662856-0-0-lh4q237=582212611=JBZ180806181014255719=One-USD_EMM-1662856-0-0-laxor20=1150=439=464=2018081754=132=031=100.810151=014=06=100.8109805=438.9489806=421.2165645=439.4749804=439.4745961=Price75=2018081560=20180815-12:23:02.079381=877047.0038=8700006655=87000055=FIXED22=448=USP79171AE79200=202409205=1223=7.45106=PROVINCE OF CORDOBA6620=201703016659=20170301107=CORDO  7.450  9/1/24 (URegS)6608=7.2816637=202409016611=29886.926612=906933.926609=MISC6606=atrianine@marketxess.com15=USD120=USD9947=wpacus04157=16610=014
+2018-10-16 11:08:24.345 INFO  listeners.SendActionListener - Sending message 8=FIX.4.29=40535=849=MA56=STPTC34=6752=20180815-12:22:43.19637=582212611=JBZ1808061810142557109=STP Test Client, Inc.17=5822126-laj1r20=0150=039=022=448=USP79171AE7955=FIXED54=164=2018081738=870000151=87000032=031=075=20180815381=014=06637=202409016620=201703016659=201703016609=MISC6=0.015=USD120=USD60=20180815-12:22:43223=7.45106=PROVINCE OF CORDOBA107=CORDO  7.450  9/1/24 (URegS)10=074
+2018-10-16 11:08:37.506 INFO  listeners.SendActionListener - Sending message 8=FIX.4.29=172435=849=MA56=STPTC34=6852=20180815-12:23:02.1839690=139691=WPACBIC9692=B9694=100.8109693=19695=8700009697=Done7761=19691=ABO1MPID9692=C9694=105.0009693=19695=8700009697=Covered7761=29691=GMSG9692=C9694=107.5009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=39691=GUCPUSM19692=B9694=108.3009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=49691=RBAIUS41XXX9692=B9694=114.1009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=59691=LAZA9692=C9694=115.4009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=69691=NITE9692=B9694=116.4009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=79691=AASIUS339692=B9694=117.5009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=89691=ANZBUS339692=B9696=Please Contact your ANZ Salesperson 1.9697=Passed7761=99691=CRLYUS339692=B9697=Passed7761=109691=CTBAAU2SFXD9692=B9696=None in TList9697=Passed7761=119691=RDOSUS319692=B9697=Passed7761=129691=SBSIUS339692=B9697=Timed Out 7761=153109=STP Test Client, Inc.76=WPACBIC17=One-USD_EMM-1662856-0-0-laxor37=582212611=JBZ180806181014255719=5822126-laj1r20=0150=239=264=2018081754=132=87000031=100.810151=014=8700006=100.8109805=438.9489806=421.2165645=439.4749804=439.4745961=Price75=2018081560=20180815-12:23:02.079381=877047.0038=8700006655=87000055=FIXED22=448=USP79171AE79200=202409205=1223=7.45106=PROVINCE OF CORDOBA6620=201703016659=20170301107=CORDO  7.450  9/1/24 (URegS)6608=7.2816637=202409016611=29886.926612=906933.926609=MISC6606=atrianine@marketxess.com15=USD120=USD9947=wpacus04157=16610=206
+2018-10-16 11:08:47.713 INFO  listeners.SendActionListener - Sending message 8=FIX.4.29=173535=849=MA56=STPTC34=7852=20180815-12:27:51.2289690=139691=WPACBIC9692=B9694=100.8109693=19695=8700009697=Cancelled7761=19691=ABO1MPID9692=C9694=105.0009693=19695=8700009697=Covered7761=29691=GMSG9692=C9694=107.5009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=39691=GUCPUSM19692=B9694=108.3009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=49691=RBAIUS41XXX9692=B9694=114.1009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=59691=LAZA9692=C9694=115.4009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=69691=NITE9692=B9694=116.4009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=79691=AASIUS339692=B9694=117.5009693=19695=8700009696=Dealer response !! QuoteUpdate9697=Missed7761=89691=ANZBUS339692=B9696=Please Contact your ANZ Salesperson 1.9697=Passed7761=99691=CRLYUS339692=B9697=Passed7761=109691=CTBAAU2SFXD9692=B9696=None in TList9697=Passed7761=119691=RDOSUS319692=B9697=Passed7761=129691=SBSIUS339692=B9697=Timed Out 7761=153109=STP Test Client, Inc.76=WPACBIC17=One-USD_EMM-1662856-0-0-lh4q237=582212611=JBZ180806181014255719=One-USD_EMM-1662856-0-0-laxor20=1150=439=464=2018081754=132=031=100.810151=014=06=100.8109805=438.9489806=421.2165645=439.4749804=439.4745961=Price75=2018081560=20180815-12:23:02.079381=877047.0038=8700006655=87000055=FIXED22=448=USP79171AE79200=202409205=1223=7.45106=PROVINCE OF CORDOBA6620=201703016659=20170301107=CORDO  7.450  9/1/24 (URegS)6608=7.2816637=202409016611=29886.926612=906933.926609=MISC6606=atrianine@marketxess.com15=USD120=USD9947=wpacus04157=16610=014

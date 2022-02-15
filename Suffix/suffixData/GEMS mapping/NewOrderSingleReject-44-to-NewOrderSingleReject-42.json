@@ -1,0 +1,28 @@
+{
+    "fromMessageType": "8",
+    "toMessageType": "8",
+    "fromSystem": "MA_EMS",
+    "toSystem": "FRONT_ARENA",
+    "fromExecType": "8",
+    "outputBeginString": "FIX.4.2",
+    "outputFormat": [
+      {"MsgType": "'8'"},
+      {"OrderID": "[OrderID]"},      
+      {"ClOrdID": "[ClOrdID]"},                      
+      {"ExecID": "[ExecID]"},
+      {"ExecType": "'8'"},
+      {"ExecTransType": "'3'"}, //Hard-coded, confirm with Marlon
+      {"OrdStatus": "'8'" },
+      {"OrdRejReason": "[OrdRejReason]"},      
+      {"Symbol": "[Symbol]"},
+      {"SecurityID": "[SecurityID]"},
+      {"IDSource": "'4'"},
+      {"Side": "[Side]"},
+      {"LeavesQty": "[LeavesQty]"},
+      {"CumQty": "[CumQty]"},
+      {"AvgPx": "[AvgPx]"},
+      //{"SecurityIDSource": "'4'"}, //What to do with this field in 4.2 messages?
+      {"Text": "[Text]"}
+    ]
+}     
+     
